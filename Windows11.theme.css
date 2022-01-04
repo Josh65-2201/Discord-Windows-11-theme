@@ -1,6 +1,6 @@
 /**
  * @name Windows11
- * @version 0.6.8
+ * @version 1.0.0
  * @description Windows 11 stylings for BetterDiscord. Edit this file to chage discord color to your windows theme for full sync.
  * @source 
  * @updateUrl 
@@ -36,7 +36,15 @@
 	--unread: #00d81d; /* #00d81d - Default*/
 
 
-	
+
+
+	/* ------ Do Not Edit ------*/
+
+	/* Versions */
+	--theme-version: "Windows 11 theme - v1.0.0";
+	--rs-version: "Radial Status - v2.0.6";
+	--fb-version: "Better Badges - v1.0.0";
+
 	/* Rounded status */
 	--rs-online-color: #43b581; /* Colour for online status */
 	--rs-idle-color: #faa61a; /* Colour for idle status */
@@ -45,16 +53,9 @@
 	--rs-streaming-color: #643da7; /* Colour for streaming status */
 	--rs-invisible-color: #747f8d; /* Colour for invisible status - Note: this will only show for your own invisibility */
 	--rs-phone-color: var(--rs-online-color); /* Colour of the ring and phone icon when a user is on their phone |  */
-  
+	
 	--rs-phone-visible: block; /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */
 
-
-	/* ------ Do Not Edit ------*/
-	--theme-version: "Windows 11 theme - v0.6.8";
-	--rs-version: "Radial Status - v2.0.6";
-	--fb-version: "Better Badges - v1.0.0";
-
-	/*-Rounded status-*/
 	--rs-small-spacing: 2px; /* Gap between avatar and status for members list/dms | MUST end in px */
 	--rs-medium-spacing: 3px; /* Gap between avatar and status for User popout | MUST end in px */
 	--rs-large-spacing: 4px; /* Gap between avatar and status for User profiles | MUST end in px */
@@ -65,12 +66,12 @@
   
 	--rs-avatar-shape: 10%; /* 50% for round - 0% for square */
 
-	/*-Fancy Badges-*/
+	/* Fancy Badges */
 	--badge-size: 32px; /*discord defualt = 18px, theme defualt = 22px;*/
     --badge-margin: 1.5px; /*discord default = 2px, theme defualt = 1.5px*/
     --badges-everywhere-size: 15px; /*default = 15px*/
 
-	/*-Other-*/
+	/* Other */
 	--User-List-Width: 250px;					/* 200spx, Discord default = 240px */
 	--User-Popout-Width: 300px;					/* 236px, Discord default = 300px */
 	--Channel-List-Width: 251px;				/* 196px, Discord default = 240px */
@@ -97,6 +98,7 @@
 	--info-positive-foreground: #43B581;					/* #3BA55C */
 	--info-positive-background: rgba(67,181,129,0.1);		/* rgba(59,165,92,0.1) */
 	--status-positive-background: #43B581;					/* #3BA55C */
+
 
 	--Scrollbar-thumb-width: 60% !important;
 	--Scrollbar-track-width: 12px !important;
@@ -8989,11 +8991,11 @@ body {
 
 /* Loading Spinner */
 .spinner-2enMB9:after {
+	width: 32px;
+	height: 32px;
     background-image: url('https://github.com/josh-65/Discord-Win11-theme/blob/main/assets/loadIcon.gif?raw=true');
     background-size: cover;
     display: inline-block;
-    width: 64px; 
-    height: 64px;
     content:"";
 }
 .spinner-2enMB9 > span{
@@ -9225,6 +9227,7 @@ body {
 	Fix voice chat user limit not displaying when hovered
 	Fix reactions not win-fg highlighted
 	Fix user area playing game breaking formatting
+	Fix locked loading spinner size
 	Fix channel catagory open-close animation
 	Fix message bar locked 1 line hight
 	Fix GIF search bar not correct height
