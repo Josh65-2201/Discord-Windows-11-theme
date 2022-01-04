@@ -842,7 +842,7 @@ transform: translatey( -100% );
 	fill: transparent
 }
 .homeIcon-AaowEC {
-    background: url('https://raw.githubusercontent.com/microsoft/fluentui-system-icons/master/assets/Home/SVG/ic_fluent_home_24_filled.svg') center/contain no-repeat;
+    background: url('https://github.com/josh-65/Discord-Win11-theme/blob/main/assets/homeIcon.png?raw=true') center/contain no-repeat;
     min-width: 30px;
     min-height: 30px;
 }
@@ -8989,7 +8989,7 @@ body {
 
 /* Loading Spinner */
 .spinner-2enMB9:after {
-    background-image: url('https://github.com/josh-65/Discord-Win11-theme/blob/main/win11-loading.gif?raw=true');
+    background-image: url('https://github.com/josh-65/Discord-Win11-theme/blob/main/assets/loadIcon.gif?raw=true');
     background-size: cover;
     display: inline-block;
     width: 64px; 
@@ -9227,6 +9227,7 @@ body {
 	Fix user area playing game breaking formatting
 	Fix channel catagory open-close animation
 	Fix message bar locked 1 line hight
+	Fix GIF search bar not correct height
 	Fix Add server + discovery button not correct colors
 	Fix scrollbars not synced in create/join server
 	Add up and down arrows on scrollbars
