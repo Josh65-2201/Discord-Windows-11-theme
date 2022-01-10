@@ -140,7 +140,6 @@
 	
 	--win-pop-con: #242424;
 	--win-pop-foot: #1C1C1C;
-	--win-pop-bg: #000000b4;
 
 	--background-title: #202020;
 	--background: #272727;
@@ -170,7 +169,6 @@
 
 	--win-pop-con: #F2F2F2 !important;
 	--win-pop-foot: #dfdfdf !important;
-	--win-pop-bg: #8a8a8ab4 !important;
 
 	--background-title: #F1F1F1b0 !important;
 	--background: #F9F9F9F1 !important;
@@ -292,6 +290,7 @@ body {
 
 	/* Remove */
 		/* Background */
+		.container-1taM1r [class*="animatedContainer-"], /* Channels - Baaner image */
 		.addFriendInputWrapper-3PjsbB, /* Home - Add friend */
 		[aria-label="USER_SETTINGS"] .card-FDVird:before, .theme-dark .copyInputDefault-21sXtF, .theme-dark .container-1nZlH6, .theme-dark .input-cIJ7To:hover, .theme-dark .copyInputDefault-21sXtF:hover, .theme-dark .container-1nZlH6:hover, /* Settings - keybinds */
 		.uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.image-2yrs5j, /* File upload modify icon */
@@ -1144,11 +1143,6 @@ transform: translatey( -100% );
 
 .divider-ewBQKj {
 	background-color: var(--win-border);
-}
-
-/* Server boost server header icon */
-.guildIconContainer-2hr-Lk {
-	margin-top: -9px;
 }
 
 
@@ -2366,12 +2360,17 @@ transform: translatey( -100% );
 	.privateChannels-1nO12o .channel-2QD9_O.selected-aXhQR6 .layout-2DM8Md {
 		border-radius: 5px !important;
 	}
-		/* Channels images */
+		/* Channel server image */
+				/* Temp no image header fix */
+				.hasBanner-2SrLR3 .header-2V-4Sw, .hasBanner-2SrLR3 .header-2V-4Sw:hover {
+					background-color: var(--win-input-highlight);
+				}
+
 		.bannerImg-2NHyzX {
 			width: 100%;
 			margin-left: auto;
 			margin-right: auto;
-			display: block;
+			display: none;
 		}
 
 		/* Channel item spacing */
@@ -2901,7 +2900,8 @@ transform: translatey( -100% );
 		text-align: center;
 		z-index: 2;
 	}
-	/* Hover */
+	
+	/* Background */
 	.container-1taM1r.clickable-25tGDB,
 	.container-1taM1r.clickable-25tGDB .header-2V-4Sw:hover,
 	.container-1taM1r.selected-31Nl7x .header-2V-4Sw {
@@ -3145,78 +3145,89 @@ transform: translatey( -100% );
 }
 
 	/* Pinned message pop out */
-	div[aria-label="Pinned messages"] .messagesPopoutWrap-1MQ1bW {
-		position: relative;
-		width: var(--side-popout) !important;
-		left: 323px !important;
-		height: 970px !important;
-		max-height: 970px !important;
-		border: 1px solid var(--win-border);
-	}
-		/* Header */
-		.layer-v9HyYc .header-ykumBX {
-			background-color: var(--win-pop-foot);
-			box-shadow: none;
-			padding: 10px 0px 10px 20px;
+		/* Container */
+		div[aria-label="Pinned messages"] .messagesPopoutWrap-1MQ1bW {
+			position: relative;
+			width: var(--side-popout) !important;
+			left: 323px !important;
+			height: 970px !important;
+			max-height: 970px !important;
+			border: 1px solid var(--win-border);
 		}
+			/* Header */
+			.layer-v9HyYc .header-ykumBX {
+				background-color: var(--win-pop-foot);
+				box-shadow: none;
+				padding: 10px 0px 10px 20px;
+			}
 
-		/* Content */
-		.messagesPopout-24nkyi {
-			margin: 0px;
-			padding: 3px;
-			background-color: var(--win-pop-con);
-		}
-			/* Messages */
-				/* Standard */
-				.messageGroupWrapper-o-Zw7G {
-					margin: 0px;
-					margin-bottom: 4px;
-					margin-right: 4px;
-					padding: 4px 0px 4px 0px;
-					border-radius: 8px !important;
-					background-color: transparent;
-				}
-				
-				/* Hovered */
-				.layer-v9HyYc .messageGroupWrapper-o-Zw7G:hover {
-					background-color: var(--win-input-highlight);
-				}
-
-
-	.layer-v9HyYc .messageGroupWrapper-o-Zw7G .jumpButton-3DTcS_ {
-		background-color: transparent;
-	}
-	.layer-v9HyYc .emptyPlaceholder-1zh-Eu .image-2JDb81 {
-		filter: grayscale(1);
-	}
+			/* Content */
+			.messagesPopout-24nkyi {
+				margin: 0px;
+				padding: 3px;
+				background-color: var(--win-pop-con);
+			}
+				/* Messages */
+					/* Standard */
+					.messageGroupWrapper-o-Zw7G {
+						margin: 0px;
+						margin-bottom: 4px;
+						margin-right: 4px;
+						padding: 4px 0px 4px 0px;
+						border-radius: 8px !important;
+						background-color: transparent;
+					}
+					
+					/* Hovered */
+					.layer-v9HyYc .messageGroupWrapper-o-Zw7G:hover {
+						background-color: var(--win-input-highlight);
+					}
 
 
 	/* Threads pop out */
-	.browser-2NpbWS {
-		position: relative;
-		width: var(--side-popout) !important;
-		left: 387px !important;
-		height: 970px !important;
-		max-height: 970px !important;
-		border: 1px solid var(--win-border);
-	}
-		/* Active Theads channel */
-		.popout-APcvZm,
-		.more-3VADkW {
-			background-color: var(--win-pop-con) !important;
-			border: 1px solid var(--win-border) !important;
+		/* Container */
+		.browser-2NpbWS {
+			position: relative;
+			width: var(--side-popout) !important;
+			left: 387px !important;
+			height: 970px !important;
+			max-height: 970px !important;
+			border: 1px solid var(--win-border);
 		}
+			/* Background */
+				/* Active */
+				.container-1KFiob {
+					height: 100%;
+					background-color: var(--win-pop-con) !important;
+				}
+					/* Header */
+					.header-1VS4tm {
+						background-color: var(--win-pop-foot);
+					}
+				
+				/* Archived */
+				.list-wek7hJ {
+					height: 100%;
+					padding: 0px;
+					margin: 0px;
+				}
+					/* Header */
+					.controls-1kKWv_ {
+						background-color: var(--win-pop-foot);
+					}
+
 
 	/* Inbox pop out */
-	.layer-v9HyYc .messagesPopoutWrap-1MQ1bW,
-	.layer-v9HyYc .container-enaOkj {
-		position: relative;
-		width: var(--side-popout) !important;
-		left: 259px !important;
-		height: 970px !important;
-		max-height: 970px !important;
-		border: 1px solid var(--win-border);
-	}
+		/* Container */
+		.layer-v9HyYc .messagesPopoutWrap-1MQ1bW,
+		.layer-v9HyYc .container-enaOkj {
+			position: relative;
+			width: var(--side-popout) !important;
+			left: 259px !important;
+			height: 970px !important;
+			max-height: 970px !important;
+			border: 1px solid var(--win-border);
+		}
 
 
 /* Pinned Messages/Recent Mentions & Unreads Inbox */
@@ -3551,17 +3562,23 @@ transform: translatey( -100% );
 	margin-left: 4px;
 }
 
-/* Slowmode Is Enabled */
-.typing-2GQL18 .cooldownWrapper-3joyFc {
-	margin: 0 auto;
-	width: auto;
-	font-size: 10px;
-	opacity: 0.8;
-}
-.typing-2GQL18 .cooldownWrapper-3joyFc .slowModeIcon-1BPDC_ {
-	margin-left: 2px;
-	width: 12px;
-}
+
+/* Slowmode text */
+	/* Position */
+	.typing-2GQL18 .cooldownWrapper-3joyFc {
+		margin-left: auto;
+		width: auto;
+		font-size: 10px;
+		opacity: 0.8;
+	}
+		/* Icon */
+		.typing-2GQL18 .cooldownWrapper-3joyFc .slowModeIcon-1BPDC_ {
+			margin-left: 2px;
+			width: 12px;
+		}
+
+
+
 /* Game Supports Game Invites & Try Slash Commands! */
 .activityInviteEducation-8C0Czp,
 .applicationCommandEducation-2jAJ0B {
@@ -5046,11 +5063,6 @@ transform: translatey( -100% );
 .modal-2DCYwU .container-7uh5fX {
 	background-color: #111111 !important;
 }
-.header-1VS4tm {
-	background-color: #161616;
-	height: 40px;
-	min-height: 40px;
-}
 .header-1VS4tm .tabBar-31Wimb .tab-PQvTH4 {
 	background-color: transparent !important;
 	border-bottom: 2px solid transparent;
@@ -5059,9 +5071,6 @@ transform: translatey( -100% );
 	background-color: transparent;
 	border-bottom: 2px solid #FFFFFF;
 	border-radius: 0px;
-}
-.list-wek7hJ {
-	padding: 4px 8px 8px 8px;
 }
 .list-wek7hJ .sectionHeader-17Aate {
 	color: #FFFFFF;
@@ -9044,8 +9053,8 @@ body {
 
 /* Loading Spinner */
 .spinner-2enMB9:after {
-	width: 32px;
-	height: 32px;
+	width: 48px;
+	height: 48px;
     background-image: url('https://github.com/josh-65/Discord-Win11-theme/blob/main/assets/loadIcon.gif?raw=true');
     background-size: cover;
     display: inline-block;
@@ -9258,47 +9267,3 @@ body {
 .bd-controls {
 	margin-bottom: 5px;
 }
-
-
-
-/*	To do:
-	Remove nitro shine button animation
-	Correct external link and action buttons styles
-	Update dropdown boxs
-	Fix toggle switchs transition/hold not correct colors
-	Fix toggle switchs circle misailignted
-	Add background to grouped settings items
-	Change settings Remove waring look
-	Change Settings in-out animation to slid up - https://discord.com/channels/86004744966914048/836694789898109009/840782716844900363
-	User status editor - https://discord.com/channels/86004744966914048/836694789898109009/905247456722292778
-	About user review - https://discord.com/channels/86004744966914048/836694789898109009/908455214368047145
-	Review - https://discord.com/channels/86004744966914048/836694789898109009/836726261354070047
-	Fix pinned messes entry not rounded corners
-	Fix threads buttons not underhighlight style
-	Fix right click sub menus positions not correct
-	Fix blur not applying to sub right click menus
-	Fix voice chat user limit not displaying when hovered
-	Fix reactions not win-fg highlighted
-	Fix user area playing game breaking formatting
-	Fix locked loading spinner size
-	Fix channel catagory open-close animation
-	Fix message bar locked 1 line hight
-	Show activity on user full profile always
-	Fix GIF search bar not correct height
-	Fix Add server + discovery button not correct colors
-	Fix scrollbars not synced in create/join server
-	Fix server bar and windows title bar top left rounded corner
-	Fix no image blank space on channel banner
-	Add up and down arrows on scrollbars
-	Fix discord home icon not applying
-	move settings icon to server list area
-	make avatar status windows side pill shaped
-	Add a background to mobile icon on mini and full profile.
-	Move slow mode text to align right of message box
-	Change X button to left facing arrow
-	Add Windows 11 font "Segoe UI Variable"   --font-family-sans-serif: "Segoe UI Variable Display","Segoe UI","Inter",sans-serif;
-	Check light mode compatability
-	Make role user list sticky headers
-	Indent sections for easyer editing
-	Review code for redudncys
-*/
