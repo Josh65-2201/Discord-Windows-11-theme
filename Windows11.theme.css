@@ -1,6 +1,6 @@
 /**
  * @name Windows11
- * @version 1.0.0
+ * @version 0.6.0
  * @description Windows 11 stylings for BetterDiscord. Edit this file to chage discord color to your windows theme for full sync.
  * @source 
  * @updateUrl https://raw.githubusercontent.com/josh-65/Discord-Win11-theme/main/Windows11.theme.css
@@ -41,7 +41,7 @@
 	/* ------ Do Not Edit ------*/
 
 	/* Versions */
-	--theme-version: "Windows 11 theme - v1.0.0";
+	--theme-version: "Windows 11 theme - v0.6.0";
 	--rs-version: "Radial Status - v2.0.6";
 	--fb-version: "Better Badges - v1.0.0";
 
@@ -2186,13 +2186,18 @@ transform: translatey( -100% );
 	background-color: #161616;
 }
 
+
+
 /* NEW UNREADS/MENTIONS Notice */
 .unread-1xRYoj {
-	background-color: #1B1B1B;
-	opacity: 0.9;
+	background-color: #00ff0060;
+	color: var(--text);
+	font-size: small;
+	font-weight: 1200;
+	opacity: 1;
 }
 .unread-1xRYoj:hover {
-	background-color: #212121;
+	background-color: #00ff0080;
 }
 .unreadTop-3rAB3r .mention-1f5kbO {
 	background: linear-gradient(#1B1B1B, #F04747 15%);
@@ -2210,6 +2215,8 @@ transform: translatey( -100% );
 	bottom: -8px;
 	border-radius: 8px 8px 0px 0px;
 }
+
+
 
 /* Stream Failed To Start */
 .root-25RxKh {
