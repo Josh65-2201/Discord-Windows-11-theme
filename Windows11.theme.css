@@ -1,6 +1,6 @@
 /**
  * @name Windows11
- * @version 0.7.0
+ * @version 0.7.1
  * @description Windows 11 stylings for BetterDiscord. Edit this file to chage discord color to your windows theme for full sync.
  * @source 
  * @updateUrl https://raw.githubusercontent.com/josh-65/Discord-Win11-theme/main/Windows11.theme.css
@@ -41,7 +41,7 @@
 	/* ------ Do Not Edit ------*/
 
 	/* Versions */
-	--theme-version: "Windows 11 theme - v0.7.0";
+	--theme-version: "Windows 11 theme - v0.7.1";
 	--rs-version: "Radial Status - v2.0.6";
 	--fb-version: "Better Badges - v1.0.0";
 
@@ -234,35 +234,55 @@ body {
 	}
 		/* Title */
 			/* Icon */
+			.wordmark-2u86JB > svg {
+				display: none;
+			}
+
 			.wordmark-2u86JB:before {
 				content: '';
 				position: absolute;
 				width: 48px !important;
 				height: 48px !important;
 				margin: 0px;
+				margin-left: 1px;
 				padding: 0px;
 				left: 0px;
 				top: 0px;
-				background: url("https://discord.com/assets/9f6f9cd156ce35e2d94c0e62e3eff462.png") center/18px no-repeat;
+				background: url("https://discord.com/assets/9f6f9cd156ce35e2d94c0e62e3eff462.png") center/17px no-repeat;
 			}
 				/* Light mode */
 				.theme-light .wordmark-2u86JB:before { /* Review */
-					background: url("https://discord.com/assets/ca03beabe94d8f97ba6fbf75cbb695c4.png") center/18px no-repeat !important;
+					background: url("https://discord.com/assets/ca03beabe94d8f97ba6fbf75cbb695c4.png") center/17px no-repeat !important;
 				}
 
 			/* Text */
 			.wordmark-2u86JB:after {
-				content:"Discord";
-				font-size:13px;
-				font-weight:700;
-				position:absolute;
-				width:40px;
-				top: 7px;
-				padding-left:-3px;
-				color:#FFFFFF;
+				position: absolute;
+				content: "Discord";
+				font-size: 13px;
+				font-weight: 400;
+				
+				width: 40px;
+				top: 16px;
+				left: 53px;
+				color: #878787;
 			}
 			.theme-light .wordmark-2u86JB:after {
 				color:#000000;
+			}
+
+		/* Avatar */
+		.avatarWrapper-1B9FTW {
+			position: fixed;
+			margin: 0px;
+			padding: 0px;
+			/*top: 2%;
+			right: 199px;*/
+			top: 10%;
+		}
+			/* Icon */
+			.avatar-1EWyVD.wrapper-1VLyxH > svg > foreignObject {
+				border-radius: 50% !important;
 			}
 
 
@@ -286,6 +306,7 @@ body {
 
 	/* Remove */
 		/* Background */
+		.wrapper-3kah-n .childWrapper-1j_1ub, .wrapper-3kah-n:hover .childWrapper-1j_1ub, /* Home icon */
 		.container-1-ERn5 [class*="animatedContainer-"], /* Channels - Baaner image */
 		.addFriendInputWrapper-kkoSV9, /* Home - Add friend */
 		[aria-label="USER_SETTINGS"] .card-2ART2V:before, .theme-dark .copyInputDefault-3jiMHw, .theme-dark .container-30qY7E, .theme-dark .input-2g-os5:hover, .theme-dark .copyInputDefault-3jiMHw:hover, .theme-dark .container-30qY7E:hover, /* Settings - keybinds */
@@ -395,100 +416,82 @@ transform: translatey( -100% );
 
 
 /* Formatting */
-	/* Servers bar */
+	/* Servers sidebar */
 		/* Background */
 		.scroller-3X7KbA, .wrapper-1_HaEi {
 			background-color: var(--background-title);
 			width: 74px !important;
 		}
-		/* Icons */
-			/* DMs icons */
-				.homeIcon-r0w4ny path {
-					fill: transparent
-				}
-				.homeIcon-r0w4ny {
-					min-width: 28px;
-					min-height: 28px;
-					background: url('https://github.com/josh-65/Discord-Win11-theme/blob/main/assets/homeIcon.png?raw=true') center/contain no-repeat;
-				}
+		/* Discovery page */
+		/* Add server */
+		.listItem-3SmSlK:focus-within, .listItem-3SmSlK:hover /* Home icon */ {
+			background-color: var(--win-button-highlight);
+		}
 
-
-			/* Server icons */
+		/* Position */
+		.listItem-3SmSlK {
+			width: 64px !important;
+			height: 58px !important;
+			margin-left: 5px;
+			background-color: transparent;
+			border-radius: 6px;
+			transition: var(--win-color-fade);
+		}
+			/* Home icon */
+			.homeIcon-r0w4ny path {
+				fill: transparent
+			}
+			.homeIcon-r0w4ny {
+				min-width: 28px;
+				min-height: 28px;
+				background: url('https://github.com/josh-65/Discord-Win11-theme/blob/main/assets/homeIcon.png?raw=true') center/contain no-repeat;
+			}
+			
+			/* Folders */
+				/* Collpased */
+				.folderIconWrapper-1oRIZr, /* Folder color */
+				.iconInactive-26M06U, /* in Folder icon */
+				.wrapper-28eC3z > svg > foreignObject /* Main icon */ {
+					mask: none;
+					border-radius: 6px !important;
+				}
+				/* Expanded track */
+				.expandedFolderBackground-1kSAf6 {
+					width: 64px;
+					margin-left: -7px;
+					border-radius: 8px !important;
+				}
+			
+			/* Connected servers */
 				/* Position */
-				.listItem-3SmSlK {
-					width: 64px !important;
-					height: 58px !important;
-					margin-left: 5px;
-					background-color: transparent;
-					border-radius: 6px;
-				}
-				.listItem-3SmSlK:hover {
-					background-color: var(--win-button-highlight);
-				}
 				.wrapper-28eC3z {
 					margin-top: 5px;
 				}
 
-				/* Folders */
-					/* Collpased */
-					.folderIconWrapper-1oRIZr, /* Folder color */
-					.iconInactive-26M06U, /* in Folder icon */
-					.wrapper-28eC3z > svg > foreignObject /* Main icon */ {
-						mask: none;
-						border-radius: 6px !important;
-					}
 
-					/* Expanded track */
-					.expandedFolderBackground-1kSAf6 {
-						width: 64px;
-						margin-left: -7px;
-						border-radius: 8px !important;
-					}
-
-
-				/* Bottom buttons */
-
-		
-	/* Channel bar */
-		/* User controls */
-		.container-YkUktl {
-			margin: 0px;
-			padding: 0px;
-			top: -50px;
-			z-index: 1;
-		}
-			/* Control buttons */
-			.flex-2S1XBF .flex-3BkGQD .horizontal-112GEH .horizontal-1Piu5- .flex-3BkGQD .directionRow-2Iu2A9 .justifyStart-2Mwniq .alignStretch-Uwowzr .noWrap-hBpHBz {
-				width: 60px;
+	/* Channel list */
+	div[style="height: 84px;"] {
+		display: none;
+	}
+	.content-2a4AW9 {
+		height: auto !important;
+	}
+			/* Top conent margin */
+			.searchBar-3TnChZ .searchBarComponent-3N7dCG:not(game),
+			.search-39IXmY:not(game) {
+				top: 100px;
 			}
-
-			/* Avatar */
-			.avatarWrapper-1B9FTW {
-				position: fixed;
-				margin: 0px;
-				padding: 0px;
-				top: 2%;
-				right: 199px;
-				z-index: 10000;
+			.searchBar-3TnChZ .searchBarComponent-3N7dCG:not(voice connect),
+			.search-39IXmY:not(voice connect) {
+				top: 170px;
 			}
-
-
-		/* DM/Friend list */
-			/* Remove nitro */
-			a[href="/store"] {
-				display: none;
+			.searchBar-3TnChZ .searchBarComponent-3N7dCG:not(voice connect + game),
+			.search-39IXmY:not(voice connect + game) {
+				top: 248px;
 			}
-
-		/* Channel list height */
-		div[style="height: 84px;"] {
-			display: none;
-		}
-		.content-2a4AW9 {
-			height: auto !important;
-		}
 
 		/* Server boost bar */
-			/* Bar position */
+			/* Position */
 			.container-1eD8xH {
 				margin: 5px;
 			}
@@ -501,11 +504,66 @@ transform: translatey( -100% );
 				background-color: var(--win-input-highlight) !important;
 			}
 
-			/* Catagorys */
-				/* Add channel button */
-				.children-3MeUvj {
-					display: none;
-				}
+		/* Catagorys */
+			/* Add channel button */
+			.children-3MeUvj {
+				display: none;
+			}
+
+
+	/* Users/members list */
+		/* User status */
+		#app-mount .wrapper-1VLyxH[style*="32px"] rect {
+			height: 16px !important;
+			width: 2px !important;
+			x: -12px !important;
+			y: 8px !important;
+		}
+
+		/* User full profile */
+		.tabBarItem-30Te4- .item-3XjbnG {
+			display: contents;
+		}
+
+		/* Icon */
+		.wrapper-1VLyxH > svg > foreignObject {
+			border-radius: 12px;
+		}
+
+
+	/* Message panel */
+		/* devider */
+		.content-1jQy2l::before {
+			display: none;
+		}
+
+		/* Emote positioning */
+		img.emote {
+			text-indent: 0;
+			white-space: nowrap;
+			width: auto;
+			position: relative;
+			top: 0.25ex;
+		}
+		
+		/* Wave to say hi disable */
+		.welcomeCTAButtonOuter-3pJkMq {
+			display : none
+		}
+
+		/* Role icon move left */
+		[class*="roleIcon"] {
+			float: left;
+			margin-left: 0rem;
+			margin-right: .25rem;
+		}
+
+
+	/* Home page */
+		/* Remove nitro tab */
+		a[href="/store"] {
+			display: none;
+		}
 
 
 		/* DMs User list */
@@ -558,61 +616,21 @@ transform: translatey( -100% );
 			}
 
 
-		/* Search bar */
-		.searchBar-3TnChZ .searchBarComponent-3N7dCG:not(game),
-		.search-39IXmY:not(game) {
-			top: 90px;
-		}
-		.searchBar-3TnChZ .searchBarComponent-3N7dCG:not(voice connect),
-		.search-39IXmY:not(voice connect) {
-			top: 170px;
-		}
-		.searchBar-3TnChZ .searchBarComponent-3N7dCG:not(voice connect + game),
-		.search-39IXmY:not(voice connect + game) {
-			top: 230px;
-		}
-
-		/* Discovery */
-		.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt {
-			margin-top: 44px;
-			margin-right: -8px;
-		}
-		.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt:not(game) {
-			margin-top: 64px;
-		}
-		.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt:not(voice connect) {
-			margin-top: 114px;
-		}
-		.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt:not(voice connect + game) {
-			margin-top: 190px;
-		}
-	
-	/* Message panel */
-		/* Emote positioning */
-		img.emote {
-			text-indent: 0;
-			white-space: nowrap;
-			width: auto;
-			position: relative;
-			top: 0.25ex;
-		}
-		
-		/* Wave to say hi disable */
-		.welcomeCTAButtonOuter-3pJkMq {
-			display : none
-		}
-
-		/* Role icon move left */
-		[class*="roleIcon"] {
-			float: left;
-			margin-left: 0rem;
-			margin-right: .25rem;
-		}
-
-	/* User full profile */
-	.tabBarItem-30Te4- .item-3XjbnG {
-		display: contents;
+	/* Discovery page */
+	.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt {
+		margin-top: 44px;
+		margin-right: -8px;
 	}
+	.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt:not(game) {
+		margin-top: 64px;
+	}
+	.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt:not(voice connect) {
+		margin-top: 114px;
+	}
+	.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt:not(voice connect + game) {
+		margin-top: 190px;
+	}
+
 
 
 /* Settings - keybind - move */
@@ -996,8 +1014,10 @@ transform: translatey( -100% );
 			}
 
 			/* DM/Channel - Search bar */
-			.searchBar-zdmu7v,
-			.searchBar-3TnChZ .searchBarComponent-3N7dCG {
+			.focused-8aNhVB .searchBar-zdmu7v, .open-3y3yI_ .searchBar-zdmu7v,
+		.focused-mTQKRf, .focused-20l6Zp, .searchBar-zdmu7v, /* Search bar - Selected */
+			.searchBar-zdmu7v, /* Search bar - DM standard */
+			.searchBar-3TnChZ .searchBarComponent-3N7dCG /* Search bar - Standard */ {
 				width: 288px !important;
 				margin: 0px 16px !important;
 			}
@@ -1450,9 +1470,6 @@ transform: translatey( -100% );
 
 
 /* User status rings - Move */
-#app-mount .wrapper-1VLyxH {
-	border-radius: var(--rs-avatar-shape);
-}
 #app-mount .wrapper-1VLyxH svg:not(:root) {
 	overflow: visible;
 }
