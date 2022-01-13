@@ -7,8 +7,8 @@ assignees: josh-65
 
 ---
 
-##Describe the solution you'd like**    <!-- A clear and concise description of what you want to happen. -->
+## Proposed solution    <!-- A clear and concise description of what you want to happen. -->
 
 
-##Where is it   <!-- The click taken to get to where the issues is -->
+## Where is it          <!-- The click taken to get to where the issues is -->
 
