@@ -4148,9 +4148,10 @@ transform: translatey( -100% );
 	--gutter: 0.5rem;
 	--spine-width: 0.125rem;
 	--avatar-size: 2.1875rem;
-	border-color: #36393F;
+	border-color: var(--win-border);
 }
 .repliedMessage-3Z6XBG {
+	width: 90%;
 	color: var(--text-normal);
 }
 .repliedMessage-3Z6XBG, 
@@ -8976,18 +8977,17 @@ transform: translatey( -100% );
 			}
 
 		/* User/member list */
-			/* Position */
-			.mask-1FEkla.svg-2azL_l {
-				margin-left: -8px !important;
-			}
-
 			/* Icon */
 			#app-mount .wrapper-1VLyxH foreignObject[mask="url(#svg-mask-avatar-status-round-32)"] {
 				border-radius: 50%;
 			}
-			.svg-2azL_l > rect {
+			.svg-2azL_l > rect[width="10"] {
 				transform: scale(1.15);
 			}
+				/* Position */
+				.mask-1FEkla.svg-2azL_l[width="40"] {
+					margin-left: -8px !important;
+				}
 			
 
 
