@@ -7,15 +7,24 @@ assignees: josh-65
 
 ---
 
-**Describe the issue**  <!-- A clear and concise description of what the bug is. -->
+##Describe the issue
 
-**Expected behavior**  <!-- A clear and concise description of what you expected to happen. -->
+<!-- A clear and concise description of what the bug is. -->
 
-**Where is it**  <!-- The click taken to get to where the issues is -->
+##Expected behavior
 
-**Screenshots**  <!-- If applicable, add screenshots to help explain your problem. -->
+<!-- A clear and concise description of what you expected to happen. -->
 
-**Versions**  <!-- These can be found in discord settings on the bottom sidebar -->
+##Where is it  
+
+<!-- The click taken to get to where the issues is -->
+
+##Screenshots
+
+<!-- If applicable, add screenshots to help explain your problem. -->
+
+##Versions
 Discord:
 Better discord:
 Theme:
+<!-- These can be found in discord settings on the bottom sidebar -->
