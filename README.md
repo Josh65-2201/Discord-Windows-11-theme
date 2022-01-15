@@ -5,4 +5,4 @@ Open https://raw.githubusercontent.com/Josh-65/Discord-Win11-theme/main/Windows1
 Not available
 
 ## Beta version
-0.7.4
+0.7.5

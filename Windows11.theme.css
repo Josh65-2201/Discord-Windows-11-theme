@@ -1,6 +1,6 @@
 /**
  * @name Windows11
- * @version 0.7.4
+ * @version 0.7.5
  * @description Windows 11 stylings for BetterDiscord. Edit this file to chage discord color to your windows theme for full sync.
  * @source 
  * @updateUrl https://raw.githubusercontent.com/Josh-65/Discord-Win11-theme/main/Windows11.theme.css
@@ -42,7 +42,7 @@
 
 
 	/* ----------------------------- DO NOT EDIT ----------------------------- */
-	--theme-version: "Windows 11 theme - v0.7.4";
+	--theme-version: "Windows 11 theme - v0.7.5";
 	--fb-version: "Better Badges - v1.0.0";
 
 	/* Fancy Badges */
@@ -92,6 +92,8 @@
 	--win-info-danger-background: #910000;
 	--win-info-danger-border: #F04747;
 	--text-danger: #d60000;
+
+	--win-pop-bg: #00000050;
 	/* ------------------------------------------------------------------------ */
 }
 
@@ -115,45 +117,48 @@
 
 	--win-inactive: #606060;
 
-	--win-border: #303030 !important;
+	--win-border: #303030;
 	
-	--win-pop-bg: #0000008c;
 	--win-pop-con: #242424;
 	--win-pop-foot: #1C1C1C;
 
-	--background-title: #202020;
-	--background-tint: #242424;
-	--background: #272727;
+	--win-background-title: #202020;
+	--win-background-tint: #242424;
+	--win-background-tran: #272727b0;
+	--win-background: #272727;
 	--text: #FFFFFF;
 }
 
 .theme-light {
 	/* Windows 11 style elements - Light*/
-	--Scrollbar-thumb: #F5F5F5 !important;
-	--Scrollbar-track: #F2F2F2 !important;
+	--Scrollbar-thumb: #F5F5F5;
+	--Scrollbar-track: #F2F2F2;
 
 	--win-button-sta: ;
-	--win-button-highlight: ;
+	--win-button-highlight: #3C3C3C;
 	--win-button-sel-highlight: ;
 
-	--win-input-sta: #FBFBFB !important;
-	--win-input-highlight: #EAEAEA !important;
-	--win-input-sel-highlight: #EDEDED !important;
-	--win-input-sel: #FFFFFF !important;
+	--win-input-sta: #FBFBFB;
+	--win-input-highlight: #EAEAEA;
+	--win-input-sel-highlight: #EDEDED;
+	--win-input-sel: #FFFFFF;
 
-	--win-dropdown-header: #e21c1c;
-	--win-dropdown-content: #970707;
+	--win-dropdown-header: ;
+	--win-dropdown-content: ;
+	--win-dropdown-background: ;
 
-	--win-inactive: #BFBFBF !important;
+	--win-inactive: #BFBFBF;
 
-	--win-border: #E5E5E5 !important;
+	--win-border: #E5E5E5;
 
-	--win-pop-con: #F2F2F2 !important;
-	--win-pop-foot: #dfdfdf !important;
+	--win-pop-con: #F2F2F2;
+	--win-pop-foot: #dfdfdf;
 
-	--background-title: #F1F1F1b0 !important;
-	--background: #F9F9F9F1 !important;
-	--text: #000000 !important;
+	--win-background-title: #F3F3F3;
+	--win-background-tint: #F7F7F7;
+	--win-background-tran: #f9f9f9b0;
+	--win-background: #F9F9F9;
+	--text: #000000;
 }
 
 
@@ -175,6 +180,14 @@
 	}
 
 /* Version info display settings */
+.versionHash-10nbs-,
+.colorMuted-20987_,
+.colorMuted-HdFt4q {
+	padding: 0px;
+	margin: 2px;
+	font-size: 13px;
+	color: var(--text-muted);;
+}
 .sidebar-nqHbhN .info-1sUqUG::after {
 	font-size: 12px;
 	color: #72767C;
@@ -220,7 +233,7 @@ body {
 		height: 48px;
 		margin-top: 0px;
 		padding-top: 0px;
-		background-color: var(--background-title) !important;
+		background-color: var(--win-background-title) !important;
 	}
 		/* Title */
 			/* Icon */
@@ -380,18 +393,9 @@ body {
 
 	/* Apply */
 		/* Background */
-			/* Title and Servers bar */
-			.layers-OrUESM {
-				background-color: var(--background-title) !important;
-			}
-			/* Channel list */
-			.sidebar-1tnWFu {
-				background-color: var(--background-tint);
-				border-right: 1px solid var(--background-title);
-			}
 			/* Content */
 			.base-2jDfDU /* All discord */ {
-				background-color: var(--background) !important;
+				background-color: var(--win-background) !important;
 			}
 
 		/* Border */
@@ -453,8 +457,11 @@ transform: translatey( -100% );
 /* Formatting */
 	/* Servers bar */
 		/* Background */
+		.layers-OrUESM {
+			background-color: var(--win-background-title) !important;
+		}
 		.scroller-3X7KbA, .wrapper-1_HaEi {
-			background-color: var(--background-title);
+			background-color: transparent;
 			width: 74px;
 		}
 
@@ -474,8 +481,13 @@ transform: translatey( -100% );
 			.homeIcon-r0w4ny {
 				min-width: 28px;
 				min-height: 28px;
-				background: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/homeIcon.png?raw=true') center/contain no-repeat;
+				background: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/homeIcon-light.png?raw=true') center/contain no-repeat;
 			}
+				/* Light mode */
+				.theme-light .homeIcon-r0w4ny {
+					background: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/homeIcon-dark.png?raw=true') center/contain no-repeat !important;
+				}
+
 				/* Separator */
 				.scrollerBase-_bVAAt > div[class="listItem-3SmSlK"] {
 					display: none;
@@ -498,7 +510,7 @@ transform: translatey( -100% );
 					width: 64px;
 					margin-left: -7px;
 					border-radius: 8px !important;
-					background-color: var(--background);
+					background-color: var(--win-background);
 				}
 			
 			/* Servers */
@@ -508,31 +520,39 @@ transform: translatey( -100% );
 				}
 
 			/* Add server */
-			.listItem-3SmSlK:focus-within, .listItem-3SmSlK:hover /* Home icon */ {
-				background-color: var(--win-button-highlight);
+			.listItem-3SmSlK:focus-within, .listItem-3SmSlK:hover {
+				background-color: var(--win-input-highlight) !important;
 			}
 
 
 	/* Channel list */
-	div[style="height: 84px;"] {
-		display: none;
-	}
-	.content-2a4AW9 {
-		height: auto !important;
-	}
-			/* Top content margin */
-			.searchBar-3TnChZ .searchBarComponent-3N7dCG:not(game),
-			.search-39IXmY:not(game) {
-				top: 100px;
-			}
-			.searchBar-3TnChZ .searchBarComponent-3N7dCG:not(voice connect),
-			.search-39IXmY:not(voice connect) {
-				top: 170px;
-			}
-			.searchBar-3TnChZ .searchBarComponent-3N7dCG:not(voice connect + game),
-			.search-39IXmY:not(voice connect + game) {
-				top: 222px;
-			}
+		/* Background */
+		.sidebar-1tnWFu {
+			background-color: var(--win-background-tint);
+			border-right: 1px solid var(--win-background-title);
+		}
+
+		/* ? */
+		div[style="height: 84px;"] {
+			display: none;
+		}
+		.content-2a4AW9 {
+			height: auto !important;
+		}
+
+		/* Top content margin */
+		.searchBar-3TnChZ .searchBarComponent-3N7dCG:not(game),
+		.search-39IXmY:not(game) {
+			top: 100px;
+		}
+		.searchBar-3TnChZ .searchBarComponent-3N7dCG:not(voice connect),
+		.search-39IXmY:not(voice connect) {
+			top: 170px;
+		}
+		.searchBar-3TnChZ .searchBarComponent-3N7dCG:not(voice connect + game),
+		.search-39IXmY:not(voice connect + game) {
+			top: 222px;
+		}
 
 		/* Server boost bar */
 			/* Position */
@@ -547,6 +567,12 @@ transform: translatey( -100% );
 			.progressBarContainer-2E4oR- {
 				background-color: var(--win-input-highlight) !important;
 			}
+
+		/* Header */
+		.bannerVisible-Vkyg1I .header-3OsQeK {
+			-webkit-filter: none !important;
+			color: var(--text);
+		}
 
 		/* Catagorys */
 			/* Add channel button */
@@ -588,18 +614,20 @@ transform: translatey( -100% );
 			  }
 			[title^="https://discord.com/channels/"]::before, [title^="https://ptb.discord.com/channels/"]::before, [title^="https://canary.discord.com/channels/"]::before {
 				content: "✉ Jump to Message";
-				font-size: 16px;
+				font-size: 12px;
 				user-select: text;
 				font-weight: 500;
-				transition: background-color 50ms ease-out, color 50ms ease-out;
 				cursor: pointer;
 				border-radius: 3px;
 				padding: 0 2px;
 				background-color: var(--win-accent-color);
+				opacity: 0.8;
+				transition: var(--win-color-fade);
 				color: var(--text);
 			 }
 			[title^="https://discord.com/channels/"]:hover::before, [title^="https://ptb.discord.com/channels/"]:hover::before, [title^="https://canary.discord.com/channels/"]:hover::before {
 				background-color: var(--win-accent-color);
+				opacity: 1;
 				color: #fff;
 			}
 
@@ -617,7 +645,7 @@ transform: translatey( -100% );
 
 			/* Background */
 			.channelTextArea-1FufC0 {
-				background-color: #272727ad !important;
+				background-color: var(--win-background-tran) !important;
 				backdrop-filter: blur(8px);
 			}
 
@@ -640,7 +668,7 @@ transform: translatey( -100% );
 					flex-direction: row-reverse;
 				}
 
-				/* Plugin: Send button by SyndiShanX - Fixes*/
+				/* Plugin: Send button by Zerebos - Fixes*/
 				.buttonWrapper-1ZmCpA[aria-label="Send Message"] {
 					background-color: transparent;
 					top: 2px;
@@ -654,7 +682,7 @@ transform: translatey( -100% );
 						transform: scale(1.2) !important;
 						transition: 100ms;
 					}
-	
+
 
 	/* Users/members list */
 		/* User status */
@@ -700,95 +728,122 @@ transform: translatey( -100% );
 				top: 0.25ex;
 			}
 
-
-	/* Home page */
-		/* Remove nitro tab */
-		a[href="/store"] {
-			display: none;
-		}
-
-
-		/* DMs User list */
-			/* User text */
-			.name-3Vmqxm, 
-			.subText-OGOWMj {
-				max-width: 96%;
+	
+	/* Popups */
+		/* Animation */
+			/* Zoom in */
+			.layer-1Ixpg3 /* Plugin: Image utilities by DevilBro */ {
+				animation: zoom-in 0.2s linear !important;
+			}
+			@keyframes zoom-in {
+				0% {transform: scale(1.1); opacity: 0;}
+				100% {transform: scale(1); opacity: 1;}
 			}
 
-
-	/* Settings */
-		/* Sidebar */
-			/* Better discord change log*/
-			.bd-changelog-button {
-				position: absolute;
-				height: 31px !important;
-				width: 32px;
-				margin-top: 289px;
-				left: calc(var(--sidebar-width) - 42px);
-				border-radius: 4px;
-				z-index: 10 !important;
+			/* Zoom out */
+			 {
+				animation: zoom-out 0.2s linear !important;
 			}
-				/* Icon */
-				.bd-changelog-button > svg {
-					margin: 25%;
-					transform: scale(1.25);
-					fill: var(--text) !important;
-				}
-				/* Hovered */
-				.bd-changelog-button:hover {
-					background-color: var(--win-button-highlight);
-					cursor: pointer;
-				}
+			@keyframes zoom-out {
+				0% {transform: scale(1); opacity: 1;}
+				100% {transform: scale(1.1); opacity: 0;}
+			}
 
-			/* Social links */
-			.socialLinks-2DELRE {
+		/* Plugin: Image utilities by DevilBro - Images */
+			/* Position */
+			.imageWrapper-oMkQl4 .image-36HiZc > img {
+				margin: 0 auto !important;
+			}
+
+			/* Text */
+			.detailsWrapper-TE1mu5 > div, .operations-3V47CY > a {
+				opacity: 1;
+				color: var(--text) !important;
+				font-weight: 600 !important;
+			}
+	
+
+	/* Pages */
+		/* Home */
+			/* Remove nitro tab */
+			a[href="/store"] {
 				display: none;
 			}
 
 
-	.item-3XjbnG .selected-g-kMVV .themed-2-lozF,
-	.brand-3g5E0C.item-3XjbnG, .themed-2-lozF.item-3XjbnG:hover,
-	.brand-3g5E0C.item-3XjbnG, .themed-2-lozF.item-3XjbnG {
-		color: var(--text) !important;
-	}
-		/* Title */
-		.bd-settings-title.size16-2OrZ3x {
-			margin-bottom: 14px;
-			font-size: 18px;
-			font-weight: bold !important;
+			/* DMs User list */
+				/* User text */
+				.name-3Vmqxm, 
+				.subText-OGOWMj {
+					max-width: 96%;
+				}
+
+
+		/* Settings */
+			/* Sidebar */
+				/* Better discord change log*/
+				.bd-changelog-button {
+					position: absolute;
+					height: 31px !important;
+					width: 32px;
+					margin-top: 289px;
+					left: calc(var(--sidebar-width) - 42px);
+					border-radius: 4px;
+					z-index: 10 !important;
+				}
+					/* Icon */
+					.bd-changelog-button > svg {
+						margin: 25%;
+						transform: scale(1.25);
+						fill: var(--text) !important;
+					}
+					/* Hovered */
+					.bd-changelog-button:hover {
+						background-color: var(--win-button-highlight);
+						cursor: pointer;
+					}
+
+				/* Social links */
+				.socialLinks-2DELRE {
+					display: none;
+				}
+
+			/* Content */
+				/* Titles */
+				.h2-1EaYVL, /* Plugin: Plugin repo by DevilBro, Theme repo by DevilBro */
+				.bd-settings-title {
+					margin-bottom: 14px;
+					font-size: 18px;
+					font-weight: bold !important;
+				}
+				
+				/* Remove devider */
+				.divider-3LgWDL, .dividerDefault-3C2-ws /* Settings */ {
+					margin: 0px;
+					border: 0px;
+				}
+
+				/* Tabs */
+					/* Authorised apps */
+					.deleteApp-3NqwJh {
+						opacity: 1 !important;
+					}
+
+
+		/* Discovery page */
+		.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt {
+			margin-top: 44px;
+			margin-right: -8px;
 		}
-			/* Emote clear button */
-			.bd-button.bd-button-title {
-				position: fixed;
-			}
-		
-
-		/* Remove devider */
-		.divider-3LgWDL, .dividerDefault-3C2-ws /* Settings */ {
-			margin: 0px;
-			border: 0px;
+		.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt:not(game) {
+			margin-top: 64px;
 		}
-
-		/* Authorised apps tab */
-		.deleteApp-3NqwJh {
-			opacity: 1 !important;
+		.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt:not(voice connect) {
+			margin-top: 114px;
 		}
-
-
-	/* Discovery page */
-	.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt {
-		margin-top: 44px;
-		margin-right: -8px;
-	}
-	.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt:not(game) {
-		margin-top: 64px;
-	}
-	.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt:not(voice connect) {
-		margin-top: 114px;
-	}
-	.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt:not(voice connect + game) {
-		margin-top: 190px;
-	}
+		.content-1SgpWY .sidebar-1tnWFu .scrollerBase-_bVAAt:not(voice connect + game) {
+			margin-top: 190px;
+		}
 
 
 
@@ -1044,16 +1099,7 @@ transform: translatey( -100% );
 
 
 		/* Better Discord */
-			/* Settings and Emote pages */
-				/* Formatting */
-					/* Remove line */
-					.bd-setting-divider,
-					.bd-settings-group.collapsible .bd-settings-title::before {
-						background-color: transparent;
-						border-color: transparent;
-						margin: 0px;
-					}
-				
+			/* Settings */
 				/* Header */
 					/* Formatting */
 					.bd-settings-group~.bd-settings-group .bd-settings-title {
@@ -1065,17 +1111,25 @@ transform: translatey( -100% );
 						border-radius: 6px;
 						border: 1px solid var(--win-border);
 					}
-					/* Text */
-					.bd-settings-title.bd-settings-group-title {
-						height: 60px;
-						margin: 0px;
-						padding: 0.25% 16px 0px 72px;
-					}
-					/* Arrow animation */
-					.bd-settings-group.collapsed .bd-settings-title::after {
-						transition: transform 0.1s ease;
-						transform: rotate(180deg);
-					}
+						/* Text */
+						.bd-settings-title.bd-settings-group-title {
+							height: 60px;
+							margin: 0px;
+							padding: 0.25% 16px 0px 72px;
+						}
+						/* Remove spaceing line */
+						.bd-setting-divider,
+						.bd-settings-group.collapsible .bd-settings-title::before {
+							background-color: transparent;
+							border-color: transparent;
+							margin: 0px;
+						}
+					
+						/* Arrow animation */
+						.bd-settings-group.collapsed .bd-settings-title::after {
+							transition: transform 0.1s ease;
+							transform: rotate(180deg);
+						}
 
 				/* Expanded background */
 				.bd-settings-container {
@@ -1115,7 +1169,7 @@ transform: translatey( -100% );
 
 					/* Repo height fix */
 					.repoList-9JnAPs .contentRegionScroller-2_GT_N {
-						height: 100% !important;
+						height: 88% !important;
 					}
 
 				/* Header */
@@ -1138,6 +1192,9 @@ transform: translatey( -100% );
 				.bd-description-wrap, .bd-footer {
 					height: 32px;
 					background-color: var(--win-dropdown-content);
+				}
+				.bd-description {
+					color: var(--text) !important;
 				}
 				.bd-footer {
 					border-bottom-left-radius: 6px;
@@ -1880,7 +1937,7 @@ transform: translatey( -100% );
 
 /* Server Icons */
 .childWrapper-1j_1ub.acronym-2zrAHN {
-	background-color: var(--background);
+	background-color: var(--win-background);
 }
 
 
@@ -1892,7 +1949,7 @@ transform: translatey( -100% );
 	}
 	/* Expanded background icon */
 	.wrapper-1_HaEi .expandedFolderIconWrapper-Huv7rA {
-		background-color: var(--background-title);
+		background-color: var(--win-background-title);
 		filter: brightness(1.3);
 	}
 	/* Expanded track background */
@@ -1923,7 +1980,7 @@ transform: translatey( -100% );
 /* Add Server/Discovery Button - Review */
 	.wrapper-1_HaEi .circleIconButton-3lUBQk[data-list-item-id="guildsnav___create-join-button"],
 	.wrapper-1_HaEi .circleIconButton-3lUBQk[data-list-item-id="guildsnav___guild-discover-button"] {
-		background-color: var(--background);
+		background-color: var(--win-background);
 		color: var(--text);
 	}
 	.circleIconButton-3lUBQk:hover,
@@ -2146,15 +2203,20 @@ transform: translatey( -100% );
 	z-index: 1;
 }
 
-/* Categories Collapse/Open Channels Button & Text */
+/* Channel catagories */
 .sidebar-1tnWFu .wrapper-1S43wv {
+	padding-top: 16px;
 	padding-left: 42px;
+	padding-bottom: 16px;
 	padding-right: 8px;
 	margin-bottom: 1px;
 }
-.sidebar-1tnWFu .clickable-2AoIYN:hover {
-	background-color: #1C1C1C;
+.container-q97qHp {
+	font-size: 13px;
+	margin-top: 1px;
+	color: var(--text);
 }
+
 
 /* Instant Invite, Edit & Create Channel Buttons */
 .sidebar-1tnWFu .actionIcon-2sw4Sl {
@@ -2654,7 +2716,7 @@ transform: translatey( -100% );
 						margin-left: 91%;
 						width: 21px;
 						height: 21px;
-						top: 1px;
+						top: 15%;
 					}
 
 			/* Channels */
@@ -2907,7 +2969,7 @@ transform: translatey( -100% );
 			font-weight: 400;
 		}
 		.container-YkUktl .avatarSpeaking-33RRJU {
-			box-shadow: inset 0 0 0 2px var(--status-positive-background),inset 0 0 0 2.5px var(--background);
+			box-shadow: inset 0 0 0 2px var(--status-positive-background),inset 0 0 0 2.5px var(--win-background);
 		}
 			/* Mute, Deafen, Settings Buttons */
 			.container-YkUktl .button-12Fmur {
@@ -2948,7 +3010,7 @@ transform: translatey( -100% );
 	gap: 0.5px;
 }
 .container-1zzFcN .voiceUsers-25eR9q .speaking-3K28iH {
-	box-shadow: inset 0 0 0 1.5px var(--status-positive-background),inset 0 0 0 2px var(--background);
+	box-shadow: inset 0 0 0 1.5px var(--status-positive-background),inset 0 0 0 2px var(--win-background);
 }
 .container-1zzFcN .voiceUsers-25eR9q .primary-38Hs-h {
 	background-color: transparent;
@@ -4002,7 +4064,7 @@ transform: translatey( -100% );
 	margin-right: 12px;
 }
 .divider-2rZFJK .content-3spvdd {
-	background-color: var(--background);
+	background-color: var(--win-background);
 	border-radius: 5px;
 	padding: 2px 4px;
 	color: var(--text);
@@ -4249,8 +4311,8 @@ transform: translatey( -100% );
 /* User Replied To User */
 .repliedTextPreview-1bvxun,
 .mentioned-Tre-dv .repliedTextPreview-1bvxun {
-	background-color: #323232bd;
-	border: 2px solid #303030;
+	background-color: var(--win-background-tran);
+	border: 2px solid var(--win-border);
 	border-radius: 5px !important;
 }
 
@@ -4309,14 +4371,7 @@ transform: translatey( -100% );
 	margin-top: 4px;
 	margin-right: 3.125rem;
 }
-.markup-eYLPri code, 
-.markup-eYLPri code.inline,
-.container-2sjPya .textContainer-36wgKK,
-.modalContent-1zPatc .modalTextContainer-1FUO2W,
-.bd-changelog-modal code.inline {
-	background-color: #151515;
-	border: 1px solid #151515;
-}
+
 .container-2sjPya .footer-GXWBBp,
 .modalContent-1zPatc .footer-GXWBBp {
 	background-color: #191919;
@@ -4409,7 +4464,7 @@ transform: translatey( -100% );
 	/* Standard */
 	.reaction-2A2y9y {
 		margin-right: 3px;
-		background-color: var(--background);
+		background-color: var(--win-background);
 		border: 1px solid var(--win-border);
 		border-radius: 4px;
 	}
@@ -5154,7 +5209,7 @@ transform: translatey( -100% );
 	min-width: calc(var(--User-List-Width) - 54px);
 }
 .container-2o3qEW {
-	background-color: var(--background);
+	background-color: var(--win-background);
 }
 
 /* User Name */
@@ -5586,7 +5641,7 @@ transform: translatey( -100% );
 .container-1oAagU .wrapper-2RrXDg,
 .container-1oAagU .card-YtRIQ2,
 .container-1oAagU .emptyCard-KDifrB {
-	background-color: var(--background);
+	background-color: var(--win-background);
 	border: none;
 }
 .container-1oAagU .padded-2NSY6O {
@@ -6342,7 +6397,7 @@ transform: translatey( -100% );
 		.sidebarRegion-1VBisG {
 			width: var(--sidebar-width);
 			left: 2px;
-			background-color: var(--background-tint) !important;
+			background-color: var(--win-background-tint) !important;
 			border-right: 1px solid var(--win-border) !important;
 			border-top-left-radius: 8px;
 			flex: none;
@@ -6401,7 +6456,7 @@ transform: translatey( -100% );
 /* Settings Menu's */
 .standardSidebarView-E9Pc3j .contentRegion-3HkfJJ,
 .standardSidebarView-E9Pc3j .contentRegionScroller-2_GT_N {
-	background-color: var(--background) !important;
+	background-color: var(--win-background) !important;
 }
 .standardSidebarView-E9Pc3j .contentColumnDefault-3eyv5o {
 	padding: 0px;
@@ -6557,7 +6612,7 @@ transform: translatey( -100% );
 	/* Background */
 	.item-2idW98, .item-2idW98 .radioBar-3w9XY-:hover, .item-2idW98 .radioBar-3w9XY- /* Settings */ {
 		background-color: transparent !important;
-		color: #FFFFFF;
+		color: var(--text);
 		border: none;
 	}
 
@@ -6608,7 +6663,7 @@ transform: translatey( -100% );
 		transition: border .3s ease-out,color .3s ease-out;
 	}
 
-	/*track bar*/
+	/* Track */
 	.bar-1Bhnl9 {
 		top: 18px;
 		height: 4px;
@@ -9124,6 +9179,7 @@ transform: translatey( -100% );
 
 /* Pop out backdrop */
 .backdrop-2ByYRN {
+	transition: opacity 500ms linear;
 	background-color: var(--win-pop-bg) !important;
 	opacity: 1 !important;
 }
@@ -9151,7 +9207,7 @@ transform: translatey( -100% );
 
 /* Discord Login Box */
 .authBox-1HR6Ha {
-	background-color: var(--background) !important;
+	background-color: var(--win-background) !important;
 }
 
 /* Notice Bar */
@@ -9264,7 +9320,7 @@ transform: translatey( -100% );
 		height: 20px;
 	}
 	#bd-pub-button {
-		background-color: var(--background);
+		background-color: var(--win-background);
 		line-height: 20px;
 		height: 20px;
 		color: var(--text) !important;
