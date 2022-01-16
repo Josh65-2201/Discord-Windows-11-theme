@@ -34,8 +34,8 @@
 @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft/flags.css);
 
 /* Fonts */
-@font-face {font-family: default; src: url(https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/SegoeUIVariable-normal.ttf?raw=true);}
-@font-face {font-family: bold; src: url(https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/SegoeUIVariable-bold.ttf?raw=true);}
+@font-face {font-family: default; src: url(https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/font-segoeUiVariable-normal.ttf?raw=true);}
+@font-face {font-family: bold; src: url(https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/font-segoeUiVariable-bold.ttf?raw=true);}
 
 :root {
 	/* ------------------------------- Settings ------------------------------- */
@@ -560,11 +560,11 @@ transform: translatey( -100% );
 			.homeIcon-r0w4ny {
 				min-width: 28px;
 				min-height: 28px;
-				background: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/homeIcon-light.png?raw=true') center/contain no-repeat;
+				background: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/icon-light-home.png?raw=true') center/contain no-repeat;
 			}
 				/* Light mode */
 				.theme-light .homeIcon-r0w4ny {
-					background: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/homeIcon-dark.png?raw=true') center/contain no-repeat !important;
+					background: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/icon-dark-home.png?raw=true') center/contain no-repeat !important;
 				}
 
 				/* Removes separator */
@@ -629,9 +629,12 @@ transform: translatey( -100% );
 				.flex-2S1XBF > button[aria-label="User settings"] > div {
 					width: 48px;
 					height: 48px;
-					background: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/settings.png?raw=true') center/32px no-repeat !important;
+					background: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/icon-light-settings.png?raw=true') center/32px no-repeat;
 					z-index: 10 !important;
 				}
+					.theme-light .flex-2S1XBF > button[aria-label="User settings"] > div {
+						background: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/icon-dark-settings.png?raw=true') center/32px no-repeat !important;
+					}
 
 				/* Hovered */
 				.flex-2S1XBF > button[aria-label="User settings"]:hover {
@@ -9228,7 +9231,7 @@ transform: translatey( -100% );
 .spinner-2RT7ZC:after {
 	width: 48px;
 	height: 48px;
-    background-image: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/loadIcon.gif?raw=true');
+    background-image: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/icon-loading.gif?raw=true');
     background-size: cover;
     display: inline-block;
     content:"";
