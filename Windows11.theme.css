@@ -1,6 +1,6 @@
 /**
  * @name Windows11
- * @version 0.7.5
+ * @version 0.7.6
  * @description Windows 11 stylings for BetterDiscord. Edit this file to chage discord color to your windows theme for full sync.
  * @source 
  * @updateUrl https://raw.githubusercontent.com/Josh-65/Discord-Win11-theme/main/Windows11.theme.css
@@ -17,7 +17,7 @@
 @import url(https://nyri4.github.io/Discolored/main.css);
 
 /* Settings icons */
-@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css);
+/*@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css);*/
 
 /* Right click icons */
 @import url(https://crearts-community.github.io/Context-Icons/clients/betterdiscord.css);
@@ -42,7 +42,7 @@
 
 
 	/* ----------------------------- DO NOT EDIT ----------------------------- */
-	--theme-version: "Windows 11 theme - v0.7.5";
+	--theme-version: "Windows 11 theme - v0.7.6";
 	--fb-version: "Better Badges - v1.0.0";
 
 	/* Fancy Badges */
@@ -230,10 +230,11 @@ body {
 
 	/*Window Titlebar*/
 	.withFrame-2dL45i, .titleBar-1it3bQ {
-		height: 48px;
-		margin-top: 0px;
+		height: 44px;
+		margin-top: 4px;
 		padding-top: 0px;
 		background-color: var(--win-background-title) !important;
+		z-index: 1 !important;
 	}
 		/* Title */
 			/* Icon */
@@ -280,9 +281,9 @@ body {
 			margin: 0px;
 			padding: 0px;
 			/*top: 0px;
-			right: 199px; */
+			right: 199px;*/
 			top: 32px;
-			left: 200px;
+			left: 356px;
 			transform: scale(0.9);
 		}
 			/* Hovered */
@@ -290,12 +291,21 @@ body {
 				transform: scale(0.85);
 				transition: 100ms ease-in-out;
 			}
+			/* Status */
+				/* Name + ID */
+				.title-338goq {
+
+				}
+				.subtext-2HDqJ7 {
+
+				}
+
 
 		/*Window control buttons*/
 		.titleBar-1it3bQ>*:nth-child(2),
 		.titleBar-1it3bQ>*:nth-child(3), 
 		.titleBar-1it3bQ>*:nth-child(4) {
-			margin-top: 4px;
+			margin-top: 0px;
 			height: 48px;
 			width: 48px;
 		}
@@ -357,15 +367,15 @@ body {
 			.toolsContainer-25FL6V {
 				position: fixed;
 				margin-left: -1px;
-				left: 6px;
-				bottom: 64px;
+				left: 5px;
+				bottom: 60px;
 			}
 
 			/* Button */
 			.standardSidebarView-E9Pc3j .closeButton-PCZcma {
-				width: 64px !important;
+				width: 65px !important;
 				height: 56px !important;
-				border: ;
+				border: none;
 				border-radius: 8px;
 			}
 			.closeButton-PCZcma {
@@ -373,17 +383,13 @@ body {
 			}
 				/* Icon */
 				.closeButton-PCZcma > svg {
-					display: ;
+					display: none;
 				}
 				/* Text */
 				.keybind-13vtq8 {
 					display: none !important;
 				}
 
-
-				.standardSidebarView-E9Pc3j .closeButton-PCZcma:hover {
-					background-color: var(--win-button-highlight);
-				}
 		
 		/* Border */
 		.channelTextArea-1VQBuV /* Message box */ {
@@ -469,7 +475,9 @@ transform: translatey( -100% );
 		.listItem-3SmSlK {
 			width: 64px !important;
 			height: 58px !important;
+			margin: 0px;
 			margin-left: 5px;
+			margin-bottom: 4px;
 			background-color: transparent;
 			border-radius: 6px;
 			transition: var(--win-color-fade);
@@ -523,6 +531,33 @@ transform: translatey( -100% );
 			.listItem-3SmSlK:focus-within, .listItem-3SmSlK:hover {
 				background-color: var(--win-input-highlight) !important;
 			}
+
+			/* Settings Icon */
+				/* Position */
+				.flex-2S1XBF > button[aria-label="User settings"] {
+					width: 64px !important;
+					height: 56px !important;
+					top: 934px !important;
+					left: -194px;
+					color: var(--text);
+					border-radius: 8px;
+				}
+				/* Background */
+				.flex-2S1XBF > button[aria-label="User settings"] {
+					background-color: var(--win-background-title);
+				}
+
+				/* Icon */
+				.flex-2S1XBF > button[aria-label="User settings"] > div > svg {
+					transform: scale(1.5);
+				}
+
+				/* Hovered */
+				.flex-2S1XBF > button[aria-label="User settings"]:hover {
+					background-color: var(--win-button-highlight);
+				}
+
+				/* Selected */
 
 
 	/* Channel list */
@@ -962,21 +997,22 @@ transform: translatey( -100% );
 		/* Formating */
 		.item-2LIpTv[style*="opacity: 1; height: 40px"] /* Server */ {
 			width: 4px;
-			min-height: 65%;
-			max-height: 65%;
+			height: 24px !important;
 			margin: 0px;
+			margin-right: 4px;
 			border-radius: 4px !important;
 		}
 			/* Servers */
-			.wrapper-1_HaEi [class^="listItem-"] .item-2LIpTv[style*="opacity: 1; height: 8px"], /* Unread */
-			.wrapper-1_HaEi [class^="listItem-"]:hover .item-2LIpTv /* Hovered */ {
+			.item-2LIpTv[style*="opacity: 1; height: 8px"] /* Unread */ {
 				background-color: transparent !important;
 			}
 				/* Position */
 				.pill-L_aLMQ, .pill-2RsI5Q {
-					height: 36px;
-					top: 11px;
+					height: 56px;
+					width: 64px;
+					top: 0px;
 					left: 0px;
+					margin-right: 8px !important;
 					z-index: 100 !important;
 				}
 			
@@ -1003,28 +1039,35 @@ transform: translatey( -100% );
 					margin-top: -32px;
 					margin-left: 32px;
 				}
-
+				/* Enable click through */
+				.pill-L_aLMQ, .pill-2RsI5Q {
+					pointer-events: none !important;
+				}
 
 		/* Unread */
-		.wrapper-1_HaEi [class^="listItem-"] .item-2LIpTv[style*="opacity: 1; height: 8px"] /* Servers bar */{
-			background-color: var(--unread);
+		.item-2LIpTv[style*="opacity: 1; height: 8px"] /* Servers bar */{
+			background-color: var(--unread) !important;
+			border-radius: 50%;
+			top: -18px;
+			left: 54px;
+			position: relative;
 		}
+			/* Icon */
+			.icon-3AqZ2e {
+				transform: scale(0.9);
+				border-radius: 6px;
+			}
 
 		/* Hovered */
-		.wrapper-1_HaEi [class^="listItem-"]:hover .item-2LIpTv /* Servers bar */{
+		.item-2LIpTv:hover /* Servers bar */{
 			background: var(--win-button-highlight) !important;
-		}
-
-		/* Selected + Hovered */
-		.wrapper-1_HaEi [class^="listItem-"]:hover .item-2LIpTv[style*="opacity: 1; height: 40px"] {
-			background-color: var(--win-accent-color) !important;
 		}
 
 		/* Selected */
 		.channel-1Shao0.selected-1-Z6gm:before, .modeSelected-3DmyhH::before, .selectedCategoryItem-ZjqSui::before /* Channel item */ {
 			border-color: var(--win-accent-color) !important;
 		}
-		.wrapper-1_HaEi [class^="listItem-"] .item-2LIpTv[style*="opacity: 1; height: 40px"] /* Servers bar */{
+		.item-2LIpTv[style*="opacity: 1; height: 40px"] /* Servers bar */{
 			background-color: var(--win-accent-color);
 		}
 	
@@ -2939,8 +2982,7 @@ transform: translatey( -100% );
 /* User area */
 	/* Position */
 	.panels-3wFtMD[aria-label="User area"] {
-		position: sticky;
-		bottom: 1000px !important;
+		position: fixed;
 	}
 	.container-1NXEtd {
 		position: relative;
@@ -2971,15 +3013,7 @@ transform: translatey( -100% );
 		.container-YkUktl .avatarSpeaking-33RRJU {
 			box-shadow: inset 0 0 0 2px var(--status-positive-background),inset 0 0 0 2.5px var(--win-background);
 		}
-			/* Mute, Deafen, Settings Buttons */
-			.container-YkUktl .button-12Fmur {
-				width: 22px;
-				right: 3px;
-			}
-			.container-YkUktl .button-12Fmur svg {
-				width: 24px;
-				margin-right: 2px;
-			}
+			/* Mute, Deafen */
 			.container-YkUktl .button-12Fmur:hover {
 				background: transparent;
 			}
@@ -6094,50 +6128,12 @@ transform: translatey( -100% );
 	color: #FFFFFF;
 	font-size: 15px;
 }
-/* Change Online Status Popout */
-.styleFixed-2_NfVL[id="status-picker"] {
-	background-color: #1C1C1C;
-	border-radius: 4px 0px 0px 0px;
-	width: var(--sidebar-width);
-	margin-bottom: -6px;
-	margin-left: -1px;
-}
+/* Status remove devider - move */
 .styleFixed-2_NfVL[id="status-picker"] .separator-1So4YB {
 	border-bottom: none;
 	margin: 0px;
 }
-.styleFixed-2_NfVL[id="status-picker"] .item-1OdjEX {
-	padding: 2px 0px;
-	margin: 0px;
-}
-.styleFixed-2_NfVL[id="status-picker"] .scroller-1bVxF5 {
-	margin-right: -8px;
-	padding: 0px;
-}
-.styleFixed-2_NfVL[id="status-picker"] .colorDefault-CDqZdO.focused-3qFvc8 {
-	background-color: #262626;
-}
-/* Change Online Status Background */
-.styleFixed-2_NfVL[id="status-picker"] #status-picker-online:hover,
-.styleFixed-2_NfVL[id="status-picker"] #status-picker-online.focused-3qFvc8 {
-	background-color: rgba(67,181,129,0.15) !important;
-	border-radius: 3px 3px 0px 0px;
-}
-.styleFixed-2_NfVL[id="status-picker"] #status-picker-idle:hover,
-.styleFixed-2_NfVL[id="status-picker"] #status-picker-idle.focused-3qFvc8 {
-	background-color: rgba(250,166,26,0.15) !important;
-	border-radius: 0px;
-}
-.styleFixed-2_NfVL[id="status-picker"] #status-picker-dnd:hover,
-.styleFixed-2_NfVL[id="status-picker"] #status-picker-dnd.focused-3qFvc8 {
-	background-color: rgba(240,71,71,0.15) !important;
-	border-radius: 0px;
-}
-.styleFixed-2_NfVL[id="status-picker"] #status-picker-invisible:hover,
-.styleFixed-2_NfVL #status-picker-invisible.focused-3qFvc8 {
-	background-color: rgba(116,127,141,0.15) !important;
-	border-radius: 0px 0px 3px 3px;
-}
+
 /* Set Custom Status Modal */
 .popout-1KHNAq .option-2eIyOn[data-list-item-id*="online"]:hover {
 	background-color: rgba(67,181,129,0.15) !important;
@@ -6418,18 +6414,12 @@ transform: translatey( -100% );
 				margin-bottom: 4px !important;
 			}
 
-	/* Content */
-		/* Settings - Accessibility */
-			/* Avatar */
-			 {
-				margin-left: 24px;
-			}
-
 
 .standardSidebarView-E9Pc3j .sidebar-nqHbhN .side-2ur1Qk .item-3XjbnG {
 	margin-bottom: 0px;
 	padding-top: 5.7px;
 	padding-bottom: 5.7px;
+	color: var(--text);
 }
 	/* Headers */
 	.standardSidebarView-E9Pc3j .sidebar-nqHbhN .side-2ur1Qk .separator-2wx7h6 {
@@ -6688,10 +6678,6 @@ transform: translatey( -100% );
 	.standardSidebarView-E9Pc3j .accountProfileCard-lbN7n- .background-3d_SjE,
 	.standardSidebarView-E9Pc3j .accountProfileCard-lbN7n- .background-3d_SjE .fieldList-in8WkP {
 		background-color: var(--win-pop-con);
-	}
-	.standardSidebarView-E9Pc3j .accountProfileCard-lbN7n- .avatar-3mTjvZ {
-		background-color: #141414;
-		border: 8px solid #141414;
 	}
 
 	/* Premium Banner */
@@ -8306,7 +8292,7 @@ transform: translatey( -100% );
 }
 .root-8LYsGj .topSection-13QKHs .header-S26rhB,
 .root-8LYsGj .topSection-13QKHs {
-	background-color: #191919;
+	background-color: var(--win-pop-foot);
 }
 
 /* User Profile: Avatar */
@@ -8341,7 +8327,7 @@ transform: translatey( -100% );
 
 /* User Profile: Body/Footer */
 .root-8LYsGj .body-1Ukv50 {
-	background-color: #202020;
+	background-color: var(--win-pop-con);
 	height: auto;
 }
 .root-8LYsGj .body-1Ukv50 .infoScroller-1QMpon {
@@ -9155,7 +9141,8 @@ transform: translatey( -100% );
 			}
 
 			/* Icon */
-			.wrapper-1VLyxH foreignObject[mask="url(#svg-mask-avatar-status-round-32)"] {
+			.wrapper-1VLyxH foreignObject[mask="url(#svg-mask-avatar-status-round-32)"],
+			foreignObject[mask="url(#svg-mask-avatar-status-round-80)"] {
 				border-radius: 50%;
 			}
 			.svg-2azL_l > rect[width="10"] {
