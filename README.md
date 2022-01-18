@@ -4,5 +4,5 @@
 Open https://raw.githubusercontent.com/Josh-65/Discord-Win11-theme/main/Windows11.theme.css > right click > Save as > go to BD theme folder (%AppData%\BetterDiscord\themes) > Save
 
 ## Versions
-Release: Not available
+Release: Not available <br>
 Beta: 0.7.7
