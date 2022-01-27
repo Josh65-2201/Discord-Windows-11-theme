@@ -1,6 +1,6 @@
 /**
  * @name Windows11
- * @version 0.7.11
+ * @version 0.7.12
  * @description Windows 11 stylings for BetterDiscord. Edit this file to chage discord color to your windows theme for full sync.
  * @source 
  * @updateUrl https://raw.githubusercontent.com/Josh-65/Discord-Win11-theme/main/Windows11.theme.css
@@ -466,12 +466,9 @@ body {
 				
 					/* Name + ID */
 						/* Position */
-						.container-YkUktl:has(.avatarWrapper-1B9FTW[aria-expanded="false"]) > .nameTag-sc-gpq.canCopy-IgTwyV {
-							display: none;
-						}
 						.nameTag-sc-gpq.canCopy-IgTwyV {
 							height: 16px;
-							width: 200px;
+							margin-right: 56px;
 							border-bottom: 1px solid var(--text);
 						}
 
@@ -2892,7 +2889,7 @@ body {
 		}
 
 	/* Button - Disconnect + nosic suprestion */
-	.horizontal-112GEH>.flex-2S1XBF, .horizontal-112GEH>.flexChild-3PzYmX:not([style="flex: 1 1 auto;"], .close-1mLglB) {
+	.flex-2S1XBF:not([style*="flex: 1 1 auto"]) {
 		position: fixed;
 		margin-top: 78px;
 		margin-left: 224px;
