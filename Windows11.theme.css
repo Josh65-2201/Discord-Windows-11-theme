@@ -1237,11 +1237,17 @@ body {
 
 							/* Content */
 								/* Position */
+								.repoHeader-2KfNvH, /* Plugin: Plugin & theme repo by DevilBro */
 								.standardSidebarView-E9Pc3j .contentColumnDefault-3eyv5o {
 									padding: 27px 12px 24px 72px;
 									margin: 0 auto;
 								}
+									/* Content top spaceing - Plugin: Plugin & theme repo by DevilBro */
+									.repoHeader-2KfNvH {
+										padding-bottom: 0px !important;
+									}
 									/* Size */
+									.repoHeader-2KfNvH, /* Plugin: Plugin & theme repo by DevilBro */
 									.standardSidebarView-E9Pc3j .contentColumn-1C7as6, /* Content max width */
 									.standardSidebarView-E9Pc3j .customColumn-2n-oKU,
 									.standardSidebarView-E9Pc3j .content-2ssVKB {
@@ -8895,11 +8901,7 @@ body {
 .repoList-9JnAPs .repoHeader-2KfNvH {
 	padding-top: 44px;
 }
-.repoList-9JnAPs .repoHeader-2KfNvH > * {
-	max-width: 770px;
-	padding-left: 40px;
-	padding-right: 0px;
-}
+
 .repoList-9JnAPs .repoHeader-2KfNvH .tabBar-2MuP6- {
 	height: 40px;
 }
