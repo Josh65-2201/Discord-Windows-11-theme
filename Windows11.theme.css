@@ -1,6 +1,6 @@
 /**
  * @name Windows11
- * @version 0.8.1
+ * @version 0.8.2
  * @description Windows 11 stylings for BetterDiscord. Edit this file to chage discord color to your windows theme for full sync.
  * @source 
  * @updateUrl https://raw.githubusercontent.com/Josh-65/Discord-Win11-theme/main/Windows11.theme.css
@@ -370,15 +370,16 @@ body {
 
 	/* Scroll bars */
 		/* Disable */
-		.content-2hZxGK, /* Channel discription */
 		[class^='channelTextArea'] .scrollableContainer-15eg7h, /* Message bar */
 		.listScroller-entkMk, .infoScroller-1QMpon, /* User full profile */
 		.scroller-Q9d9Di,
 		.scroller-1bVxF5, /* Right click context menu */
 		.description-zXiu5E, /* Plugin: Plugin & theme repo by DevilBro */
-		.menu-1QACrS.styleFixed-2_NfVL.menu-1AgizY,
-		.scroller-3X7KbA.scrollerBase-_bVAAt /* Servers bar */ {
+		.menu-1QACrS.styleFixed-2_NfVL.menu-1AgizY {
 			overflow: hidden !important;
+		}
+		.scroller-3X7KbA {
+			margin-right: -10px;
 		}
 
 		/* Position */
@@ -777,7 +778,7 @@ body {
 
 		/* Server boost bar */
 			/* Position */
-			.container-1eD8xH {
+			.container-2giAcK {
 				margin: 6px;
 			}
 			/* Icon */
@@ -809,6 +810,11 @@ body {
 			/* Add channel button */
 			.children-3MeUvj {
 				display: none;
+			}
+
+			/* Open threads */
+			.name-28HaxV.channelName-3KPsGw {
+				margin-left: 42px;
 			}
 
 
@@ -1279,6 +1285,7 @@ body {
 						margin: 25%;
 						transform: scale(1.25);
 						fill: var(--text) !important;
+						margin-top: 7px;
 					}
 					/* Hovered */
 					.bd-changelog-button:hover {
@@ -1391,6 +1398,7 @@ body {
 					.guilds-2JjMmN .scroller-3X7KbA {
 						contain: unset;
 						margin-top: 62px;
+						margin-bottom: 62px;
 					}
 					.guilds-2JjMmN .scroller-3X7KbA .tutorialContainer-1pL9QS {
 						position: fixed;
@@ -1702,8 +1710,15 @@ body {
 
 /* Drop box */
 	/* Header */
+		/* Position */
+		.bd-select {
+			margin-top: -4px;
+		}
+
 		/* Standard */
+		.bd-select,
 		.select-1Ia3hD.lookFilled-1GseHa {
+			padding: 8px;
 			background-color: var(--win-button-sta) !important;
 			border: 1px solid var(--win-border) !important;
 			border-radius: 4px;
@@ -1719,10 +1734,12 @@ body {
 			backdrop-filter: blur(12px) !important;
 		}
 		/* Standard */
+		.bd-select-options,
 		.option-2eIyOn {
 			margin: 4px !important;
 			padding: 10px !important;
 			border-radius: 4px !important;
+			background-color: transparent;
 		}
 			/* Text */
 			.deviceOptionLabel-WQjcaH /* Voice settings */ {
@@ -1730,11 +1747,13 @@ body {
 			}
 
 		/* Hovered */
+		.bd-select-options:hover,
 		.option-2eIyOn:hover {
 			background-color: var(--win-button-highlight) !important;
 		}
 
 		/* Selected */
+		.bd-select-option.selected,
 		.option-2eIyOn[aria-selected="true"] {
 			background-color: var(--win-button-highlight) !important;
 		}
@@ -6849,20 +6868,6 @@ body {
 		--switch-color: var(--win-bg-color) !important;
 	}
 
-/* BetterDiscord Drop Down Menu's */
-.bd-select:hover,
-.bd-select.menu-open {
-	border-color: transparent;
-}
-.bd-select {
-	background-color: #141414;
-	border-color: transparent;
-}
-.bd-select .bd-select-options {
-	background-color: #191919;
-	border: none;
-}
-
 /* BetterDiscord Plugins/Theme List "Open X Folder" Button */
 .bd-settings-title .bd-button {
 	background-color: var(--win-accent-color);
@@ -6875,10 +6880,6 @@ body {
 	/* Override download button */
 	.button-coQXfM[style="background-color: var(--bdfdb-blurple);"] {
 		background-color: var(--win-accent-color) !important;
-	}
-	.bd-search-wrapper {
-		background-color: #111111;
-		margin: 0px !important;
 	}
 	.bd-addon-controls .bd-select-wrapper {
 		color: var(--text);

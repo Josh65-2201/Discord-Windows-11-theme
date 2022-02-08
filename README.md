@@ -11,4 +11,4 @@ Open https://raw.githubusercontent.com/Josh-65/Discord-Win11-theme/main/Windows1
 
 ## Versions
 Release: Not available <br>
-Beta: 0.8.1
+Beta: 0.8.2
