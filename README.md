@@ -21,10 +21,9 @@ Some controls have moved to conform with Windows 11 styles.
 
 
 ### Disabled elements
-- Notfications/Toasts for Discord and better discord
-- BD minimal mode (Does change anything ive seen)
+- BD minimal mode
 - BD public server button
-- Gift button (BD toggle doesnt do anything)
+- Gift button
 
 
 ### Moved settings
