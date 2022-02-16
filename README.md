@@ -1,9 +1,4 @@
-![image](https://user-images.githubusercontent.com/26977075/149966946-5cb25797-7857-4589-aba3-ed63bf578b88.png)
-
-
-## Important infomation
-https://github.com/Josh-65/Discord-Win11-theme/wiki
-
+![image]()
 
 ## How to download
 Open https://raw.githubusercontent.com/Josh-65/Discord-Win11-theme/main/Windows11.theme.css > right click > Save as > go to BD theme folder (%AppData%\BetterDiscord\themes) > Save
@@ -12,3 +7,25 @@ Open https://raw.githubusercontent.com/Josh-65/Discord-Win11-theme/main/Windows1
 ## Versions
 Release: Not available <br>
 Beta: 0.8.2
+
+<br>
+
+## Functionality changes
+### Control changes
+Some controls have moved to conform with Windows 11 styles.
+- Settings is now a toggle on the same icon in the server bar
+- Stickers and GIFs are now all in the emote menu
+- User/Members list will now auto hide at smallest window size. Toggle doesnt do anything visably at min size but will save state upon resize
+- All search bars are on the sidebar were possible
+<!-- -User controls like Status and name are now in the title bar next to windows controls -->
+
+
+### Disabled elements
+- Notfications/Toasts for Discord and better discord
+- BD minimal mode (Does change anything ive seen)
+- BD public server button
+- Gift button (BD toggle doesnt do anything)
+
+
+### Moved settings
+- Toast/Notifications now have an global toggle in the themes settings
