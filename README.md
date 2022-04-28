@@ -6,8 +6,7 @@ Open https://raw.githubusercontent.com/Josh-65/Discdows11/main/Discdows11.theme.
 <br>
 
 ## Versions
-Release: Not available <br>
-Beta: 0.9.1
+Release: 0.9.3
 
 <br>
 
@@ -27,8 +26,10 @@ Some controls have moved to conform with Windows 11 styles.
 ### Disabled elements
 - BD minimal mode
 - BD public server button
-- Gift button
+- Gift button (Toggle in themes settings)
+- Settings > User profile preview (Now uses the account preview popup on the titlebar)
 
 
 ### Other
 - User/Members list will now auto hide at smallest window size. (Toggle doesnt do anything visably at min size but will save state upon resize)
+- Due to layering issues the Window drag area ends at the left side of the search bar
