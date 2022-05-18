@@ -1,4 +1,4 @@
-![image](https://github.com/Josh-65/Discdows11/blob/main/assets/preview.jpg?raw=true)
+![image](https://github.com/Josh-65/Discdows11/blob/main/preview.jpg?raw=true)
 
 ## How to download
 Open https://raw.githubusercontent.com/Josh-65/Discdows11/main/Discdows11.theme.css > right click > Save as > go to BD theme folder (%AppData%\BetterDiscord\themes) > Save
@@ -6,7 +6,7 @@ Open https://raw.githubusercontent.com/Josh-65/Discdows11/main/Discdows11.theme.
 <br>
 
 ## Versions
-Release: 0.9.3
+Release: 0.9.4
 
 <br>
 

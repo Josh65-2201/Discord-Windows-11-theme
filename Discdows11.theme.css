@@ -1,12 +1,12 @@
 /**
 * @name Discdows11
-* @version 0.9.3
+* @version 0.9.4
 * @description Windows 11 stylings for Discord. Edit this file to chage discord color to your windows theme for full syncing.
 * @source 
 * @updateUrl https://raw.githubusercontent.com/Josh-65/Discord-Win11-theme/main/Windows11.theme.css
 * @patreon 
 * @invite 
-* @author Josh 65
+* @author Josh-65
 * @authorId 2201
 * @authorLink 
 */
@@ -48,15 +48,9 @@
 /* DO NOT EDIT ------------------------------------------------------------------------------------------------------------- */
 	/* Notices */
 	--infobar-info-background: #272727;
-
-	--infobar-green-background: #393d1b;
-	--infobar-green-icon: #6ccb5f;
-	
-	--infobar-yellow-background: #433519;
-	--infobar-yellow-icon: #fce100;
-	
-	--infobar-red-background: #442726;
-	--infobar-red-icon: #ff99a4;
+	--infobar-success-background: #393d1b;
+	--infobar-warning-background: #433519;
+	--infobar-error-background: #442726;
 
 	/* Other */
 	--unread: #00d81d;
@@ -95,6 +89,7 @@
 	--inactive: #606060;
 
 	--border: #303030;
+	--border-w: #1d1d1d;
 	
 	--model-backdrop: #000000b2;
 	--model-content: #2b2b2b;
@@ -105,7 +100,7 @@
 
 	--background-title: #202020;
 	--background-tint: #242424;
-	--background-transparent: #272727b0;
+	--background-transparent: #2f2f2fc2;
 	--background: #272727;
 	--text: #FFFFFF;
 }
@@ -136,6 +131,7 @@
 	--inactive: #606060;
 
 	--border: #e5e5e5;
+	--border-w: #FFFFFF;
 	
 	--model-backdrop: #FFFFFFb2;
 	--model-content: #f7f7f7;
@@ -146,7 +142,7 @@
 
 	--background-title: #f3f3f3;
 	--background-tint: #f7f7f7;
-	--background-transparent: #f9f9f9b0;
+	--background-transparent: #f9f9f9c2;
 	--background: #f9f9f9;
 	--text: #000000;
 }
@@ -173,7 +169,7 @@
 			left: 412px;
 			padding: 11px;
 			padding-left: 48px;
-			background: var(--infobar-red-background);
+			background: var(--infobar-error-background);
 			border-radius: 4px;
 			color: #fff;
 			content: "Offline: Unable to connect to Discord";
@@ -257,7 +253,8 @@
 				}
 				/* Friends list */
 				.searchBar-2aylmZ{
-					
+					margin: 6px 12px !important;
+					border-radius: 6px;
 				}
 
 			/* Text */
@@ -415,11 +412,19 @@
 			}
 
 
+	.resizeHandle-PBRzPC {
+		width: 1px !important;
+		background: var(--button-highlight);
+		border-left: 4px solid var(--background);
+		border-right: 4px solid var(--background);
+	}
+
+
 	/* Border */
 	.base-2jDfDU{
 		border-top-left-radius: 10px;
-		border-top: 1px solid var(--border);
-		border-left: 1px solid var(--border);
+		border-top: 1px solid var(--border-w);
+		border-left: 1px solid var(--border-w);
 	}
 
 
@@ -905,13 +910,9 @@
 		.submenu-1apzyU{
 			height: 396px !important;
 			width: 256px !important;
-			background: var(--dropdown-content);
+			background: var(--background-transparent);
 			backdrop-filter: blur(24px) !important;
 			border: 1px solid var(--border);
-			border-radius: 10px;
-		}
-		.menu-1QACrS .scroller-1bVxF5{
-			padding: 3px;
 		}
 			/* Channel catagory arrow */
 			.iconContainer-1-SsTR{
@@ -921,12 +922,21 @@
 			/* Fix position for sub menus */
 			.submenuPaddingContainer-_k62dJ{
 				position: fixed;
-				right: -256px;
+				right: -333px; /*-258*/
 				top: 0px !important;
 			}
 				/* Your profile fix */
-				.submenuPaddingContainer-_k62dJ:has(div[aria-activedescendant="account-switch-account"]){
-					right: -6px !important;
+				.submenu-1apzyU.menu-1QACrS[aria-activedescendant="account-status-picker"],
+				.submenu-1apzyU.menu-1QACrS[aria-activedescendant="account-status-picker--online"],
+				.submenu-1apzyU.menu-1QACrS[aria-activedescendant="account-status-picker--idle"],
+				.submenu-1apzyU.menu-1QACrS[aria-activedescendant="account-status-picker--dnd"],
+				.submenu-1apzyU.menu-1QACrS[aria-activedescendant="account-status-picker--invisible"],
+				.submenu-1apzyU.menu-1QACrS[aria-activedescendant="account-switch-account"],
+				.submenu-1apzyU.menu-1QACrS[aria-activedescendant="account-switch-account--manage-accounts"]{
+					right: 0px !important; /* 248 */
+				}
+				.activeIcon-1ykRnF {
+					margin: 0px;
 				}
 			
 			/* Scrollbar */
@@ -957,18 +967,6 @@
 			margin-left: 12px;
 			margin-right: 12px;
 			border-color: 1px solid var(--border);
-		}
-		.menu-1QACrS .colorDanger-3n-KnP.focused-3qFvc8{
-			background: #F04747;
-		}
-		.menu-1QACrS .labelContainer-2vJzYL .label-2gNW3x .subtext-2GlkbE{
-			color: #44B381;
-		}
-		.menu-1QACrS .submenuPaddingContainer-_k62dJ{
-			padding: 0 4px;
-		}
-		.menu-1QACrS .submenuPaddingContainer-_k62dJ .roleDot-2gCDg5{
-			border: none;
 		}
 
 
@@ -1045,7 +1043,7 @@
 			.channel-1Shao0, /* DMs users */
 			.wrapper-1S43wv, /* Server catagories */
 			.content-1gYQeQ{ /* Server channel */
-				margin: 1px 4px;
+				margin: 1px 4px !important;
 			}
 			.privateChannelsHeaderContainer-1UWASm > .headerText-1qIDDT, /* DMs catagories */
 			.iconContainer-21RCa3{ /* Server channel */
@@ -1065,6 +1063,17 @@
 				.itemInner-3e_4G4 > .avatar-6qzftW {
 					margin-left: 14px;
 				}
+				
+				/* Threads */
+					/* Icon */
+					.spine-29OFwR {
+						margin-left: 40px;
+					}
+
+					/* Text */
+					.name-28HaxV.channelName-3KPsGw.overflow-1wOqNV {
+						margin-left: 82px;
+					}
 
 
 		/* Size */
@@ -1088,7 +1097,7 @@
 
 			/* Server channel */
 			.wrappedLayout-31F4iI, /* Discover page */
-			.content-1gYQeQ {
+			.content-1gYQeQ{
 				padding: 2px;
 			}
 
@@ -1481,12 +1490,6 @@
 				margin-left: 200px;
 			}
 
-			/* Background */
-			.hasBanner-2IrYih .header-3OsQeK, .hasBanner-2IrYih .header-3OsQeK:hover, .header-3OsQeK{
-				background: var(--sidebar-button-hover) !important;
-			}
-
-
 		/* Image/banner */
 			/* Position */
 			.animatedBannerHoverLayer-129r1v{
@@ -1760,7 +1763,7 @@
 			height: 48px;
 			width: 100%;
 			box-shadow: none;
-			background: var(--sidebar-button-hover);
+			background: var(--background-tint);
 		}
 
 		/* Icon */
@@ -2058,7 +2061,7 @@
 		}
 			/* Message box background */
 			.scrollerSpacer-3AqkT9{
-				height: 60px !important;
+				padding-bottom: 40px !important;
 			}
 
 		/* Background */
@@ -2167,7 +2170,7 @@
 		}
 
 
-	/* User list */
+	/* User members list */
 		/* Position */
 		.members-3WRCEx{
 			width: var(--userlist-width);
@@ -2213,7 +2216,12 @@
 			}
 			.svg-2azL_l > rect[width="10"]{
 				transform: scale(1.15);
-			}		
+			}
+				/* Threads */
+				.mask-1FEkla.svg-2azL_l > foreignObject {
+					mask: none !important;
+				}
+
 				/* Status */
 				.pointerEvents-9SZWKj{
 					z-index: 10 !important;
@@ -2415,28 +2423,6 @@
 				.root-8LYsGj [aria-label*="Invisible"]{
 					--user-standardtus-background: linear-gradient(#747F8D 2px, #747F8D50 2px, #747F8D10 50%, transparent 88%);
 				}
-
-
-
-		/* Review
-			.memberOffline-2lN7gt img{
-				-webkit-clip-path: none !important;
-				clip-path: none !important;
-			}
-			.offline-22aM7E img{
-				-webkit-clip-path: none !important;
-				clip-path: none !important;
-			}
-			.avatarWrapperNonUserBot-2LumL4 .wrapper-1VLyxH img{
-				-webkit-clip-path: none !important;
-				clip-path: none !important;
-			}
-		
-			.userInfo-2WpsYG,
-			.peopleListItem-u6dGxF{
-				overflow: visible;
-			}
-		*/
 
 
 	/* Shared */
@@ -2906,13 +2892,12 @@
 		background: var(--infobar-info-background);
 		border-radius: 6px;
 		opacity: 1;
-		pointer:cli ;
 	}
 
-	/* Green */
+	/* Succses */
 
 
-	/* Yellow */
+	/* Waring */
 		/* Private channel icon */
 		.sidebar-1tnWFu [d="M21.025 5V4C21.025 2.88 20.05 2 19 2C17.95 2 17 2.88 17 4V5C16.4477 5 16 5.44772 16 6V9C16 9.55228 16.4477 10 17 10H19H21C21.5523 10 22 9.55228 22 9V5.975C22 5.43652 21.5635 5 21.025 5ZM20 5H18V4C18 3.42857 18.4667 3 19 3C19.5333 3 20 3.42857 20 4V5Z"],
 		.sidebar-1tnWFu [d="M22.025 2V3C22.5635 3 23 3.43652 23 3.975V7C23 7.55228 22.5523 8 22 8H18C17.4477 8 17 7.55228 17 7V4C17 3.44772 17.4477 3 18 3V2C18 0.88 18.95 0 20 0C21.05 0 22.025 0.88 22.025 2ZM19 3H21V2C21 1.42857 20.5333 1 20 1C19.4667 1 19 1.42857 19 2V3Z"],
@@ -2926,7 +2911,7 @@
 			padding: 12px;
 			padding-left: 64px;
 			border-radius: 4px;
-			background: var(--infobar-yellow-background);
+			background: var(--infobar-warning-background);
 			color: #FFFFFF;
 			font-size: 14px;
 		}
@@ -2936,27 +2921,35 @@
 			margin: 0 auto;
 			margin-bottom: 24px;
 			padding: 0px;
-			background: var(--infobar-yellow-background);
+			background: var(--infobar-warning-background);
 			border-radius: 4px;
 		}
 
-		/* Window notice */
+		/* Better discord: Outdated plugins */
 		.notice-2HEN-u{
-			width: calc(100% - var(--sidebar-width) - var(--userlist-width));
-			margin-left: var(--sidebar-width);
-			background: var(--infobar-yellow-background);
-			border-radius: 8px;
+			position: fixed;
+			width: 512px;
+			margin-top: 104px;
+			margin-left: calc(70% - var(--sidebar-width) - var(--userlist-width));
+			background: var(--infobar-warning-background);
+			border-radius: 4px !important;
 			box-shadow: none;
-			-webkit-box-shadow: none;
+			text-align: left;
+		}
+		.notice-message {
+			margin-left: 48px;
+		}
+		.notice-message::before {
+			background-image: url("D:\Joshs PC\Visual Studio\Better discord\Discdows11\assets\icon-infobar-warning.png");
 		}
 
 
-	/* Red */
+	/* Error */
 		/* Server rules model */
 		.root-g14mjS .footer-31IekZ > .colorHeaderSecondary-g5teka{
 			padding: 12px;
 			padding-left: 64px;
-			background: var(--infobar-red-background);
+			background: var(--infobar-error-background);
 			border-radius: 4px;
 			color: #FFFFFF;
 			font-size: 14px;
@@ -2969,7 +2962,7 @@
 
 		/* Discord Crashed Background */
 		.wrapper-3AZUiP{
-			background: var(--infobar-red-background);
+			background: var(--infobar-error-background);
 		}
 
 
