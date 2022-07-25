@@ -1,6 +1,6 @@
 /**
 * @name Discdows11
-* @version 0.9.5
+* @version 0.9.6
 * @description Windows 11 stylings for Discord. Edit this file to chage discord color to your windows theme for full syncing.
 * @source 
 * @updateUrl https://raw.githubusercontent.com/Josh-65/Discord-Win11-theme/main/Windows11.theme.css
@@ -290,7 +290,7 @@
 					width: 31% !important;
 					margin: 0 auto;
 					border-radius: 0px 0px 12px 12px;
-					background: var(--model-content) !important;
+					background: var(--background-transparent) !important;
 					backdrop-filter: blur(16px);
 				}
 
@@ -2096,7 +2096,7 @@
 			}
 				/* Content */
 				.textContainer-36wgKK{
-					background: var(--popout-content) !important;
+					background: var(--model-content) !important;
 					border-radius: 10px 10px 0px 0px !important;
 				}
 					/* Text */
@@ -2307,7 +2307,7 @@
 			/* Background */
 			.searchResultsWrap-5RVOkx{
 				width: 512px !important;
-				background: var(--popout-content);
+				background: var(--model-backdrop);
 			}
 			.scroller-3iiyhZ{
 				padding: 0px;

@@ -6,7 +6,7 @@ Open https://raw.githubusercontent.com/Josh-65/Discdows11/main/Discdows11.theme.
 <br>
 
 ## Versions
-Release: 0.9.5
+Release: 0.9.6
 
 <br>
 
