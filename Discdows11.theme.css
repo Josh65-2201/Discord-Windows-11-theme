@@ -1,6 +1,6 @@
 /**
 * @name Discdows11
-* @version 0.9.6
+* @version 0.9.7
 * @description Windows 11 stylings for Discord. Edit this file to chage discord color to your windows theme for full syncing.
 * @source 
 * @updateUrl https://raw.githubusercontent.com/Josh-65/Discord-Win11-theme/main/Windows11.theme.css
@@ -40,9 +40,10 @@
 :root{
 /* Settings ---------------------------------------------------------------------------------------------------------------- */
 	--accent-color: #0277d3;
-	--notifcations: none;    /* on = flex    off = none */
-	--gift-button: none;     /* on = flex    off = none */
-	--wave-to-user: none;    /* on = flex    off = none */
+	--in-app-toasts: none;    /*   on = flex   + off = none */
+	--gift-button: none;      /*   on = flex   + off = none */
+	--wave-to-user: none;     /*   on = flex   + off = none */
+	--nitro-ads: flex;        /* + on = flex     off = none */
 
 
 /* DO NOT EDIT ------------------------------------------------------------------------------------------------------------- */
@@ -145,6 +146,11 @@
 
 
 /* 1. Main window ---------------------------------------------------------------------------------------------------------- */
+	/* Server boost */
+	.perksModal-CLcR1c {
+		background: var(--background) !important;
+	}
+
 	/* Tab selection highlight */
 	.ui-tab-bar-item.selected{
 		border: 3px solid #FFFFFF !important;
@@ -330,17 +336,17 @@
 				.container-YkUktl{
 					width: 224px;
 				}
-				.avatarWrapper-1B9FTW:hover {
+				.avatarWrapper-1B9FTW:hover{
 					background: transparent !important;
 				}
 					/* Name */
-					.headerTop-3GPUSF.copiableNameTag-3f6roa {
+					.headerTop-3GPUSF.copiableNameTag-3f6roa{
 						margin-top: 48px;
 						padding: 8px 21px;
 					}
 
 					/* Currently playing */
-					.bodyInnerWrapper-2bQs1k {
+					.bodyInnerWrapper-2bQs1k{
 						background: transparent !important;
 						padding: 0px 8px;
 					}
@@ -359,7 +365,7 @@
 					margin: 0px;
 				}
 
-				/* State icons */
+				/* Activity state icons */
 					/* Size */
 					.icon-Lz4Y-_{
 						margin-left: 2px;
@@ -379,19 +385,29 @@
 					.statusItem-2hiCNB foreignObject[mask="url(#svg-mask-standardtus-offline)"] .status-2DiCMd{
 						background: #747F8D !important;
 					}
+					/* Text */
+						/* Color */
+						.styleFixed-2_NfVL .status-3TYC5W{
+							color: #ffffff;
+							font-size: 14px;
+						}
 
-				/* State Text */
-					/* Color */
-					.styleFixed-2_NfVL .status-3TYC5W{
-						color: #ffffff;
-						font-size: 14px;
+						/* Discription */
+						.description-3Cwkxk{
+							display: none;
+						}
+				
+				/* Custom status */
+					/* Content padding */
+					.sectionTitle-3j2YI1 {
+						margin-top: 8px;
+					}
+						
+					/* Emote button */
+					.emojiButtonContainer-gCE6AT {
+						margin-left: 380px;
 					}
 
-					/* Discription */
-					.description-3Cwkxk{
-						display: none;
-					}
-		
 
 		/* Window control buttons */
 			/* Position */
@@ -501,7 +517,7 @@
 	color: var(--header-primary);
 	opacity: 1;
 	margin-top: 10px;
-	display: var(--notifcations) !important;
+	display: var(--in-app-toasts) !important;
 }
 	/* Icon */
 	.bd-toast,
@@ -793,7 +809,9 @@
 
 
 		/* Size */
-		.inputWrapper-1YNMmM, /* Mini user profile: Message user */
+		.note-3M15gE, /* Full user profile: Note */
+		.inputDefault-3FGxgL.input-2g-os5.input-3AAlUz, /* Custom status */
+		.inputDefault-3FGxgL.input-2g-os5.input-2z42oC, /* Mini user profile: Message user */
 		.note-Go5ZP2, /* Mini user profile: Note */
 		.addFriendInput-1Ta-rO, /* Home: Add friend */
 		.input-3MU9bJ, /* Settings: Keybinds */
@@ -810,18 +828,24 @@
 			border-radius: 6px !important;
 			border: 1px solid var(--border);
 		}
-			/* Width fix: Full */
+			/* Width fix: Full window */
+			.note-3M15gE, /* Full user profile: Note */
 			.textArea-2CLwUE.textAreaSlate-9-y-k2.slateContainer-3x9zil, /* Message box */
 			.container-1SX9VC{ /* Sticker page */
 				width: 100% !important;
 				padding: 0px !important;
 			}
 
+			.inputDefault-3FGxgL.input-2g-os5.input-3AAlUz{ /* Custom status */
+				width: 90% !important;
+			}
+
 
 		/* Unselected */
+		.inputDefault-3FGxgL.input-2g-os5.input-3AAlUz, /* Custom status */
+		.note-3M15gE, /* Full user profile: Note */
 		.note-Go5ZP2, /* Mini user profile: Note */
-		.inputWrapper-1YNMmM, /* Mini user profile: Message user */
-		.inputWrapper-1YNMmM, /* Server settings: Roles Review*/
+		.inputDefault-3FGxgL.input-2g-os5.input-2z42oC, /* Mini user profile: Message user */
 		.searchBar-jGtisZ, /* Converstaion searchbar */
 		.addFriendInput-1Ta-rO, /* Home: Add friend */
 		.input-3MU9bJ, /* Settings: Keybinds */
@@ -852,12 +876,13 @@
 
 
 		/* Hovered */
+		.note-3M15gE:hover, /* Full user profile: Note */
 		.note-Go5ZP2:hover, /* Mini user profile: Note */
-		.inputWrapper-1YNMmM:hover, /* Server settings: Roles */
+		.inputDefault-3FGxgL.input-2g-os5.input-3AAlUz:hover, /* Custom status */
 		.searchBar-jGtisZ:hover, /* Sidebar search */ 
 		.addFriendInput-1Ta-rO:hover, /* Home: Add friend */
 		.input-3MU9bJ:hover, /* Settings: Keybinds */
-		.inputWrapper-1YNMmM:hover,  /* Mini profile: Message user */
+		.inputDefault-3FGxgL.input-2g-os5.input-2z42oC:hover,  /* Mini profile: Message user */
 		.textArea-2CLwUE:hover, /* Messages: Message box */
 		.root-g14mjS .input-2g-os5[name="invite"]:hover, /* Add server viewModal */
 		.container-1SX9VC:hover, /* Sticker page */
@@ -872,8 +897,9 @@
 
 
 		/* Selected */
+		.note-3M15gE:focus-within, /* Full user profile: Note */
 		.note-Go5ZP2:focus-within, /* Mini user profile: Note */
-		.inputWrapper-1YNMmM:focus-within, /* Server settings: Roles */
+		.inputDefault-3FGxgL.input-2g-os5.input-3AAlUz:focus-within, /* Custom status */
 		.searchBar-jGtisZ:focus-within, /* Sidebar search */
 		.addFriendInput-1Ta-rO:focus-within, /* Home: Add friend */
 		.input-3MU9bJ:focus-within, /* Settings: Keybinds */
@@ -981,6 +1007,9 @@
 
 		/* Background */
 			/* Content */
+			.scroller-1Kbkqa.thin-31rlnD.scrollerBase-_bVAAt.fade-1R6FHN, /* DMs: Add friends to group */
+			.topSection-13QKHs, .body-1Ukv50, /* Full user profile */
+			.content-2hZxGK, /* Custom status */
 			.reactors-1VXca7, /* User reaction */
 			.modalSize-3WSXDU{ /* Share screen */
 				background: var(--model-content) !important;
@@ -1164,9 +1193,18 @@
 
 
 		/* Side highlight */
-			/* Position */		
+			/* Position */
+				/* DMs */
+				.selected-3veCBZ:after{
+					position: absolute;
+					height: 18px;
+					border-radius: 4px;
+					border-left: 4px solid var(--accent-color);
+					content: "";
+				}
+
 				/* Server channel list */
-				.categoryItem-Kc_HK_:after, .channel-1Shao0:after, .wrapper-NhbLHG:after{
+				.categoryItem-Kc_HK_:after, .wrapper-NhbLHG:after{
 					content: "";
 					border-left: transparent
 				}
@@ -1183,18 +1221,18 @@
 					margin-top: -28px;
 					margin-left: 38px;
 				}
-					/* Server settings: Template */
-					.dot-e8DTw_{
-						position: fixed;
-						width: 4px;
-						height: 24px;
-						left: 107px;
-						background: var(--unread) !important;
-					}
 
-					.selectedCategoryItem-ZjqSui::after {
-						margin-left: 12px;
-					}
+				/* Server settings: Template */
+				.dot-e8DTw_{
+					position: fixed;
+					width: 4px;
+					height: 18px;
+					left: 122px;
+					background: var(--unread) !important;
+				}
+				.selectedCategoryItem-ZjqSui::after {
+					margin-left: 12px;
+				}
 
 
 			/* Hovered */
@@ -2397,24 +2435,6 @@
 				border: 0px;
 			}
 
-			/* Colors */
-			.userPopout-2j1gM4 [aria-label*="Online"]{
-				--user-standardtus-background: linear-gradient(#43B581 1px, #43B58150 2px, #43B58110 50%, transparent 75%);
-			}
-			.userPopout-2j1gM4 [aria-label*="Idle"]{
-				--user-standardtus-background: linear-gradient(#FAA61A 1px, #FAA61A50 2px, #FAA61A10 50%, transparent 75%);
-			}
-			.userPopout-2j1gM4 [aria-label*="Do not disturb"],
-			.userPopout-2j1gM4 [aria-label*="Do Not Disturb"]{
-				--user-standardtus-background: linear-gradient(#F04747 1px, #F0474750 2px, #F0474710 50%, transparent 75%);
-			}
-			.userPopout-2j1gM4 [aria-label*="Streaming"]{
-				--user-standardtus-background: linear-gradient(#593695 1px, #59369550 2px, #59369510 50%, transparent 75%);
-			}
-			.userPopout-2j1gM4 [aria-label*="Offline"],
-			.userPopout-2j1gM4 [aria-label*="Invisible"]{
-				--user-standardtus-background: linear-gradient(#747F8D 1px, #747F8D50 2px, #747F8D10 50%, transparent 75%);
-			}
 
 		/* Avatar */
 			/* Background */
@@ -2466,24 +2486,6 @@
 				height: 120px;
 				stroke-width: var(--avatar-border-thickness);
 			}
-				/* Color */
-				.root-8LYsGj [aria-label*="Online"]{
-					--user-standardtus-background: linear-gradient(#43B581 2px, #43B58150 2px, #43B58110 50%, transparent 88%);
-				}
-				.root-8LYsGj [aria-label*="Idle"]{
-					--user-standardtus-background: linear-gradient(#FAA61A 2px, #FAA61A50 2px, #FAA61A10 50%, transparent 88%);
-				}
-				.root-8LYsGj [aria-label*="Do Not Disturb"],
-				.root-8LYsGj [aria-label*="Do not disturb"]{
-					--user-standardtus-background: linear-gradient(#F04747 2px, #F0474750 2px, #F0474710 50%, transparent 88%);
-				}
-				.root-8LYsGj [aria-label*="Streaming"]{
-					--user-standardtus-background: linear-gradient(#593695 2px, #59369550 2px, #59369510 50%, transparent 88%);
-				}
-				.root-8LYsGj [aria-label*="Offline"],
-				.root-8LYsGj [aria-label*="Invisible"]{
-					--user-standardtus-background: linear-gradient(#747F8D 2px, #747F8D50 2px, #747F8D10 50%, transparent 88%);
-				}
 
 
 	/* Shared */
@@ -2589,7 +2591,7 @@
 					position: absolute;
 					height: 31px !important;
 					width: 32px;
-					margin-top: 248px;
+					margin-top: 241px;
 					left: calc(var(--sidebar-width) - 42px);
 					border-radius: 4px;
 					z-index: 10 !important;
@@ -2602,6 +2604,10 @@
 						fill: var(--text) !important;
 					}
 
+			/* Unselected */
+			.brand-3g5E0C.item-3XjbnG, .themed-2-lozF.item-3XjbnG {
+				color: var(--text) !important;
+			}
 		
 			/* Hovered */
 			.item-3XjbnG:hover,
@@ -3183,9 +3189,15 @@
 
 
 	/* Optional */
+		/* Nitro ads */
+		.premiumTab-39eQzY, /* Settings */
+		.wrapper-1z1z-S{ /* Mini user profile: custom image */
+			display: var(--nitro-ads) !important;
+		}
+
 		/* Gift button */
 		button[aria-label="Send a gift"]{
-			display: var(--gift-button);
+			display: var(--gift-button) !important;
 		}
 
 		/* Wave To User Notices */
