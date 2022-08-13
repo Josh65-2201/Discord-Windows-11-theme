@@ -1,9 +1,9 @@
 /**
-* @name Discdows11
+* @name Discord Windows 11
 * @version 0.9.7
 * @description Windows 11 stylings for Discord. Edit this file to chage discord color to your windows theme for full syncing.
 * @source 
-* @updateUrl https://raw.githubusercontent.com/Josh-65/Discord-Win11-theme/main/Windows11.theme.css
+* @updateUrl https://raw.githubusercontent.com/Josh-65/Discord-Windows-11-theme/main/Windows11.theme.css
 * @patreon 
 * @invite 
 * @author Josh-65
@@ -467,12 +467,12 @@
 			}
 				/* Top */
 				*::-webkit-scrollbar-button:single-button:vertical:decrement{
-					background-image: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/icon-dark-arrow-u.png?raw=true');
+					background-image: url('https://github.com/Josh-65/Discord-Windows-11-theme/blob/main/assets/icon-dark-arrow-u.png?raw=true');
 					background-repeat: no-repeat;
 				}
 				/* Bottom */
 				*::-webkit-scrollbar-button:single-button:vertical:increment{
-					background-image: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/icon-dark-arrow-d.png?raw=true');
+					background-image: url('https://github.com/Josh-65/Discord-Windows-11-theme/blob/main/assets/icon-dark-arrow-d.png?raw=true');
 					background-repeat: no-repeat;
 				}
 
@@ -1074,7 +1074,7 @@
 		.spinner-2RT7ZC:after{
 			width: 48px;
 			height: 48px;
-			background-image: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/icon-loading.gif?raw=true');
+			background-image: url('https://github.com/Josh-65/Discord-Windows-11-theme/blob/main/assets/icon-loading.gif?raw=true');
 			background-size: cover;
 			display: inline-block;
 			content: "";
@@ -1308,11 +1308,11 @@
 				.homeIcon-r0w4ny{
 					min-width: 28px;
 					min-height: 28px;
-					background: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/icon-light-home.png?raw=true') center/contain no-repeat;
+					background: url('https://github.com/Josh-65/Discord-Windows-11-theme/blob/main/assets/icon-light-home.png?raw=true') center/contain no-repeat;
 				}
 					/* Light mode */
 					.theme-light .homeIcon-r0w4ny{
-						background: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/icon-dark-home.png?raw=true') center/contain no-repeat !important;
+						background: url('https://github.com/Josh-65/Discord-Windows-11-theme/blob/main/assets/icon-dark-home.png?raw=true') center/contain no-repeat !important;
 					}
 				
 				/* Removes separator */
@@ -1440,12 +1440,12 @@
 							.flex-2S1XBF > button[aria-label="User Settings"] > div{
 								width: 48px;
 								height: 48px;
-								background: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/icon-light-settings.png?raw=true') center/24px no-repeat;
+								background: url('https://github.com/Josh-65/Discord-Windows-11-theme/blob/main/assets/icon-light-settings.png?raw=true') center/24px no-repeat;
 								z-index: 10 !important;
 							}
 								/* Light mode */
 								.theme-light .flex-2S1XBF > button[aria-label="User Settings"] > div{
-									background: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/icon-dark-settings.png?raw=true') center/24px no-repeat !important;
+									background: url('https://github.com/Josh-65/Discord-Windows-11-theme/blob/main/assets/icon-dark-settings.png?raw=true') center/24px no-repeat !important;
 								}
 
 
@@ -1990,7 +1990,7 @@
 		/* Loading: Review */
 		.wrapper-3HVHpV{
 			background: transparent;
-			background-image: url('https://github.com/Josh-65/Discord-Win11-theme/blob/main/assets/icon-loading.gif?raw=true') center/48px no-repeat;
+			background-image: url('https://github.com/Josh-65/Discord-Windows-11-theme/blob/main/assets/icon-loading.gif?raw=true') center/48px no-repeat;
 		}
 		.wrapper-15CKyy.cozy-3hKWhq{
 			display: none;
