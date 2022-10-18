@@ -1,7 +1,7 @@
 ![image](https://github.com/Josh-65/Discord-Windows-11-theme/blob/main/preview.jpg?raw=true)
 
 ## How to download
-Open https://raw.githubusercontent.com/Josh-65/Discdows11/main/Discdows11.theme.css > right click > Save as > go to BD theme folder (%AppData%\BetterDiscord\themes) > Save
+Open https://raw.githubusercontent.com/Josh-65/Discord-Windows-11-theme/main/Discord_Windows_11.theme.css > right click > Save as > go to BD theme folder (%AppData%\BetterDiscord\themes) > Save
 
 <br>
 
