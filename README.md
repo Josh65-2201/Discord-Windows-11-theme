@@ -1,4 +1,4 @@
-![image](https://github.com/Josh-65/Discdows11/blob/main/preview.jpg?raw=true)
+![image](https://github.com/Josh-65/Discord-Windows-11-theme/blob/main/preview.jpg?raw=true)
 
 ## How to download
 Open https://raw.githubusercontent.com/Josh-65/Discdows11/main/Discdows11.theme.css > right click > Save as > go to BD theme folder (%AppData%\BetterDiscord\themes) > Save
@@ -20,16 +20,15 @@ Some controls have moved to conform with Windows 11 styles.
 - Settings is now a toggle on the same icon in the server bar
 - Stickers and GIFs are now all in the emote menu
 - Search bars are on the titlebar
-- User controls like Status and name are now in the title bar next to windows controls
+- User controls are now in the title bar next to window controls
 
 
 ### Disabled elements
 - BD minimal mode
-- BD public server button
 - Gift button (Toggle in themes settings)
 - Settings > User profile preview (Now uses the account preview popup on the titlebar)
 
 
 ### Other
 - User/Members list will now auto hide at smallest window size. (Toggle doesnt do anything visably at min size but will save state upon resize)
-- Due to layering issues the Window drag area ends at the left side of the search bar
+- Due to layering issues the Window drag area ends at the left side of the window
