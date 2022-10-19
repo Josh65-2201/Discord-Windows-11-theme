@@ -7,16 +7,16 @@ assignees: Josh-65
 
 ---
 
-## Describe the issue <!-- A clear and concise description of what the bug is. -->
+## Describe the issue <!-- A clear description of what the bug is -->
 
 
-## Expected behavior <!-- A clear and concise description of what you expected to happen. -->
+## Expected behavior <!-- A clear and concise description of what you expected to happen -->
 
 
-## Where is it <!-- The click taken to get to where the issues is -->
+## Steps to reproduce <!-- How to get to where the issue is -->
 
 
-## Screenshots <!-- If applicable, add screenshots to help explain your problem. -->
+## Screenshots/video <!-- Add a visual to help explain the issue -->
 
 
 ## Versions  <!-- These can be found in discord settings on the bottom sidebar -->
