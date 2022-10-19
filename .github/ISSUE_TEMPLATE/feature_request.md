@@ -7,7 +7,10 @@ assignees: Josh-65
 
 ---
 
-## Proposed solution <!-- A clear and concise description of what you want to happen. -->
+## Describe the feature <!-- A clear description of what you want added -->
 
 
-## Where is it <!-- The click taken to get to where the issues is -->
+## Where is it <!-- How to get to where the feature should be -->
+
+
+## Screenshots/video <!-- Add a visual to help explain the issue -->
