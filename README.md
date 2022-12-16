@@ -6,7 +6,7 @@ Open https://raw.githubusercontent.com/Josh-65/Discord-Windows-11-theme/main/Dis
 <br>
 
 ## Versions
-Release: 0.9.10
+Release: 1.0.0
 
 <br>
 
@@ -19,16 +19,10 @@ Some controls have moved to conform with Windows 11 styles.
 - Mute and deafen settings are now shown only on the voice connected panel
 - Settings is now a toggle on the same icon in the server bar
 - Stickers and GIFs are now all in the emote menu
-- Search bars are on the titlebar
+- Search bars are on the title bar
 - User controls are now in the title bar next to window controls
 
 
-### Disabled elements
-- BD minimal mode
-- Gift button (Toggle in themes settings)
-- Settings > User profile preview (Now uses the account preview popup on the titlebar)
-
-
 ### Other
-- User/Members list will now auto hide at smallest window size. (Toggle doesnt do anything visably at min size but will save state upon resize)
+- User/Members list will now auto hide at smallest window size. (Toggle doesn't do anything visibly at min size but will save state upon resize)
 - Due to layering issues the Window drag area ends at the left side of the window
