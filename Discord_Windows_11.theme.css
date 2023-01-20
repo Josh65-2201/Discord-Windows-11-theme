@@ -1,6 +1,6 @@
 /**
 * @name Discord Windows 11
-* @version 1.0.0
+* @version 0.9.12
 * @description Windows 11 styling for Discord. Edit this file to change discord color to your windows theme for full syncing.
 * @author Josh-65
 */
@@ -33,7 +33,7 @@
 
 :root{
 /* Settings |Default = +| -------------------------------------------------------------------------------------------- */
-	--accentColor: #0277d3;
+	--accentColor: #4cc2ff;
 	--toasts: flex;       /* + on = flex     off = none */
 	--waveToUser: none;   /*   on = flex   + off = none */
 	--nitro: none;        /* + on = flex     off = none */
@@ -771,11 +771,11 @@
 			margin-left: 46px;
 			margin-right: 18px;
 		}
-		.interactive-1vLZ_I{
+		.interactive-26HRN_{
 			height: 32px;
 		}
 			/* DMs users */
-			.pinned-0lM4wD > .interactive-1vLZ_I{
+			.pinned-0lM4wD > .interactive-26HRN_{
 				padding-left: 38px;
 			}
 				/* Avatar */
@@ -1216,7 +1216,7 @@
 		/* Position */
 		.scroller-3X7KbA, .wrapper-1_HaEi{
 			background: transparent;
-			width: 74px;
+			width: 72px;
 		}
 		div[aria-label="Servers"]{
 			margin-left: 3px;
@@ -1403,17 +1403,14 @@
 				.flex-2S1XBF > button[aria-label="User Settings"] > div > svg > path{
 					transform: scale(0.025) translate(164px, 164px);
 					fill: var(--text);
-					d: path("M178 598 c-51 -22 -53 -26 -39 -75 12 -41 -1 -54 -42 -42 -50 14 -53 12 -78 -48 l-23 -56 30 -23 c16 -13 32 -24 37 -24 4 0 7 -9 7 -20 0 -11 -3 -20 -7 -20 -5 0 -21 -11 -37 -24 l-30 -23 23 -56 c25 -60 28 -62 78 -48 41 12 54 -1 42 -42 -5 -18 -9 -37 -9 -43 0 -11 91 -54 114 -54 6 0 20 16 30 35 11 21 27 35 38 35 10 0 18 -3 18 -7 0 -5 11 -21 23 -37 l24 -29 49 18 c66 25 68 27 57 74 -14 51 -3 62 48 48 47 -11 49 -9 74 57 l18 49 -29 24 c-16 12 -32 23 -36 23 -5 0 -8 8 -8 18 0 11 14 27 35 38 41 22 41 23 16 89 -21 56 -27 60 -74 47 -45 -13 -58 -1 -46 41 14 50 12 53 -48 78 l-56 23 -23 -30 c-13 -16 -24 -32 -24 -36 0 -21 -38 -3 -58 27 -25 40 -30 41 -94 13z m81 -53 c16 -27 27 -35 50 -35 27 0 41 12 76 68 1 1 16 -3 34 -9 22 -8 30 -16 27 -28 -18 -59 -17 -70 4 -91 21 -21 32 -22 91 -4 12 3 20 -5 28 -27 6 -18 11 -33 11 -35 0 -1 -16 -11 -35 -23 -28 -16 -35 -27 -35 -51 0 -24 7 -35 35 -51 19 -12 35 -22 35 -23 0 -2 -5 -17 -11 -35 -8 -22 -16 -30 -28 -27 -59 18 -70 17 -91 -4 -21 -21 -22 -32 -4 -91 3 -12 -5 -20 -27 -28 -18 -6 -33 -10 -34 -9 -35 56 -49 68 -76 68 -23 0 -34 -8 -50 -35 -12 -19 -22 -35 -23 -35 -2 0 -17 5 -35 11 -22 8 -30 16 -27 28 18 59 17 70 -4 91 -21 21 -32 22 -91 4 -12 -3 -20 5 -28 27 -6 18 -10 33 -9 34 55 34 68 49 68 75 0 26 -13 41 -68 75 -1 1 3 16 9 34 8 22 16 30 28 27 59 -18 70 -17 91 4 21 21 22 32 4 92 -3 11 4 19 23 26 40 15 39 15 62 -23z") !important;
-				}
-				.flex-2S1XBF > button[aria-label="User Settings"] > div > svg > path::after{
-					d: path("M260 413 c-95 -49 -83 -183 20 -214 53 -16 107 10 134 65 17 36 18 43 5 79 -25 71 -96 102 -159 70z m104 -44 c19 -15 26 -29 26 -57 0 -75 -83 -110 -135 -57 -73 72 28 178 109 114z") !important;
+					d: path("M178 598 c-51 -22 -53 -26 -39 -75 12 -41 -1 -54 -42 -42 -50 14 -53 12 -78 -48 l-23 -56 30 -23 c16 -13 32 -24 37 -24 4 0 7 -9 7 -20 0 -11 -3 -20 -7 -20 -5 0 -21 -11 -37 -24 l-30 -23 23 -56 c25 -60 28 -62 78 -48 41 12 54 -1 42 -42 -5 -18 -9 -37 -9 -43 0 -11 91 -54 114 -54 6 0 20 16 30 35 11 21 27 35 38 35 10 0 18 -3 18 -7 0 -5 11 -21 23 -37 l24 -29 49 18 c66 25 68 27 57 74 -14 51 -3 62 48 48 47 -11 49 -9 74 57 l18 49 -29 24 c-16 12 -32 23 -36 23 -5 0 -8 8 -8 18 0 11 14 27 35 38 41 22 41 23 16 89 -21 56 -27 60 -74 47 -45 -13 -58 -1 -46 41 14 50 12 53 -48 78 l-56 23 -23 -30 c-13 -16 -24 -32 -24 -36 0 -21 -38 -3 -58 27 -25 40 -30 41 -94 13z m81 -53 c16 -27 27 -35 50 -35 27 0 41 12 76 68 1 1 16 -3 34 -9 22 -8 30 -16 27 -28 -18 -59 -17 -70 4 -91 21 -21 32 -22 91 -4 12 3 20 -5 28 -27 6 -18 11 -33 11 -35 0 -1 -16 -11 -35 -23 -28 -16 -35 -27 -35 -51 0 -24 7 -35 35 -51 19 -12 35 -22 35 -23 0 -2 -5 -17 -11 -35 -8 -22 -16 -30 -28 -27 -59 18 -70 17 -91 -4 -21 -21 -22 -32 -4 -91 3 -12 -5 -20 -27 -28 -18 -6 -33 -10 -34 -9 -35 56 -49 68 -76 68 -23 0 -34 -8 -50 -35 -12 -19 -22 -35 -23 -35 -2 0 -17 5 -35 11 -22 8 -30 16 -27 28 18 59 17 70 -4 91 -21 21 -32 22 -91 4 -12 -3 -20 5 -28 27 -6 18 -10 33 -9 34 55 34 68 49 68 75 0 26 -13 41 -68 75 -1 1 3 16 9 34 8 22 16 30 28 27 59 -18 70 -17 91 4 21 21 22 32 4 92 -3 11 4 19 23 26 40 15 39 15 62 -23z M260 413 c-95 -49 -83 -183 20 -214 53 -16 107 10 134 65 17 36 18 43 5 79 -25 71 -96 102 -159 70z m104 -44 c19 -15 26 -29 26 -57 0 -75 -83 -110 -135 -57 -73 72 28 178 109 114z") !important;
 				}
 
 				/* Selected */
-					/* Animation */
+					/* Animation 
 					.flex-2S1XBF > button[aria-label="User Settings"]:active > div{
 						animation: settingsIconSpin 0.5s linear;
-					}
+					}*/
 
 				/* Exit button */
 					/* Position */
@@ -1427,7 +1424,7 @@
 						left: 0px;
 						bottom: 0px;
 						height: calc(100% - 49px) !important;
-						width: 74px !important;
+						width: 72px !important;
 						background: transparent !important;
 						border: none;
 						border-radius: 0px;
@@ -2585,7 +2582,7 @@
 		transform: scale(1) !important;
 	}
 	.standardSidebarView-E9Pc3j{
-		left: 74px;
+		left: 72px;
 		top: 71px !important;
 	}
 
@@ -2674,6 +2671,13 @@
 				margin-left: 4px;
 				border-radius: 4px;
 			}
+				/* Pill */
+				.item-3XjbnG .selected-g-kMVV .themed-2-lozF::after{
+					height: 16px;
+					width: 3px;
+					background: var(--accentColor);
+					border-radius: 25%;
+				}
 
 			/* Selected + Hovered */
 			.item-3XjbnG.selected-g-kMVV.themed-2-lozF, .premiumTabItem-1QTfBr[aria-selected=true]{
@@ -2932,7 +2936,6 @@
 }
 .layer-86YKbF ~ .layer-86YKbF .customizationSection-IGy2fS:not(.previewProfileThemes-ViDDkq) .channelTextArea-1VQBuV{
 	grid-area: input;
-	margin: 18px 0 36px;
 }
 .layer-86YKbF ~ .layer-86YKbF .customizationSection-IGy2fS:not(.previewProfileThemes-ViDDkq) .bioTextArea-dDGOeC{
 	border: none;
@@ -3330,20 +3333,6 @@
 }
 .root-g14mjS:not(.modal-3Crloo, .carouselModal-1eUFoq, .root-2uUafN) [class^=modalCloseButton-],
 .root-g14mjS:not(.modal-3Crloo, .carouselModal-1eUFoq, .root-2uUafN) [class^=closeButton-]{
-	display: none;
-}
-.root-g14mjS:not(.modal-3Crloo, .carouselModal-1eUFoq, .root-2uUafN) .content-2hZxGK{
-	padding: 0 24px 24px !important;
-	display: flex;
-	flex-direction: column;
-}
-.root-g14mjS:not(.modal-3Crloo, .carouselModal-1eUFoq, .root-2uUafN) .content-2hZxGK .marginBottom20-315RVT{
-	margin-bottom: 0;
-}
-.root-g14mjS:not(.modal-3Crloo, .carouselModal-1eUFoq, .root-2uUafN) .content-2hZxGK .marginBottom20-315RVT + *{
-	margin-top: 20px;
-}
-.root-g14mjS:not(.modal-3Crloo, .carouselModal-1eUFoq, .root-2uUafN) .content-2hZxGK div[class][style^="position: absolute;"]:not(.file-input){
 	display: none;
 }
 .root-g14mjS:not(.modal-3Crloo, .carouselModal-1eUFoq, .root-2uUafN) .size16-rrJ6ag{
@@ -4423,13 +4412,13 @@ div:not([class]) > .content-vQY7Mf{
 	.arrowGroup-25Wc10,
 	#account-status-picker, /* Logged in user: Profile status */
 	.layer-86YKbF.layer-86YKbF ~ .layer-86YKbF .divider-_0um2u, .layer-86YKbF.layer-86YKbF ~ .layer-86YKbF .divider-ogkn3u, /* Settings: option divider */
-	.item-1OdjEX:not(#message-add-reaction):not(#message-apps) > .iconContainer-1-SsTR, /* Context menu: Default icons */
+	/*.item-1OdjEX:not(#message-add-reaction):not(#message-apps) > .iconContainer-1-SsTR,  Context menu: Default icons */
 	.settingsBanner-2E5fAp, /* Settings: Profile banner */
 	.avatarSpeaking-33RRJU, /* User profile: Speaking ring */
 	.status-12NUUC, .divider-q3P9HC, .children-3xh0VB > .iconWrapper-2awDjA, .titleWrapper-24Kyzc, /* Channel information: Selected text */
 	#account-switch-account > .iconContainer-1-SsTR, /* User profile: Switch account */
 	.matchingPostsRow-2IiEQ1, /* Forums: Matching post bar */
-	.customizationSection-IGy2fS.preview-Z55SA3, /* Settings: User profile: preview */
+	.accountProfileCard-lbN7n- > .bannerSVGWrapper-qc0szY, /* Settings: User profile: preview */
 	.menu-1QACrS .wrapper--nA0oy, /* Right click menu: Emoji suggestions */
 	.art-1TvEXv, .close-1mLglB, .headerDescription-yFPU-Q, /* Share screen: Header */
 	.option-ayUoaq:after,

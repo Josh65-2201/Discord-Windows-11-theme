@@ -6,7 +6,7 @@ Open https://raw.githubusercontent.com/Josh-65/Discord-Windows-11-theme/main/Dis
 <br>
 
 ## Versions
-Release: 1.0.0
+Release: 0.9.12
 
 <br>
 
