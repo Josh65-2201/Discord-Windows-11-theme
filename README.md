@@ -1,9 +1,10 @@
 ![image](https://github.com/Josh-65/Discord-Windows-11-theme/blob/main/preview.jpg?raw=true)
 
-## How to download
+## Download
+Lastest release: 0.8.13
+
 Open https://raw.githubusercontent.com/Josh-65/Discord-Windows-11-theme/main/Discord_Windows_11.theme.css > right click > Save as > go to BD theme folder (%AppData%\BetterDiscord\themes) > Save
 
-<br>
 
 ## Versions
 Release: 0.8.14
