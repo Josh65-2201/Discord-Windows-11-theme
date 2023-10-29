@@ -74,6 +74,8 @@ Discord
             Pending
             Blocked
             Add friend
+        Nitro
+        Shop
         Family centre
             Activity
             My family
