@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 0.9.1
+* @version 0.9.3
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -21,6 +21,9 @@
 
 	/* Context icons by CreArts */
 	@import url('https://crearts-community.github.io/Context-Icons/clients/betterdiscord.css');
+
+	/* Acrylic pop outs by _kokussz_ */
+	@import url('https://s-k-y-l-i.github.io/discord-themes/Theme%20code/transparent-popups.css');
 
 	/* Windows 11 fluent emoji by DevilBro*/
 	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft/spritesheets.css');
@@ -60,9 +63,14 @@
 	--colorTransition: 0.1s ease-in-out !important;
 
 	/* Settings Model */
-	--settingsmodalbackground: 	transparent;
-	--settingsmodalwidth: 		1098px;
-	--settingsmodalheight: 		690px;
+	--settingsmodalbackground: transparent;
+	--settingsmodalwidth: 1098px;
+	--settingsmodalheight: 690px;
+
+	/* Pop outs */
+	--blur: 24px;
+	--opacity: 1;
+	--radius: 8px;
 }
 
 
@@ -73,7 +81,7 @@
 	--backgroundTint: 39, 39, 39;
 	--background: 44, 44, 44;
 
-	--contextBackground: 45, 45, 45;
+	--pop-up-color: 45, 45, 45;
 
 	--contentDialogBackdrop: 0, 0, 0, 0.3;
 	--contentDialogContent: 43, 43, 43;
@@ -88,9 +96,9 @@
 	--sidebarButtonHover: 55, 55, 55;
 	--sidebarButtonSelectedHover: 50, 50, 50, 0.5;
 
-	--buttonStandard: 50, 50, 50;
-	--buttonHover: 62, 62, 62;
-	--buttonSelected: 58, 58, 58;
+	--buttonStandard: 55, 55, 55;
+	--buttonHover: 70, 70, 70;
+	--buttonSelected: 60, 60, 60;
 	--buttonDisabled: 42, 42, 42;
 	--buttonBorder: 53, 53, 53;
 
@@ -294,7 +302,8 @@
 
 				/* Check mark */
 				.control__6a084 path[fill], /* Discord */
-				.bd-switch .bd-switch-body path{ /* Better discord */
+				.slider__41d94.vc-switch-slider > svg > path, /* Vencord */
+				.bd-switch > .bd-switch-body > path{ /* Better discord */
 					fill: transparent !important;
 				}
 
@@ -622,47 +631,15 @@
 		/* Background */
 		.menu__088f7:not(.menu__13d0c),
 		.submenu_aed9ee{
-			height: 384px !important;
 			width: 256px !important;
-			background: rgb(var(--contextBackground), 0.8);
-			backdrop-filter: blur(24px) !important;
-			border: 1px solid rgb(var(--border));
-			border-radius: 8px;
 		}
-
-		/* Fix position for sub menus */
-		.submenuPaddingContainer__5a97c{
-			position: fixed;
-			right: -256px;
-			top: 0px !important;
-		}
-		.scroller__8f066{
-			padding: 6px !important;
-			overflow-y: scroll !important;
-		}
-			/* Your profile fix */
-			.submenu-1apzyU.menu__13d0c[aria-activedescendant="account-status-picker"],
-			.submenu-1apzyU.menu__13d0c[aria-activedescendant="account-status-picker--online"],
-			.submenu-1apzyU.menu__13d0c[aria-activedescendant="account-status-picker--idle"],
-			.submenu-1apzyU.menu__13d0c[aria-activedescendant="account-status-picker--dnd"],
-			.submenu-1apzyU.menu__13d0c[aria-activedescendant="account-status-picker--invisible"],
-			.submenu-1apzyU.menu__13d0c[aria-activedescendant="account-switch-account"],
-			.submenu-1apzyU.menu__13d0c[aria-activedescendant="account-switch-account--manage-accounts"]{
-				right: -100px !important;
-			}
-			.activeIcon_b2fa28{
-				margin: 0px;
-			}
 			
+		/* Your profile*/
 			/* Scrollbar */
-			.scroller-1bVxF5.thin_b1c063.scrollerBase-_bVAAt{
-				overflow-y: scroll !important;
-				overflow-x: hidden !important;
+			.scroller__8f066{
+				overflow: hidden !important;
 			}
 
-		.item__183e8 .labelContainer__4f869 .colorDefault_e361cf{
-			border-radius: 4px;
-		}
 		
 		/* Text + icon alignment */
 			.iconContainer__5d61c{
@@ -1338,7 +1315,7 @@
 			}
 			/* Icon */
 			.childWrapper_a6ce15 svg path{
-				transform: scale(0.055) rotate(180deg) translate(-485px, -390px);
+				transform: scale(0.05) rotate(180deg) translate(-450px, -460px);
 				fill: rgb(var(--text));
 				d: path("M92 377 l-92 -92 0 -143 0 -142 75 0 75 0 0 85 0 85 50 0 50 0 0 -85 0 -85 75 0 75 0 0 143 0 142 -93 93 c-51 50 -99 92 -107 92 -9 0 -57 -42 -108 -93z m195 -29 l83 -83 0 -117 0 -118 -45 0 -45 0 0 85 0 85 -80 0 -80 0 0 -85 0 -85 -45 0 -45 0 0 117 0 118 82 82 c46 46 85 83 88 83 2 0 42 -37 87 -82z") !important;
 			}
@@ -1482,28 +1459,28 @@
 				/* Position */
 				.flex_f18b02 > button[aria-label="User Settings"]{
 					position: fixed;
-					width: 64px !important;
-					height: 56px !important;
-					bottom: 4px !important;
-					left: 4px;
+					width: 48px !important;
+					height: 48px !important;
+					bottom: 6px !important;
+					left: 12px;
 					color: rgb(var(--text));
-					border-radius: 8px;
+					border-radius: 6px;
 					z-index: 11 !important;
 				}
 
-				/* Size */
+				/* Icon */
 				.flex_f18b02 > button[aria-label="User Settings"] > div{
-					width: 48px;
-					height: 48px;
+					width: 28px;
+					height: 28px;
 					z-index: 10 !important;
 				}
 
-				/* Icon */
-				.flex_f18b02 > button[aria-label="User Settings"] > div > svg {
-					width: 48px;
-					height: 48px;
+				.flex_f18b02 > button[aria-label="User Settings"] > div > div{
+					Width: 100% !important;
+					height: 100% !important;
 				}
-				.flex_f18b02 > button[aria-label="User Settings"] > div > svg > path{
+
+				.flex_f18b02 > button[aria-label="User Settings"] > div > div > svg > path{
 					transform: scale(0.025) translate(164px, 164px);
 					fill: rgb(var(--text));
 					d: path("M178 598 c-51 -22 -53 -26 -39 -75 12 -41 -1 -54 -42 -42 -50 14 -53 12 -78 -48 l-23 -56 30 -23 c16 -13 32 -24 37 -24 4 0 7 -9 7 -20 0 -11 -3 -20 -7 -20 -5 0 -21 -11 -37 -24 l-30 -23 23 -56 c25 -60 28 -62 78 -48 41 12 54 -1 42 -42 -5 -18 -9 -37 -9 -43 0 -11 91 -54 114 -54 6 0 20 16 30 35 11 21 27 35 38 35 10 0 18 -3 18 -7 0 -5 11 -21 23 -37 l24 -29 49 18 c66 25 68 27 57 74 -14 51 -3 62 48 48 47 -11 49 -9 74 57 l18 49 -29 24 c-16 12 -32 23 -36 23 -5 0 -8 8 -8 18 0 11 14 27 35 38 41 22 41 23 16 89 -21 56 -27 60 -74 47 -45 -13 -58 -1 -46 41 14 50 12 53 -48 78 l-56 23 -23 -30 c-13 -16 -24 -32 -24 -36 0 -21 -38 -3 -58 27 -25 40 -30 41 -94 13z m81 -53 c16 -27 27 -35 50 -35 27 0 41 12 76 68 1 1 16 -3 34 -9 22 -8 30 -16 27 -28 -18 -59 -17 -70 4 -91 21 -21 32 -22 91 -4 12 3 20 -5 28 -27 6 -18 11 -33 11 -35 0 -1 -16 -11 -35 -23 -28 -16 -35 -27 -35 -51 0 -24 7 -35 35 -51 19 -12 35 -22 35 -23 0 -2 -5 -17 -11 -35 -8 -22 -16 -30 -28 -27 -59 18 -70 17 -91 -4 -21 -21 -22 -32 -4 -91 3 -12 -5 -20 -27 -28 -18 -6 -33 -10 -34 -9 -35 56 -49 68 -76 68 -23 0 -34 -8 -50 -35 -12 -19 -22 -35 -23 -35 -2 0 -17 5 -35 11 -22 8 -30 16 -27 28 18 59 17 70 -4 91 -21 21 -32 22 -91 4 -12 -3 -20 5 -28 27 -6 18 -10 33 -9 34 55 34 68 49 68 75 0 26 -13 41 -68 75 -1 1 3 16 9 34 8 22 16 30 28 27 59 -18 70 -17 91 4 21 21 22 32 4 92 -3 11 4 19 23 26 40 15 39 15 62 -23z M260 413 c-95 -49 -83 -183 20 -214 53 -16 107 10 134 65 17 36 18 43 5 79 -25 71 -96 102 -159 70z m104 -44 c19 -15 26 -29 26 -57 0 -75 -83 -110 -135 -57 -73 72 28 178 109 114z") !important;
@@ -2363,8 +2340,8 @@
 
 			/* Forums */
 				/* Background */
-				.mainCard__0ec2c, /* Search/create post bar */
-				.scrollerBase_f742b2 div.content__690c5{
+				.mainCard__0ec2c.header_b2c494, /* Search/create post bar */
+				.list__5ced9, .grid_c2bdfe{
 					background: rgb(var(--background)) !important;
 				}
 				.container-JhuCwn{
@@ -2372,20 +2349,20 @@
 				}
 
 				/* Forums items */
-				.row-uezxzk{
-					transform: none !important;
-				}
-				.container__7d004{
+				.card__691f2.mainCard__0ec2c, /* Gallary */
+				.container_de2a56.mainCard__0ec2c{ /* List */
 					background-color: rgb(var(--buttonStandard)) !important;
 					border-radius: 6px;
 					border: none !important;
 				}
 
-				.container__7d004:hover{
+				.card__691f2.mainCard__0ec2c:hover, /* Gallary */
+				.container_de2a56.mainCard__0ec2c:hover{ /* List */
 					background-color: rgb(var(--buttonHover)) !important;
 				}
 
-				.container__7d004:focus-within{
+				.card__691f2.mainCard__0ec2c:hover, /* Gallary */
+				.container_de2a56.mainCard__0ec2c:focus-within{ /* List */
 					background-color: rgb(var(--buttonSelected)) !important;
 				}
 
@@ -3711,6 +3688,15 @@
 						background: rgb(var(--buttonStandard)) !important;
 						border: none !important;
 					}
+
+
+			/* Vencord: Plugins */
+			.vc-addon-card {
+				background: rgb(var(--buttonStandard));
+			}
+			.vc-addon-card:hover {
+				background: rgb(var(--buttonHover));
+			}
 
 
 		/* Server settings */

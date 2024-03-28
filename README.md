@@ -1,7 +1,7 @@
 ![image](https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/preview.jpg?raw=true)
 
 ## Download
-Latest version: 0.9.2
+Latest version: 0.9.3
 
 ### BetterDiscord
 Open https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/main/Discord_Windows_11.theme.css > Right click > Save as > Go to BetterDiscord themes folder (%AppData%\BetterDiscord\themes) > Save
@@ -23,7 +23,7 @@ Some controls have moved to conform with Windows 11 styles.
 
 ### Moved settings
 - Toast/Notifications now have an global toggle in the themes settings
-- Mute and deafen settings are now shown only on the voice connected panel
+<!-- - Mute and deafen settings are now shown only on the voice connected panel -->
 - Stickers and GIFs are now all in the emote menu
 - Search bars are on the title bar
 - User profile is now in the title bar next to window controls
