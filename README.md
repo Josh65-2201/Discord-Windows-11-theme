@@ -1,7 +1,7 @@
 ![image](https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/preview.jpg?raw=true)
 
 ## Download
-Latest version: 0.9.1
+Latest version: 0.9.2
 
 ### BetterDiscord
 Open https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/main/Discord_Windows_11.theme.css > Right click > Save as > Go to BetterDiscord themes folder (%AppData%\BetterDiscord\themes) > Save
@@ -9,7 +9,7 @@ Open https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/main
 ### Vencord
 **Offline - Manual update**
 
-Open https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/main/Discord_Windows_11.theme.css > Right click > Save as > Go to Vendcord themes folder (%AppData%\Vencord\themes) > Save
+Open https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/main/Discord_Windows_11.theme.css > Right click > Save as > Go to Vencord themes folder (%AppData%\Vencord\themes) > Save
 
 **Online - Auto update**
 
