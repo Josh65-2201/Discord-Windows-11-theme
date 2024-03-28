@@ -21,5 +21,5 @@ assignees: Josh-65
 
 ## Versions  <!-- These can be found in discord settings on the bottom sidebar -->
 Discord:
-Better discord:
+Better discord/Vencord:
 Theme:
