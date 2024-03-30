@@ -1,12 +1,12 @@
 /* /**
 * @name Discord Windows 11
-* @version 0.9.3
+* @version 0.9.4
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
 */
 
-/* Imports ----------------------------------------------------------------------------------------------------------- */
+/* Imports/credits ----------------------------------------------------------------------------------------------------------- */
 	/* Discolored by Nyria */
 	@import url('https://nyri4.github.io/Discolored/main.css');
 
@@ -22,8 +22,7 @@
 	/* Context icons by CreArts */
 	@import url('https://crearts-community.github.io/Context-Icons/clients/betterdiscord.css');
 
-	/* Acrylic pop outs by _kokussz_ */
-	@import url('https://s-k-y-l-i.github.io/discord-themes/Theme%20code/transparent-popups.css');
+	/* Transparent context menu & user profile by _kokussz_ */
 
 	/* Windows 11 fluent emoji by DevilBro*/
 	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft/spritesheets.css');
@@ -66,11 +65,6 @@
 	--settingsmodalbackground: transparent;
 	--settingsmodalwidth: 1098px;
 	--settingsmodalheight: 690px;
-
-	/* Pop outs */
-	--blur: 24px;
-	--opacity: 1;
-	--radius: 8px;
 }
 
 
@@ -86,6 +80,8 @@
 	--contentDialogBackdrop: 0, 0, 0, 0.3;
 	--contentDialogContent: 43, 43, 43;
 	--contentDialogFooterHeader: 32, 32, 32;
+
+	--contextBackground: 32, 32, 32;
 
 	--scrollbarThumb: 159, 159, 159;
 	--scrollbarTrack: 45, 45, 45;
@@ -121,6 +117,8 @@
 	--contentDialogBackdrop: 0, 0, 0, 0.4;
 	--contentDialogContent: 43, 43, 43;
 	--contentDialogFooterHeader: 32, 32, 32;
+
+	--contextBackground: 32, 32, 32;
 
 	--scrollbarThumb: 159, 159, 159;
 	--scrollbarTrack: 45, 45, 45;
@@ -633,14 +631,31 @@
 		.submenu_aed9ee{
 			width: 256px !important;
 		}
-			
+		.input__2a648, .scroller_d4b86c, .menu__088f7, #popout_4842 {
+			background: rgb(var(--contextBackground),0.75) !important;
+		}
+			/* Blur*/
+			[role="menu"][id]:not(#account)::after, /* Main */
+			.submenuPaddingContainer__5a97c::before { /* Sub */
+				content: "";
+				backdrop-filter: blur(32px);
+				top: 0;
+				left: 0;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: transparent;
+				z-index: -1;
+				border-radius: inherit;
+			}
+
+
 		/* Your profile*/
 			/* Scrollbar */
 			.scroller__8f066{
 				overflow: hidden !important;
 			}
 
-		
 		/* Text + icon alignment */
 			.iconContainer__5d61c{
 				margin-right: 4px;
@@ -669,6 +684,13 @@
 				margin-left: 12px;
 				margin-right: 12px;
 				border: 1px solid var(--border);
+			}
+
+		/* Sub menu */
+			/* Position */
+			.submenuPaddingContainer__5a97c {
+				margin-left: -4px;
+				padding: 0px;
 			}
 
 
@@ -1138,8 +1160,8 @@
 					width: 31.25% !important;
 					margin: 0 auto;
 					border-radius: 0px 0px 12px 12px;
-					background: rgb(var(--contextBackground), 0.8) !important;
-					backdrop-filter: blur(16px);
+					background: rgb(var(--contextBackground), 0.75) !important;
+					backdrop-filter: blur(24px);
 				}
 					.queryContainer_c1cb2f{
 						display: none !important;
@@ -2568,7 +2590,7 @@
 
 		/* Switch account text */
 		.label__563c3 {
-			color: rgb(var(--text));	
+			color: rgb(var(--text));
 		}
 
 	/* Mini profile */
@@ -2580,10 +2602,26 @@
 			z-index: 4;
 		}
 
-		/* Discord bug: Profile max height fix */
-		.userPopoutOverlayBackground_bf6444 {
-			max-height: 60vh;
+		/* Background */
+		.userProfileInner__61cc1 .input_f27786, .popoutNoBannerPremium__587cf,
+		:not(aside):not(.customizationSection__0f57e)>.userProfileOuterThemed__1fbd7, 
+		:not(aside):not(.customizationSection__0f57e)>.userProfileOuterUnthemed_e14365, 
+		:not(aside):not(.customizationSection__0f57e)>div>.userProfileInnerThemedWithBanner__2152d,
+		:not(aside):not(.customizationSection__0f57e)>div>.userProfileInnerThemedPremiumWithoutBanner__3705a,
+		:not(aside):not(.customizationSection__0f57e)>div>.userProfileInnerThemedNonPremium_ed9022 {
+			background: rgb(25,25,25,0.5) !important;
 		}
+		:not(aside):not(.customizationSection__0f57e)>div>div>.overlayBackground__2666e {
+			background: transparent;
+		}
+		.userProfileInnerThemedNonPremium_ed9022 .popoutBanner__3fbe8 { /* Non-nitro color */
+			opacity: 0;
+		}
+			/* Blur */
+			.userPopoutInner_e90432:before {
+				backdrop-filter: blur(32px);
+			}
+
 
 		/* Status */
 			/* Position */
