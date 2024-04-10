@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 0.9.5
+* @version 2024.04.10.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -952,10 +952,17 @@
 					.selectedCategoryItem__3e361::after{
 						margin-left: 4px !important;
 					}
+
 					/* Threads/forms */
 					.typeThread__5fb37.modeSelected__473f1::after{
 						margin-left: 0px !important;
 					}
+
+					/* Active now voice channels */
+					.containerPadding_ca1052:has(.bar__004d9 .voiceChannelsIcon__2516e), /* In voice popup */
+					#channels li[class*=containerDefault]:has([class*=wrapperStatic]) {&, & + * { 
+						display: none; 
+					}}
 
 
 				/* Server settings: Template */
