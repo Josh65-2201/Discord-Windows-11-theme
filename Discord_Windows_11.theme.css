@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.04.10.0
+* @version 2024.04.13.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -972,6 +972,12 @@
 					height: 18px;
 					left: 122px;
 					background: rgb(var(--badgeUnread)) !important;
+				}
+
+
+				/* Server settings: Save changes */
+				.saveNoticeContainer__67513{
+					position: sticky;
 				}
 
 
@@ -2960,12 +2966,8 @@
 			margin-bottom: 50px;
 			background: rgb(var(--backgroundContentAlt)) !important;
 		}
-			/* Fix section scrolling */
-			.contentColumn__5f80b{
-				z-index: 100;
-			}
-
 			/* Center settings content */
+			.standardSidebarView__12528 .customContainer__64260,
 			.standardSidebarView__12528 .contentColumnDefault__78de3{
 				width: 1000px !important;
 				padding: 0px;
@@ -3611,9 +3613,18 @@
 
 		/* Server settings */
 			/* Roles */
-			.customContainer__64260{
-				top: 50px
-			}
+				/* Fix width */
+				.customScroller_b96e1e>div{
+					max-width: 1000px !important;
+					min-width: 1000px !important;
+					margin: 0px !important;
+					padding-right: 24px;
+				}
+
+				/* Fix height */
+				.content__690c5 > div:first-child{
+					display: none;
+				}
 
 			/* Audi log */
 			.scroller_ca9f10{
@@ -3865,7 +3876,7 @@
 	.expandedFolderBackground_b1385f, /* servers bar: Folder background */
 	.tabBarItemContainer__5d798 > svg, /* Server settings: Delete channel icon */
 	.welcomeCTAButtonOuter_fdd0ae, /* Messages: Wave to say hi */
-	.form_d8a4a1:before, /* Artifact on message box */
+	.form_d8a4a1:before, .form_d8a4a1::after, /* Artifact on message box */
 	.shineContainerDefault-3f8X_o, /* Button nitro shiny effect */
 	.content-2a4AW9 > div[style="height: 8px;"], /* DM: Friend button spacing */
 	.channelTextArea_c2094b .buttons__7ecff button[aria-label="Open sticker picker"],
