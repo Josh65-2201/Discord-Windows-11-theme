@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.04.18.0
+* @version 2024.04.18.1
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -173,37 +173,37 @@
 
 	/* Scrollbars */
 		/* Position */
-		*::-webkit-scrollbar{
+		*:not(.scroller_de945b)::-webkit-scrollbar{
 			padding: 0px;
 			margin: 0px;
 			width: 12px !important;
 		}
 
 		/* Track */
-		*::-webkit-scrollbar-track{
+		*:not(.scroller_de945b)::-webkit-scrollbar-track{
 			visibility: visible !important;
 			background-color: rgb(var(--scrollbarTrack)) !important;
 			border: 0px !important;
 			border-radius: 0px !important;
 		}
 			/* Arrows */
-			*::-webkit-scrollbar-button{
+			*:not(.scroller_de945b)::-webkit-scrollbar-button{
 				visibility: visible;
 				background-color: rgb(var(--scrollbarTrack));
 			}
 				/* Top */
-				*::-webkit-scrollbar-button:single-button:vertical:decrement{
+				*:not(.scroller_de945b)::-webkit-scrollbar-button:single-button:vertical:decrement{
 					background-image: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/icon-dark-arrow-u.png?raw=true');
 					background-repeat: no-repeat;
 				}
 				/* Bottom */
-				*::-webkit-scrollbar-button:single-button:vertical:increment{
+				*:not(.scroller_de945b)::-webkit-scrollbar-button:single-button:vertical:increment{
 					background-image: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/icon-dark-arrow-d.png?raw=true');
 					background-repeat: no-repeat;
 				}
 
 		/* Thumb */
-		*::-webkit-scrollbar-thumb{
+		*:not(.scroller_de945b)::-webkit-scrollbar-thumb{
 			visibility: visible !important;
 			background-color: rgb(var(--scrollbarThumb)) !important;
 			border: 3px solid transparent !important;
@@ -1288,7 +1288,6 @@
 			height: calc(100% - 200px);
 			width: 72px;
 			background: transparent;
-			overflow: hidden !important;
 		}
 		.listItem__48528{
 			display: block;
