@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.04.13.0
+* @version 2024.04.18.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -2393,6 +2393,10 @@
 					/* No border on full preview */
 					.image__1dc70, .modal_d2e7a7{
 						border-radius: 0px !important;
+					}
+					/* Discord bug: fixes video being cropped */
+					.video__83189{
+						object-fit: contain !important;
 					}
 
 				/* Text box */
