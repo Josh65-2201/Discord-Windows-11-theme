@@ -1,7 +1,7 @@
 ![image](https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/preview.jpg?raw=true)
 
 ## Download
-Latest version: 2024.04.18.1
+Latest version: 2024.04.19.0
 
 ### BetterDiscord
 Open https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/main/Discord_Windows_11.theme.css > Right click > Save as > Go to BetterDiscord themes folder (%AppData%\BetterDiscord\themes) > Save

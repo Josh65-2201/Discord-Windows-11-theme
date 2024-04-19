@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.04.18.1
+* @version 2024.04.19.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -1666,8 +1666,8 @@
 
 
 		/* Discord bug: Sidebar height fix */
-		.content__690c5{
-			height: 100% !important;
+		.scroller__1f498 > .content__690c5{
+			height: 99% !important;
 		}
 
 		/* Server boost bar */
@@ -3625,7 +3625,7 @@
 				}
 
 				/* Fix height */
-				.content__690c5 > div:first-child{
+				.auto__020ac .content__690c5 > div:first-child{
 					display: none;
 				}
 
