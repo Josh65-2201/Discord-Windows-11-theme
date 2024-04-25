@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.04.19.0
+* @version 2024.04.25.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -822,18 +822,6 @@
 			.itemInner_eedb2b > .avatar__6337f{
 				margin-left: 14px;
 			}
-				
-			/* Threads */
-				/* Icon */
-				.spineBorder__52981,
-				.spine__88e6d{
-					margin-left: 40px;
-				}
-
-				/* Text */
-				.typeThread__5fb37.wrapper__612a5{
-					margin-left: 78px;
-				}
 
 
 		/* Size */
@@ -1780,7 +1768,7 @@
 
 
 		/* Channels */
-			/* Unread */ 
+			/* Unread */
 			.sidebar_e031be .wrapper__612a5 .unread__48cf4{
 				width: 3px;
 				height: 18px;
@@ -1830,6 +1818,21 @@
 				.sidebar_e031be .wrapper__612a5.modeConnected__52a8f .icon__67ab4{
 					color: var(--os-accent-color, #4cc2ff);
 				}
+
+
+			/* Threads/Forums */
+				/* Position */
+				.containerDefault_ae2ea4[role="listitem"]{
+					margin-left: 72px;
+				}
+					/* Spine */
+					.spineBorder__52981{
+						margin-left:32px;
+					}
+					.spine__88e6d{
+						left: -18px;
+					}
+
 
 			/* Voice chat users */
 			.list__02208{
