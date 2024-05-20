@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.04.25.0
+* @version 2024.05.20.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -45,6 +45,7 @@
 
 /* DO NOT EDIT ------------------------------------------------------------------------------------------------------- */
 	--sidebarWidth: 320px;
+	--userProfileWidth: 400px;
 	--contentDialogBackdrop: 0, 0, 0, 0.25;
 }
 
@@ -941,7 +942,7 @@
 						margin-left: 4px !important;
 					}
 
-					/* Threads/forms */
+					/* Threads/forums */
 					.typeThread__5fb37.modeSelected__473f1::after{
 						margin-left: 0px !important;
 					}
@@ -1654,6 +1655,7 @@
 
 
 		/* Discord bug: Sidebar height fix */
+		.scroller__89969 > .content__690c5, /* DMs */
 		.scroller__1f498 > .content__690c5{
 			height: 99% !important;
 		}
@@ -1741,6 +1743,15 @@
 
 
 			/* Mod view */
+				/* Position */
+				.content__76dcf div:has(> .sidebarContianer__623bd){
+					width: var(--userProfileWidth) !important;
+					margin-left: 4px;
+				}
+				.sidebarContianer__623bd{
+					width: 100%;
+					margin-right: 0px;
+				}
 
 
 		/* Channel categories */
@@ -1820,7 +1831,7 @@
 				}
 
 
-			/* Threads/Forums */
+			/* Threads/forums */
 				/* Position */
 				.containerDefault_ae2ea4[role="listitem"]{
 					margin-left: 72px;
@@ -2666,6 +2677,27 @@
 		.userPopout-2j1gM4 .profileBadges__1f2ab,
 		.userPopout-2j1gM4 .date-YN6TCS{
 			z-index: 4;
+		}
+		.layer__6b5c3:has(> .loadingPopout__5e2fa),
+		.layer__6b5c3:has(> .animatorLeft_f985f4), .layer__6b5c3:has(> .animatorRight_b16ad3){
+			height: calc(100% - 49px);
+			width: var(--userProfileWidth);
+			left: revert !important;
+			right: 0px !important;
+			top: 49px !important;
+		}
+		.animatorRight_b16ad3, .animatorRight_b16ad3 > div:not(.popout__24e32),
+		.animatorLeft_f985f4, .animatorLeft_f985f4 > div:not(.popout__24e32),
+		.userPopoutOuter_d67f56{
+			height: 100%;
+			width: var(--userProfileWidth);
+		}
+		.loadingPopout__5e2fa{
+			height: 100% !important;
+		}
+
+		.notAppAsidePanel__95814:has(.layerContainer_a2fcaa .layer__6b5c3 div .userPopoutOuter_d67f56) .chat__52833{
+			margin-right: calc(var(--userProfileWidth) + 4px);
 		}
 
 		/* Background */
