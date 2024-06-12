@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.05.20.0
+* @version 2024.06.12.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -2678,6 +2678,11 @@
 		.userPopout-2j1gM4 .date-YN6TCS{
 			z-index: 4;
 		}
+			/* Height fix: Discord bug */
+			[class*=userPopoutOverlayBackground] {
+				max-height: 60vh;
+			}
+
 		.layer__6b5c3:has(> .loadingPopout__5e2fa),
 		.layer__6b5c3:has(> .animatorLeft_f985f4), .layer__6b5c3:has(> .animatorRight_b16ad3){
 			height: calc(100% - 49px);
