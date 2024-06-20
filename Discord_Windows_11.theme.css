@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.06.19.0
+* @version 2024.06.20.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -2684,7 +2684,7 @@
 			}
 
 		.layer_cd0de5:has(> .loadingPopout_a8c724),
-		.layer_cd0de5:has(> .animatorLeft_f88ae3), .layer_cd0de5:has(> .animatorRight_f88ae3){
+		.layer_cd0de5:has(> .animatorLeft_f88ae3), .layer_cd0de5:has(> .animatorRight_f88ae3 > div[role="dialog"]){
 			height: calc(100% - 49px);
 			width: var(--userProfileWidth);
 			left: revert !important;
@@ -2701,9 +2701,9 @@
 			height: 100% !important;
 		}
 
-		.notAppAsidePanel_bd26cc:has(.layerContainer_cd0de5 .layer_cd0de5 div .userPopoutOuter_c69a7b) .chat_a7d72e{
+		/*.notAppAsidePanel_bd26cc:has(.layerContainer_cd0de5 .layer_cd0de5 div .userPopoutOuter_c69a7b) .chat_a7d72e{
 			margin-right: calc(var(--userProfileWidth) + 4px);
-		}
+		}*/
 
 		/* Background */
 		.popoutNoBannerPremium_c3e427,
@@ -2712,17 +2712,16 @@
 		:not(aside):not(.customizationSection_b3a5c2)>div>.userProfileInnerThemedWithBanner_c69a7b,
 		:not(aside):not(.customizationSection_b3a5c2)>div>.userProfileInnerThemedPremiumWithoutBanner_c69a7b,
 		:not(aside):not(.customizationSection_b3a5c2)>div>.userProfileInnerThemedNonPremium_c69a7b {
-			background: rgb(25,25,25,0.5) !important;
+			background: rgb(var(--backgroundContent)) !important;
 		}
-		:not(aside):not(.customizationSection_b3a5c2)>div>div>.overlayBackground_c69a7b {
-			background: transparent;
-		}
-		.userProfileInnerThemedNonPremium_c69a7b .popoutBanner_c3e427 { /* Non-nitro color */
-			opacity: 0;
-		}
-			/* Blur */
-			.userPopoutInner_c69a7b:before {
-				backdrop-filter: blur(32px);
+			/* Server info */
+			:not(aside):not(.customizationSection_b3a5c2)>div>div>.overlayBackground_c69a7b {
+				background: transparent;
+			}
+
+			/* Nitro border */
+			.userProfileInnerThemedNonPremium_c69a7b .popoutBanner_c3e427 { /* Non-nitro color */
+				opacity: 0;
 			}
 
 
