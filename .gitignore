@@ -1,3 +1,4 @@
-*.code-workspace
+/local
 /.vs
-04-09-24-201318.png
+*.code-workspace
+desktop.ini

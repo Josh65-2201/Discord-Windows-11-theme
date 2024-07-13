@@ -1,19 +1,21 @@
-![image](https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/preview.jpg?raw=true)
+![image](https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/.github/preview.webp?raw=true)
 
 ## Download
-Latest version: 2024.07.06.0
+Latest version: 2024.07.13.0
 
-### BetterDiscord
-Open https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/main/Discord_Windows_11.theme.css > Right click > Save as > Go to BetterDiscord themes folder (%AppData%\BetterDiscord\themes) > Save
+<details>
+	<summary>Better Discord</summary>
+	Open https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/main/Discord_Windows_11.theme.css > Right click > Save as > Go to BetterDiscord themes folder (%AppData%\BetterDiscord\themes) > Save
+</details>
 
-### Vencord
-**Offline - Manual update**
-
-Open https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/main/Discord_Windows_11.theme.css > Right click > Save as > Go to Vencord themes folder (%AppData%\Vencord\themes) > Save
-
-**Online - Auto update**
-
-Copy URL `https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/main/Discord_Windows_11.theme.css` > Open Discord settings > Click `Themes` > Click `Online themes` > Paste in theme links.
+<details>
+	<summary>Vencord</summary>
+	<b>Offline - Manual update</b>
+	Open https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/main/Discord_Windows_11.theme.css > Right click > Save as > Go to Vencord themes folder (%AppData%\Vencord\themes) > Save
+	<br></br>
+	<b>Online - Auto update</b>
+	Copy URL `https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/main/Discord_Windows_11.theme.css` > Open Discord settings > Click `Themes` > Click `Online themes` > Paste in theme links.
+</details>
 
 <br></br>
 
@@ -37,12 +39,26 @@ Some controls have moved to conform with Windows 11 styles.
 
 ## Development
 ### Guidelines
-- Any CSS editor will work, VS Code is recommended.
-- Indents for sub sections use TABs at 4 spaces.
-- New sections (e.g. different controls or part of discord) must have one line gap
+- Any editor will work, Visual Studios Code is recommended.
+- Indents use tabs at 4 spaces.
+- New sections follow the line gaps
+```
+Main section 1 (E.G. Servers bar, Messages content)
+	Sub section 1 (E.G. Server icon, Message)
+		Part 1 (Position, Background color)
+		Part 2 (Position, Background color)
+
+	Sub section 2 (E.G. Server icon, Message)
 
 
-### Structure
+Main section 2 (E.G. Servers bar, Messages content)
+```
+
+
+### File structure
+> [!NOTE]
+> File isn't updated to follow this yet
+
 ```
 Theme imports and settings
 

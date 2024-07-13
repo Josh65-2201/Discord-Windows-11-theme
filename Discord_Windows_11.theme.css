@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.07.06.0
+* @version 2024.07.13.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -22,7 +22,7 @@
 	/* Context icons by CreArts */
 	@import url('https://crearts-community.github.io/Context-Icons/clients/betterdiscord.css');
 
-	/* Transparent context menu & user profile by kokussz */
+	/* Transparent context menu CSS by kokussz */
 
 	/* Windows 11 fluent emoji by DevilBro*/
 	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft/spritesheets.css');
@@ -193,12 +193,12 @@
 			}
 				/* Top */
 				*:not(.scroller_fea3ef)::-webkit-scrollbar-button:single-button:vertical:decrement{
-					background-image: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/icon-dark-arrow-u.png?raw=true');
+					background-image: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/icon-dark-arrow-up.webp?raw=true');
 					background-repeat: no-repeat;
 				}
 				/* Bottom */
 				*:not(.scroller_fea3ef)::-webkit-scrollbar-button:single-button:vertical:increment{
-					background-image: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/icon-dark-arrow-d.png?raw=true');
+					background-image: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/icon-dark-arrow-down.webp?raw=true');
 					background-repeat: no-repeat;
 				}
 
@@ -521,6 +521,7 @@
 		.inputDefault_f8bc55.input-2g-os5.input_df4dd0, /* Mini user profile: Message user */
 		.searchBar_a46bef, /* Conversation search bar */
 		.addFriendInput_de812f, /* Home: Add friend */
+		.searchBar_e0840f, /* Home: Search friends */
 		.input__72d38, /* Settings: Key binds */
 		.textArea_d0696b, /* Messages: Message box */
 		.root_f9a4c9 .input-2g-os5[name="invite"], /* Add server viewModal */
@@ -551,6 +552,7 @@
 		.inputDefault_f8bc55.input-2g-os5.input-3AAlUz:hover, /* Custom status */
 		.searchBar_a46bef:hover, /* Sidebar search */ 
 		.addFriendInput_de812f:hover, /* Home: Add friend */
+		.searchBar_e0840f:hover, /* Home: Search friends */
 		.input__72d38:hover, /* Settings: Key binds */
 		.inputDefault_f8bc55.input-2g-os5.input_df4dd0:hover,  /* Mini profile: Message user */
 		.textArea_d0696b:hover, /* Messages: Message box */
@@ -572,6 +574,7 @@
 		.inputDefault_f8bc55.input-2g-os5.input-3AAlUz:focus-within, /* Custom status */
 		.searchBar_a46bef:focus-within, /* Sidebar search */
 		.addFriendInput_de812f:focus-within, /* Home: Add friend */
+		.searchBar_e0840f:focus-within, /* Home: Search friends */
 		.input__72d38:focus-within, /* Settings: Key binds */
 		.inputDefault_f8bc55.input-2g-os5.input_df4dd0:focus-within,  /* Mini profile: Message user */
 		.textArea_d0696b:focus-within, /* Messages: Message box */
@@ -580,8 +583,8 @@
 		.pageWrapper_a3a4ce .searchBox-31Zv9h:focus-within, /* Discovery home page */
 		.bd-search-wrapper:focus-within, /* BD Plugin + Themes picker */
 		.inner__999f6:focus-within, /* BD Plugin + Themes repo */
-		.container_e44302 .searchBar_a46bef .searchFilter_b0fa94, 
-		.container_e44302 .searchBar_a46bef .searchAnswer_b0fa94,
+		.container_fc4f04 .searchBar_a46bef .searchFilter_b0fa94, 
+		.container_fc4f04 .searchBar_a46bef .searchAnswer_b0fa94,
 		.focused-8aNhVB .searchBar_a46bef, .open-3y3yI_ .searchBar_a46bef, 
 		.focused_e0264e,
 		.focused-20l6Zp{
@@ -607,6 +610,7 @@
 		}
 		.input_f4e139, .scroller_f4e139, .menu_d90b3d:not(.userPopoutOverlayBackground_c69a7b .menu_d90b3d), #popout_4842 {
 			background: rgb(var(--contextBackground),0.75) !important;
+			max-width: none !important;
 		}
 			/* Blur*/
 			[role="menu"][id]:not(#account)::after, /* Main */
@@ -760,7 +764,7 @@
 
 	/* Loading Spinner */
 	.spinner_b6db20:after {
-		background-image: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/icon-loading.gif?raw=true');
+		background-image: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/icon-loading.gif?raw=true');
 		background-size: cover;
 		width: 32px !important;
 		height: 32px !important;
@@ -951,7 +955,7 @@
 
 
 			/* Hovered */
-			.item_fd07a3[style*="height: 20px"] /* Servers bar */{
+			.item_c4cd66[style*="height: 20px"] /* Servers bar */{
 				background: rgb(var(--buttonHover)) !important;
 			}
 
@@ -1357,6 +1361,7 @@
 
 		/* Servers */
 			/* Icon */
+			.listItemWrapper_dfb2f8 .wrapper_c5f96a:has( svg foreignObject div img), /* DMs */
 			div[aria-label="Servers"] > .listItem_c96c45{
 				left: 4px;
 			}
@@ -1386,20 +1391,20 @@
 
 
 				/* Side highlight */
-				.item_fd07a3[style*="height: 8px"]{
+				.item_c4cd66[style*="height: 8px"]{
 					display: block !important;
 				}
-				.item_fd07a3[style*="height: 40px"]{
+				.item_c4cd66[style*="height: 40px"]{
 					display: block !important;
 					height: 24px !important;
 					width: 4px;
 					top: 16px;
-					left: 8px;
+					left: 4px;
 					border-radius: 4px !important;
 					background: var(--os-accent-color, #4cc2ff);
 				}
 					/* Remove pill on anything other the selected */
-					.item_fd07a3{
+					.item_c4cd66{
 						display: none;
 					}
 
@@ -1411,7 +1416,7 @@
 
 			/* Unread badge */
 				/* Position */
-				.item_fd07a3[style*="opacity: 1; height: 8px"] /* Servers bar */{
+				.item_c4cd66[style*="opacity: 1; height: 8px"] /* Servers bar */{
 					background: rgb(var(--badgeUnread)) !important;
 					border-radius: 50%;
 					top: 0px;
@@ -1826,7 +1831,7 @@
 				}
 
 				/* Background */
-				.container_e44302.themed_e44302{
+				.container_fc4f04.themed_fc4f04{
 					height: 48px;
 					width: 100%;
 					box-shadow: none;
@@ -1835,13 +1840,13 @@
 				
 				/* Divider */
 					/* Name | Description */
-					.container_e44302 .divider_e44302{
+					.container_fc4f04 .divider_e44302{
 						background: #FFFFFF;
 					}
 
 					/* Buttons */
 						/* Position */
-						.iconWrapper_e44302{
+						.iconWrapper_fc4f04{
 							margin: 0px 17px;
 						}
 
@@ -2255,7 +2260,7 @@
 
 			/* Loading icon */
 			.wrapper_ba0ffb{
-				background-image: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/icon-loading.gif?raw=true');
+				background-image: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/icon-loading.gif?raw=true');
 				background: no-repeat, center;
 			}
 			.wrapper_b211c6.cozy_b211c6{
@@ -2658,16 +2663,25 @@
 		}
 
 		/* Profile actions */
-		.wrapper_cb78f1.biteSize_cb78f1{
+		.wrapper_cb78f1.biteSize_cb78f1{ /* Server profiles */
 			top: 104px;
+			right: 4px;
+		}
+		.wrapper_cb78f1.panel_cb78f1{ /* DMs */
+			top: 100px;
 			right: 4px;
 		}
 
 		/* Profile picture */
-		.avatar_cc54d6{
+		.avatar_f94206.biteSize_f94206{ /* Server profiles */
 			top: 56px;
 			left: 4px;
 		}
+		.avatar_f94206.panel_f94206{ /* DMs */
+			top: 52px;
+			left: 4px;
+		}
+
 
 		/* Status message */
 			/* Position */
@@ -3073,8 +3087,8 @@
 		/* Collapsible groups */
 			/* Header */
 				/* Unselected */
-				.container_e44302 .topPill-3DJJNV .item-3XjbnG[aria-controls="add_friend-tab"], /* Friends list: Add friend*/
-				.container_e44302 .topPill-3DJJNV .item-3XjbnG
+				.container_fc4f04 .topPill-3DJJNV .item-3XjbnG[aria-controls="add_friend-tab"], /* Friends list: Add friend*/
+				.container_fc4f04 .topPill-3DJJNV .item-3XjbnG
 				.tabBarItem_b9fccc, .tabBarItem_b9fccc:hover, /* Full user profile */
 				.tabBarContainer-sCZC4w .top-K_jibn .selected-g-kMVV.item-3XjbnG
 				.root-8LYsGj .tabBarContainer-sCZC4w .top-K_jibn{
@@ -3105,14 +3119,14 @@
 				}
 
 				/* Hovered */
-				.container_e44302 .topPill-3DJJNV .item-3XjbnG:hover[aria-controls="add_friend-tab"], /* Friends list: Add friend*/
-				.container_e44302 .topPill-3DJJNV .themed-2-lozF.item-3XjbnG:hover{ /* Friends list */
+				.container_fc4f04 .topPill-3DJJNV .item-3XjbnG:hover[aria-controls="add_friend-tab"], /* Friends list: Add friend*/
+				.container_fc4f04 .topPill-3DJJNV .themed-2-lozF.item-3XjbnG:hover{ /* Friends list */
 					background: transparent !important;
 				}
 
 				/* Selected */
-				.container_e44302 .topPill-3DJJNV .item-3XjbnG[style="color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);"], /* Friends list: Add friend*/
-				.container_e44302 .topPill-3DJJNV .item-3XjbnG.selected-g-kMVV, .container_e44302 .topPill-3DJJNV .themed-2-lozF.selected-g-kMVV.item-3XjbnG /* Friends list */
+				.container_fc4f04 .topPill-3DJJNV .item-3XjbnG[style="color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);"], /* Friends list: Add friend*/
+				.container_fc4f04 .topPill-3DJJNV .item-3XjbnG.selected-g-kMVV, .container_fc4f04 .topPill-3DJJNV .themed-2-lozF.selected-g-kMVV.item-3XjbnG /* Friends list */
 				.layer-2aCOJ3 .header_f0cd33 .topPill-3DJJNV .tab_f0cd33.active_f0cd33,
 				.root-8LYsGj .tabBarContainer-sCZC4w .top-K_jibn .selected-g-kMVV.item-3XjbnG /* Full user profile */{
 					background: transparent;
@@ -3619,7 +3633,7 @@
 				margin-left: 48px;
 			}
 			.notice-message::before{
-				background-image: url("https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/icon-infobar-warning.png");
+				background-image: url("https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/icon-infobar-warning.webp");
 			}
 
 
@@ -3681,7 +3695,7 @@
 	.scroller_a39aa3, /* Discover page: Student hub */
 	.name_a08117.container-q97qHp, /* Server channel category text hover */
 	.elevationHigh__08882,
-	.children_e44302:after, /* Content: Top bar: button divider */
+	.children_fc4f04:after, /* Content: Top bar: button divider */
 	.circleIconButton_db6521, /* Add server/Discovery */
 	.wrapper__8436d .childWrapper_a6ce15:has(svg), .wrapper__8436d:hover .childWrapper_a6ce15, /* Home icon */
 	.container_fd6364 [class*="animatedContainer-"], /* Channels: Banner image */
@@ -3726,7 +3740,7 @@
 
 
 	/* D: Animations */	
-	.item_fd07a3,
+	.item_c4cd66,
 	.container_e61cfb.recording_ebcd80{
 		transition: none !important;
 		animation: none !important;
@@ -3760,7 +3774,7 @@
 	.layer_d4b6c5.layer_d4b6c5 ~ .layer_d4b6c5 .divider-_0um2u, .layer_d4b6c5.layer_d4b6c5 ~ .layer_d4b6c5 .divider-ogkn3u, /* Settings: option divider */
 	.settingsBanner-2E5fAp, /* Settings: Profile banner */
 	.avatarSpeaking-33RRJU, /* User profile: Speaking ring */
-	.status__2a4a6, .divider_e44302, .children_e44302 > .iconWrapper_e44302, .titleWrapper_e44302, /* Channel information: Selected text */
+	.status__2a4a6, .divider_e44302, .children_fc4f04 > .iconWrapper_fc4f04, .titleWrapper_e44302, /* Channel information: Selected text */
 	#account-switch-account > .iconContainer_d90b3d, /* User profile: Switch account */
 	.matchingPostsRow_a6d69a, /* Forums: Matching post bar */
 	.accountProfileCard_b69b77 > .bannerSVGWrapper_b32cc2, /* Settings: User profile: preview */
@@ -3782,8 +3796,8 @@
 	.spinner_b6db20 > span, /* Loading spinner: All */
 	.separator_a0, .header_a0, .bd-sidebar-header, /* Settings Headers */ 
 	.socialLinks_c44e94, /* Settings better discord social links */
-	[data-list-id="guildsnav"]>div>div>div:has(>div[style*="background: url(\"https://cdn.discordapp.com/assets/signups"]), /* servers bar ADs */
-	.iconWrapper_e44302[aria-label="Help"]{ /* Channel information bar: Help button */
+	[data-list-id="guildsnav"]>div>div>div:has(>div[style*="background: url(\"https://cdn.discordapp.com/signups"]), /* servers bar ADs */
+	.iconWrapper_fc4f04[aria-label="Help"]{ /* Channel information bar: Help button */
 		display: none !important;
 	}
 	ul.content_eed6a8 > div:nth-child(2){ /* Server sidebar: Blank gaps */
