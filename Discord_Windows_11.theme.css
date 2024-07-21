@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.07.13.0
+* @version 2024.07.21.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -2320,7 +2320,7 @@
 				/* Background */
 				.mentioned_d5deea{
 					border-radius: 8px;
-					background: var(--os-accent-color, #4cc2ff);
+					background: color-mix(in srgb, var(--os-accent-color) 20%, transparent);
 				}
 
 			/* Message failed to send */
