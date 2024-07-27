@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.07.21.0
+* @version 2024.07.27.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -931,11 +931,8 @@
 						margin-left: 0px !important;
 					}
 
-					/* Active now voice channels */
-					.containerPadding_eba0ba:has(.bar_eba0ba .voiceChannelsIcon_eba0ba), /* In voice popup */
-					#channels li[class*=containerDefault]:has([class*=wrapperStatic]) {&, & + * { 
-						display: none; 
-					}}
+					/* Suggested channels */
+
 
 
 				/* Server settings: Template */
@@ -1753,9 +1750,9 @@
 			/* Unread */
 			.sidebar_a4d4d9 .wrapper_d8bfb3 .unread_d8bfb3{
 				width: 3px;
-				height: 18px;
-				top: 9px;
-				left: 38px;
+				height: 16px;
+				top: 8px;
+				left: 28px;
 				margin-top: 0px !important;
 				background: rgb(var(--badgeUnread));
 				border-radius: 8px;
@@ -2301,7 +2298,7 @@
 
 			/* Selected */
 			.chat_a7d72e .message_d5deea.selected_d5deea{
-				background: var(--os-accent-color, #4cc2ff) !important;
+				background: color-mix(in srgb, var(--os-accent-color) 70%, transparent) !important;
 				border-radius: 8px;
 			}
 
@@ -2320,7 +2317,7 @@
 				/* Background */
 				.mentioned_d5deea{
 					border-radius: 8px;
-					background: color-mix(in srgb, var(--os-accent-color) 20%, transparent);
+					background: color-mix(in srgb, var(--os-accent-color) 30%, transparent);
 				}
 
 			/* Message failed to send */
@@ -3684,7 +3681,6 @@
 		0% {transform: scale(1); opacity: 1;}
 		100%{transform: scale(1.1); opacity: 0;}
 	}
-
 
 
 /* 9. Disabled elements --------------------------------------------------------------------------------------------- */
