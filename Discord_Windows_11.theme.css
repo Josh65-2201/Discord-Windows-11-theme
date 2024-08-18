@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.07.27.0
+* @version 2024.08.18.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -1468,7 +1468,7 @@
 
 			/* Settings button */
 				/* Position */
-				.flex_bba380 > button[aria-label="User Settings"]{
+				.flex_dc333f > button[aria-label="User Settings"]{
 					position: fixed;
 					width: 64px !important;
 					height: 58px !important;
@@ -1479,12 +1479,12 @@
 				}
 
 				/* Icon */
-				.flex_bba380 button[aria-label="User Settings"] .contents_dd4f85 .lottieIcon_f73ef7{
+				.flex_dc333f button[aria-label="User Settings"] .contents_dd4f85 .lottieIcon_f73ef7{
 					height: 40px !important;
 					width: 40px !important;
 				}
 
-				.flex_bba380 button[aria-label="User Settings"] div div svg g g g g path{
+				.flex_dc333f button[aria-label="User Settings"] div div svg g g g g path{
 					transform: scale(0.025) translate(-318px, -318px);
 					d: path("M178 598 c-51 -22 -53 -26 -39 -75 12 -41 -1 -54 -42 -42 -50 14 -53 12 -78 -48 l-23 -56 30 -23 c16 -13 32 -24 37 -24 4 0 7 -9 7 -20 0 -11 -3 -20 -7 -20 -5 0 -21 -11 -37 -24 l-30 -23 23 -56 c25 -60 28 -62 78 -48 41 12 54 -1 42 -42 -5 -18 -9 -37 -9 -43 0 -11 91 -54 114 -54 6 0 20 16 30 35 11 21 27 35 38 35 10 0 18 -3 18 -7 0 -5 11 -21 23 -37 l24 -29 49 18 c66 25 68 27 57 74 -14 51 -3 62 48 48 47 -11 49 -9 74 57 l18 49 -29 24 c-16 12 -32 23 -36 23 -5 0 -8 8 -8 18 0 11 14 27 35 38 41 22 41 23 16 89 -21 56 -27 60 -74 47 -45 -13 -58 -1 -46 41 14 50 12 53 -48 78 l-56 23 -23 -30 c-13 -16 -24 -32 -24 -36 0 -21 -38 -3 -58 27 -25 40 -30 41 -94 13z m81 -53 c16 -27 27 -35 50 -35 27 0 41 12 76 68 1 1 16 -3 34 -9 22 -8 30 -16 27 -28 -18 -59 -17 -70 4 -91 21 -21 32 -22 91 -4 12 3 20 -5 28 -27 6 -18 11 -33 11 -35 0 -1 -16 -11 -35 -23 -28 -16 -35 -27 -35 -51 0 -24 7 -35 35 -51 19 -12 35 -22 35 -23 0 -2 -5 -17 -11 -35 -8 -22 -16 -30 -28 -27 -59 18 -70 17 -91 -4 -21 -21 -22 -32 -4 -91 3 -12 -5 -20 -27 -28 -18 -6 -33 -10 -34 -9 -35 56 -49 68 -76 68 -23 0 -34 -8 -50 -35 -12 -19 -22 -35 -23 -35 -2 0 -17 5 -35 11 -22 8 -30 16 -27 28 18 59 17 70 -4 91 -21 21 -32 22 -91 4 -12 -3 -20 5 -28 27 -6 18 -10 33 -9 34 55 34 68 49 68 75 0 26 -13 41 -68 75 -1 1 3 16 9 34 8 22 16 30 28 27 59 -18 70 -17 91 4 21 21 22 32 4 92 -3 11 4 19 23 26 40 15 39 15 62 -23z M260 413 c-95 -49 -83 -183 20 -214 53 -16 107 10 134 65 17 36 18 43 5 79 -25 71 -96 102 -159 70z m104 -44 c19 -15 26 -29 26 -57 0 -75 -83 -110 -135 -57 -73 72 28 178 109 114z") !important;
 				}
@@ -1493,7 +1493,7 @@
 			/* Shared */
 				/* Hovered */
 				.wrapper_c5f96a:hover, /* Home */
-				.flex_bba380 button[aria-label="User Settings"]:hover{ /* Settings */
+				.flex_dc333f button[aria-label="User Settings"]:hover{ /* Settings */
 					background: rgb(var(--buttonHover));
 					border-radius: 4px;
 				}
@@ -2058,7 +2058,7 @@
 							left: 144px;
 							bottom: 2px;
 						}
-						.horizontal_bba380>.flex_bba380{
+						.horizontal_bba380>.flex_dc333f{
 							margin: 0px;
 						}
 						button[aria-label="Noise Suppression powered by Krisp"]{
@@ -2066,7 +2066,7 @@
 						}
 
 						/* Icons */
-						.connection_adcaac > .flex_bba380 > button{
+						.connection_adcaac > .flex_dc333f > button{
 							color: rgb(var(--textNormal)) !important;
 						}
 
@@ -2086,11 +2086,12 @@
 						}
 
 						/* Disable if panel not shown */
-						button[aria-label="Deafen"], button[aria-label="Mute"]{
+						button[aria-label="Deafen"],
+						button[aria-label="Mute"]{
 							display: none;
 						}
-						.panels_a4d4d9:has(.wrapper_adcaac > .container_adcaac) .container_b2ca13 > .flex_bba380.horizontal_bba380.justifyStart_ec1a20.alignStretch_ec1a20.noWrap_ec1a20 > button[aria-label="Deafen"],
-						.panels_a4d4d9:has(.wrapper_adcaac > .container_adcaac) .container_b2ca13 > .flex_bba380.horizontal_bba380.justifyStart_ec1a20.alignStretch_ec1a20.noWrap_ec1a20 > button[aria-label="Mute"]{
+						.panels_a4d4d9:has(.wrapper_adcaac > .container_adcaac) .container_b2ca13 > .flex_dc333f.horizontal_dc333f.justifyStart_ec1a20.alignStretch_ec1a20.noWrap_ec1a20 > button[aria-label="Deafen"],
+						.panels_a4d4d9:has(.wrapper_adcaac > .container_adcaac) .container_b2ca13 > .flex_dc333f.horizontal_dc333f.justifyStart_ec1a20.alignStretch_ec1a20.noWrap_ec1a20 > button[aria-label="Mute"]{
 							display: flex !important;
 						}
 
