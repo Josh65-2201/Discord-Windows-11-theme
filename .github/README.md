@@ -1,7 +1,7 @@
 ![image](https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/.github/preview.webp?raw=true)
 
 ## Download
-Latest version: 2024.09.04.0
+Latest version: 2024.09.30.0
 
 <details>
 	<summary>Better Discord</summary>
