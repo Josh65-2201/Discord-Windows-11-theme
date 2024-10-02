@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.09.30.0
+* @version 2024.10.02.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -1314,9 +1314,9 @@
 					width: 24px !important;
 				}
 
-			 .childWrapper_a6ce15:has(childWrapper_a6ce15 svg) {
+			.childWrapper_a6ce15:has(childWrapper_a6ce15 svg) {
 				flex-direction: row-reverse;
-			 }
+			}
 
 
 
@@ -1442,6 +1442,11 @@
 
 
 		/* Bottom Icons */
+			/* Background */
+			.footer_aa1bff{
+				padding: 0px;
+			}
+			
 			/* Add server button */
 			.tutorialContainer_c96c45{
 				position: fixed;
@@ -1457,7 +1462,7 @@
 
 
 			/* Discovery button */
-			.tutorialContainer_c96c45 + .listItem_c96c45{
+			.footer_aa1bff > .listItem_c96c45{
 				position: fixed;
 				left: 4px;
 				bottom: 76px;
