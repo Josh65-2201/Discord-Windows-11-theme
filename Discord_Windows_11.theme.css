@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.10.02.0
+* @version 2024.10.07.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -2705,27 +2705,39 @@
 
 		/* Status message */
 			/* Position */
-			.invisibleContainer_d0a252{
+			.invisibleContainer_e6ac4a{
 				display: none !important;
 			}
-			.statusBubbleWithTextPadding_d0a252{
+			.statusBubbleWithTextPadding_e6ac4a{
 				padding: 0px;
 			}
-			.visibleContainer_d0a252.biteSize_d0a252{
+			.visibleContainer_e6ac4a.biteSize_e6ac4a{
 				top: 146px;
 				left: 4px;
 			}
-			.statusBubbleOuter_d0a252{
+			.statusBubbleOuter_e6ac4a{
 				min-width: calc(var(--userProfileWidth) - 12px);
 			}
 				/* Information position */
-				.body_b07019{
+				.body_b8cc6d{
 					padding: 20px 8px 8px 8px;
 					overflow: hidden !important;
 				}
 
+				/* Emoji only */
+				.singleLineAlign_e6ac4a{
+					text-align: left;
+				}
+				.statusBubbleEmojiOnlyPadding_e6ac4a{
+					padding: 0px;
+				}
+				.statusEmojiOnly_e6ac4a{
+					min-height: 19px !important;
+					max-height: 19px !important;
+				}
+
 			/* Background */
-			.statusBubbleOuter_d0a252::after, .statusBubbleOuter_d0a252::before{
+			.statusBubbleOuter_e6ac4a::after, .statusBubbleOuter_e6ac4a::before{
 				display: none;
 			}
 
@@ -2815,6 +2827,7 @@
 			}
 
 			/* Mask */
+			.mask_d5fdb1 > foreignObject, /* Banner cut out */
 			foreignObject[mask="url(#svg-mask-avatar-status-mobile-80)"],
 			foreignObject[mask="url(#svg-mask-avatar-status-mobile-120)"],
 			foreignObject[mask="url(#svg-mask-avatar-status-round-80)"],
@@ -2863,7 +2876,7 @@
 				top: 60px;
 				left: 72px;
 			}
-			.statusBubbleOuter_d0a252.fullSize_d0a252{
+			.statusBubbleOuter_e6ac4a.fullSize_d0a252{
 				min-width: 590px !important;
 			}
 
