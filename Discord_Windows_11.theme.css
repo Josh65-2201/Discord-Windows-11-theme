@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.10.18.0
+* @version 2024.10.18.1
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -443,8 +443,7 @@
 				padding-top: 2px !important;
 			}
 			.inputDefault_f8bc55.input-2g-os5, /* Server settings: Roles */
-			.input__48d49, /* BD Plugin + Themes repo by DevilBro */
-			.search-25t1e9 .searchBox-31Zv9h .searchBoxInput-3h4etz{ /* Discovery home page */
+			.input__48d49{ /* BD Plugin + Themes repo by DevilBro */
 				padding: 0px !important;
 			}
 
@@ -485,7 +484,7 @@
 		.inputDefault_f8bc55.input-2g-os5.input_df4dd0, /* Mini user profile: Message user */
 		.addFriendInput_de812f, /* Home: Add friend */
 		.input__72d38, /* Settings: Key binds */
-		.root_f9a4c9 .input-2g-os5[name="invite"], /* Invite to server viewModal link */
+		.inputWrapper_f8bc55.input_e8a9c7, /* Add server content dialog Invite link */
 		.textArea_d0696b.textAreaSlate_d0696b.slateContainer_e52116, /* Messages: Message box */
 		.container_effbe2, /* Sticker page */
 		.notranslate .public-DraftEditor-content{
@@ -498,6 +497,7 @@
 			border: 1px solid var(--border);
 		}
 			/* Width fix */
+			.inputWrapper_f8bc55.input_e8a9c7, /* Add server content dialog Invite link */
 			.note_c2dcc6, /* Full user profile: Note */
 			.textArea_d0696b.textAreaSlate_d0696b.slateContainer_e52116, /* Message box */
 			.container_effbe2{ /* Sticker page */
@@ -524,9 +524,9 @@
 		.searchBar_e0840f, /* Home: Search friends */
 		.input__72d38, /* Settings: Key binds */
 		.textArea_d0696b, /* Messages: Message box */
-		.root_f9a4c9 .input-2g-os5[name="invite"], /* Add server viewModal */
+		.inputWrapper_f8bc55.input_e8a9c7, /* Add server viewModal */
 		.container_effbe2, /* Sticker page */
-		.pageWrapper_a3a4ce .searchBox-31Zv9h, /* Discovery home page */
+		.searchBar_e06425.search_e06425, /* Discovery home page */
 		.bd-search-wrapper, /* BD Plugin + Themes picker */
 		.inner__999f6, /* BD Plugin + Themes repo */
 		.searchBar_f0963d .searchBarComponent_f0963d,
@@ -556,9 +556,9 @@
 		.input__72d38:hover, /* Settings: Key binds */
 		.inputDefault_f8bc55.input-2g-os5.input_df4dd0:hover,  /* Mini profile: Message user */
 		.textArea_d0696b:hover, /* Messages: Message box */
-		.root_f9a4c9 .input-2g-os5[name="invite"]:hover, /* Add server viewModal */
+		.inputWrapper_f8bc55.input_e8a9c7:hover, /* Add server viewModal */
 		.container_effbe2:hover, /* Sticker page */
-		.pageWrapper_a3a4ce .searchBox-31Zv9h:hover, /* Discovery home page */
+		.searchBar_e06425.search_e06425:hover, /* Discovery home page */
 		.bd-search-wrapper:hover, /* BD Plugin + Themes picker */
 		.inner__999f6:hover, /* BD Plugin + Themes repo */
 		.privateChannels_f0963d .searchBar_f0963d .searchBarComponent_f0963d:hover,
@@ -578,9 +578,9 @@
 		.input__72d38:focus-within, /* Settings: Key binds */
 		.inputDefault_f8bc55.input-2g-os5.input_df4dd0:focus-within,  /* Mini profile: Message user */
 		.textArea_d0696b:focus-within, /* Messages: Message box */
-		.root_f9a4c9 .input-2g-os5[name="invite"]:focus-within, /* Add server viewModal */
+		.inputWrapper_f8bc55.input_e8a9c7:focus-within, /* Add server viewModal */
 		.container_effbe2:focus-within, /* Sticker page */
-		.pageWrapper_a3a4ce .searchBox-31Zv9h:focus-within, /* Discovery home page */
+		.searchBar_e06425.search_e06425:focus-within, /* Discovery home page */
 		.bd-search-wrapper:focus-within, /* BD Plugin + Themes picker */
 		.inner__999f6:focus-within, /* BD Plugin + Themes repo */
 		.container_fc4f04 .searchBar_a46bef .searchFilter_b0fa94, 
@@ -3034,6 +3034,10 @@
 		flex: none;
 	}
 
+	/* Search/text input */
+	.inner_effbe2.scrollerBase_c49869{
+		overflow: hidden !important;
+	}
 
 	/* Better discord change log */
 	.bd-changelog-button{
@@ -3763,7 +3767,6 @@
 	.contentTransitionWrap_c25c6d, /* Settings: Content background */
 	.input_f8bc55, /* Text input */
 	.appMount_ea7e65, body, /* Discord */
-	.scroller_a39aa3, /* Discover page: Student hub */
 	.name_a08117.container-q97qHp, /* Server channel category text hover */
 	.elevationHigh__08882,
 	.children_fc4f04:after, /* Content: Top bar: button divider */
