@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.10.18.1
+* @version 2024.10.19.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -41,10 +41,10 @@
 	--toasts: flex;					/* + on = flex     off = none */
 	--waveToUser: none;				/*   on = flex   + off = none */
 	--nitro: none;					/* + on = flex     off = none */
+	--sidebarWidth: 320px;			/* + 320px */
 
 
 /* DO NOT EDIT ------------------------------------------------------------------------------------------------------- */
-	--sidebarWidth: 320px;
 	--userProfileWidth: 400px;
 	--contentDialogBackdrop: 0, 0, 0, 0.25;
 }
@@ -2705,39 +2705,55 @@
 
 		/* Status message */
 			/* Position */
-			.invisibleContainer_e6ac4a{
+			.invisibleContainer_d22603{
 				display: none !important;
 			}
-			.statusBubbleWithTextPadding_e6ac4a{
-				padding: 0px;
+
+			.statusBubbleWithTextPadding_d22603{
+				padding: 4px;
 			}
-			.visibleContainer_e6ac4a.biteSize_e6ac4a{
-				top: 146px;
+
+			.addCustomStatusButtonBubble_d22603.biteSize_d22603{ /* Set own status */
+				top: -138px;
 				left: 4px;
 			}
-			.statusBubbleOuter_e6ac4a{
+				/* Profile information height fix */
+				.header_b8cc6d > div:last-child{
+					height: 0px;
+				}
+
+			.visibleContainer_d22603.biteSize_d22603{ /* Status text */
+				top: 4px;
+				left: 4px;
+			}
+
+			.statusBubbleSingleLineWithTextShape_d22603{
+				border-radius: 6px;
+			}
+
+			.statusBubbleOuter_d22603{
 				min-width: calc(var(--userProfileWidth) - 12px);
 			}
 				/* Information position */
 				.body_b8cc6d{
-					padding: 20px 8px 8px 8px;
+					padding: 0px 6px !important;
 					overflow: hidden !important;
 				}
 
 				/* Emoji only */
-				.singleLineAlign_e6ac4a{
+				.singleLineAlign_d22603{
 					text-align: left;
 				}
-				.statusBubbleEmojiOnlyPadding_e6ac4a{
+				.statusBubbleEmojiOnlyPadding_d22603{
 					padding: 0px;
 				}
-				.statusEmojiOnly_e6ac4a{
+				.statusEmojiOnly_d22603{
 					min-height: 19px !important;
 					max-height: 19px !important;
 				}
 
 			/* Background */
-			.statusBubbleOuter_e6ac4a::after, .statusBubbleOuter_e6ac4a::before{
+			.statusBubbleOuter_d22603::after, .statusBubbleOuter_d22603::before{
 				display: none;
 			}
 
@@ -2862,29 +2878,31 @@
 			margin: -24px 4px 4px 4px;
 		}
 
-		/* Status */
-			/* Online type */
-			.wrapper_c51b4e[style*="120px"] rect{
-				width: 120px;
-				height: 120px;
-				transform: translate(-88px, -88px);
-				stroke-width: 2px;
-			}
 
-			/* Text */
-			.visibleContainer_d0a252.fullSize_d0a252{
-				top: 60px;
-				left: 72px;
-			}
-			.statusBubbleOuter_e6ac4a.fullSize_d0a252{
-				min-width: 590px !important;
-			}
+		/* Online type */
+		.wrapper_c51b4e[style*="120px"] rect{
+			width: 120px;
+			height: 120px;
+			transform: translate(-88px, -88px);
+			stroke-width: 2px;
+		}
+
+
+		/* Status message */
+		.statusBubbleOuter_d22603.fullSize_d22603{
+			min-width: 590px !important;
+		}
+
+		.addCustomStatusButtonBubble_d22603.fullSize_d22603{
+			top: -224px;
+			left: -12px;
+		}
 
 		/* Profile image */
 			/* Position */
 			.avatar_f94206.fullSize_f94206{
-				top: -72px;
-				left: 72px;
+				top: -128px;
+				left: 4px;
 			}
 			
 			/* Background */
