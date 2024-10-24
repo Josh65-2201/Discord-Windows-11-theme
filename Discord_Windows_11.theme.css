@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.10.19.0
+* @version 2024.10.24.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -3907,7 +3907,7 @@
 		.wrapper-1z1z-S, /* Mini user profile: custom image */
 		.channel_c91bad:has([data-list-item-id$="___nitro"]), .channel_c91bad:has([data-list-item-id$="___shop"]), /* Home: Nitro and Shop channels */
 		.containerWrapper_e18107, /* User pop out nitro upsell */
-		.buttons_d0696b > button[aria-haspopup="dialog"], /*Message bar: Gift Button */
+		.button_dd4f85[aria-label="Send a gift"], /*Message bar: Gift Button */
 		.premiumFeatureBorder_c6d722, /* Premium settings feature upsell cards. */
 		.container_da1432:has(.ctaButton_da1432){ /* Shop advertisement */
 			display: var(--nitro) !important;
