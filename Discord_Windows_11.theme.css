@@ -1,6 +1,6 @@
 /* /**
 * @name Discord Windows 11
-* @version 2024.10.24.0
+* @version 2024.10.25.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -485,7 +485,7 @@
 		.addFriendInput_de812f, /* Home: Add friend */
 		.input__72d38, /* Settings: Key binds */
 		.inputWrapper_f8bc55.input_e8a9c7, /* Add server content dialog Invite link */
-		.textArea_d0696b.textAreaSlate_d0696b.slateContainer_e52116, /* Messages: Message box */
+		.textArea_bdf0de.textAreaSlate_bdf0de.slateContainer_e52116, /* Messages: Message box */
 		.container_effbe2, /* Sticker page */
 		.notranslate .public-DraftEditor-content{
 			width: 244px !important;
@@ -499,7 +499,7 @@
 			/* Width fix */
 			.inputWrapper_f8bc55.input_e8a9c7, /* Add server content dialog Invite link */
 			.note_c2dcc6, /* Full user profile: Note */
-			.textArea_d0696b.textAreaSlate_d0696b.slateContainer_e52116, /* Message box */
+			.textArea_bdf0de.textAreaSlate_bdf0de.slateContainer_e52116, /* Messages: Message box */
 			.container_effbe2{ /* Sticker page */
 				width: 100% !important;
 				padding: 0px !important;
@@ -523,7 +523,7 @@
 		.addFriendInput_de812f, /* Home: Add friend */
 		.searchBar_e0840f, /* Home: Search friends */
 		.input__72d38, /* Settings: Key binds */
-		.textArea_d0696b, /* Messages: Message box */
+		.textArea_bdf0de, /* Messages: Message box */
 		.inputWrapper_f8bc55.input_e8a9c7, /* Add server viewModal */
 		.container_effbe2, /* Sticker page */
 		.searchBar_e06425.search_e06425, /* Discovery home page */
@@ -555,7 +555,7 @@
 		.searchBar_e0840f:hover, /* Home: Search friends */
 		.input__72d38:hover, /* Settings: Key binds */
 		.inputDefault_f8bc55.input-2g-os5.input_df4dd0:hover,  /* Mini profile: Message user */
-		.textArea_d0696b:hover, /* Messages: Message box */
+		.textArea_bdf0de:hover, /* Messages: Message box */
 		.inputWrapper_f8bc55.input_e8a9c7:hover, /* Add server viewModal */
 		.container_effbe2:hover, /* Sticker page */
 		.searchBar_e06425.search_e06425:hover, /* Discovery home page */
@@ -577,7 +577,7 @@
 		.searchBar_e0840f:focus-within, /* Home: Search friends */
 		.input__72d38:focus-within, /* Settings: Key binds */
 		.inputDefault_f8bc55.input-2g-os5.input_df4dd0:focus-within,  /* Mini profile: Message user */
-		.textArea_d0696b:focus-within, /* Messages: Message box */
+		.textArea_bdf0de:focus-within, /* Messages: Message box */
 		.inputWrapper_f8bc55.input_e8a9c7:focus-within, /* Add server viewModal */
 		.container_effbe2:focus-within, /* Sticker page */
 		.searchBar_e06425.search_e06425:focus-within, /* Discovery home page */
@@ -2464,6 +2464,108 @@
 						flex-direction: row-reverse;
 					}
 
+					/* Headers */
+					.contentWrapper_af5dbb, /* Page buttons/Search bar */
+					.header_a3bc57{ /* Channel category header */
+						background: rgb(var(--backgroundBase)) !important;
+						border-radius: 0px !important;
+					}
+					.resizeHandle_af5dbb:hover{
+						background-color: rgb(var(--contextBackground));
+					}
+
+					/* Emotes */
+						.spriteContainer_d91a75{
+							transform: scale(1.1) !important;
+						}
+
+						/* Windows 11 fluent emoji none hover fix */
+						.sprite_d91a75.spriteGreyscale_d91a75.active_d91a75{
+							background-image: none !important;
+						}
+
+						/* Diversity hand icon */
+							/* Position */
+							.header_c6ee36{
+								display: flex;
+								flex-direction: row-reverse;
+								margin-left: -5px;
+							}
+							.header_c6ee36 .searchBar_c6ee36{
+								flex: 1;
+								margin-left: 6px;
+							}
+
+							/* Selected */
+							.diversitySelectorOptionsInExpressionPicker-3wybQR{
+								right: unset;
+								left: 11px;
+								top: -2px;
+							}
+
+						/* Emote picker background */
+						.bodyWrapper_c6ee36{
+							background: rgb(var(--backgroundContent));
+						}
+				
+						/* Sidebar category picker */
+						.wrapper_dc0b29{
+							background: rgb(var(--backgroundBase));	
+						}
+						.emojiPickerInExpressionPicker-2nOwH8 .categoryList_c6ee36{
+							width: 56px;
+						}
+
+						/* Nitro only emotes */
+						.emojiItemDisabled__843ea{
+							filter: none !important;
+						}
+
+					/* Stickers */
+						/* No Nitro */
+						.emptyState_d8cdac{
+							margin: 0px;
+							background: rgb(var(--backgroundContent)) !important;
+						}
+
+						/* Sidebar featured */
+						.categoryListWithSearch-2jrzH6{
+							width: 56px;	
+						}
+
+						/* Background */
+						.row_a708c4 > div[role=gridcell]{
+							background: rgb(var(--buttonStandard));
+							border-radius: 6px;
+						}
+
+						/* Icon */
+						.stickerUnsendable_a708c4 {
+							filter: grayscale(0) !important;
+						}
+
+						/* Selection */
+							/* Fix for large spacing */
+							.row_a708c4{
+								column-gap: 12px !important;
+							}
+
+					/* GIFs */
+						/* Background */
+						.container_af1167 {
+							background: rgb(var(--backgroundContent));	
+						}
+
+					/* Separator */
+					.separator_a06035{
+						margin: 0px;
+					}
+					.innerButton_a06035{
+						margin: 4px;
+					}
+					.separator_a06035::before{
+						display: none;
+					}
 
 					/* Send button */
 					.sendIcon_a06035{
@@ -2475,104 +2577,16 @@
 					}
 					.sendIcon_a06035:hover > path{
 						opacity: 1;
-						transform: scale(1.1);
 					}
 
-
-					/* Emotes, stickers, gifs */
-						/* Emotes */
-							/* Diversity hand icon */
-								/* Position */
-								.header_c6ee36{
-									display: flex;
-									flex-direction: row-reverse;
-									margin-left: -5px;
-								}
-								.header_c6ee36 .searchBar_c6ee36{
-									flex: 1;
-									margin-left: 6px;
-								}
-
-								/* Selected */
-								.diversitySelectorOptionsInExpressionPicker-3wybQR{
-									right: unset;
-									left: 11px;
-									top: -2px;
-								}
-
-							/* Emote picker background */
-							.bodyWrapper_c6ee36{
-								background: rgb(var(--backgroundContent));
-							}
-					
-							/* Sidebar category picker */
-							.wrapper_dc0b29{
-								background: rgb(var(--backgroundBase));	
-							}
-							.emojiPickerInExpressionPicker-2nOwH8 .categoryList_c6ee36{
-								width: 56px;
-							}
-
-							/* Nitro only emotes */
-							.emojiItemDisabled__843ea{
-								filter: none !important;
-							}
-
-						/* Stickers */
-							/* No Nitro */
-							.emptyState_d8cdac{
-								margin: 0px;
-								background: rgb(var(--backgroundContent)) !important;
-							}
-
-							/* Sidebar featured */
-							.categoryListWithSearch-2jrzH6{
-								width: 56px;	
-							}
-
-							/* Background */
-							.row_a708c4 > div[role=gridcell]{
-								background: rgb(var(--buttonStandard));
-								border-radius: 6px;
-							}
-
-							/* Icon */
-							.stickerUnsendable_a708c4 {
-								filter: grayscale(0) !important;
-							}
-
-							/* Selection */
-								/* Fix for large spacing */
-								.row_a708c4{
-									column-gap: 12px !important;
-								}
-
-						/* GIFs */
-							/* Background */
-							.container_af1167 {
-								background: rgb(var(--backgroundContent));	
-							}
-
-						/* Shared */
-							/* Headers */
-							.contentWrapper_af5dbb, /* Page buttons/Search bar */
-							.header_a3bc57{ /* Channel category header */
-								background: rgb(var(--backgroundBase)) !important;
-								border-radius: 0px !important;
-							}
-							.resizeHandle_af5dbb:hover{
-								background-color: rgb(var(--contextBackground));
-							}
-
-
-					/* Chat Upload/Attach File Button */
-					.sansAttachButton_d0696b{
+					/* Chat upload/attach file button */
+					.sansAttachButton_bdf0de{
 						padding: 0px !important;
+						padding-right: 38px !important;
 					}
 					.channelTextArea_a7d72e .attachWrapper_f298d4{
 						position: absolute;
-						margin-top: -3px;
-						left: calc(100% - 32px) !important;
+						left: calc(100% - 24px) !important;
 						opacity: 0.9 !important;
 					}
 					.channelTextArea_a7d72e .attachWrapper_f298d4:hover{
@@ -2582,6 +2596,15 @@
 						.subtext-2GlkbE{
 							display: none !important;
 						}
+
+					/* Apps button */
+					.button_df39bd{
+						background: transparent !important;
+						opacity: 0.7;
+					}
+					.button_df39bd:hover{
+						opacity: 1;
+					}
 
 				/* User typing */
 				.typing_d7ebeb{
@@ -3795,7 +3818,7 @@
 	[aria-label="USER_SETTINGS"] .card_ffe375:before, .theme-dark .copyInputDefault_e19ebf, .theme-dark .container-30qY7E, .theme-dark .input-2g-os5:hover, .theme-dark .copyInputDefault_e19ebf:hover, .theme-dark .container-30qY7E:hover, /* Settings: key binds */
 	.uploadModal_f82cc7 .inner_f82cc7 .file_f82cc7 .icon_f82cc7.image_f82cc7, /* File upload modify icon */
 	.input-2g-os5, /* Invite to server pop out */
-	.scrollableContainer_d0696b,
+	.scrollableContainer_bdf0de,
 	.pageWrapper_a3a4ce .input-2g-os5,
 	.layer-2aCOJ3 .header_f0cd33 .topPill-3DJJNV .item-3XjbnG:hover:not(.disabled-1nofHP),
 	.layer-2aCOJ3 .header_f0cd33 .secondary__45d4f,
@@ -3842,7 +3865,7 @@
 	.scroller_d2b491, /* Your profile */
 	.videoGrid_bae578, /* Video call */
 	.inner_effbe2.thin_eed6a8.scrollerBase-_bVAAt, /* Group DM search */
-	[class^='channelTextArea'] .scrollableContainer_d0696b, /* Message bar */
+	[class^='channelTextArea'] .scrollableContainer_bdf0de, /* Message bar */
 	.scroller_ed5743,
 	.description-zXiu5E, /* BD Plugin: BD Plugin & theme repo by DevilBro */
 	.menu_d90b3d.styleFixed-2_NfVL.menu-1AgizY{
@@ -3880,8 +3903,8 @@
 	.form_a7d72e:before, .form_a7d72e::after, /* Artifact on message box */
 	.shineContainerDefault-3f8X_o, /* Button nitro shiny effect */
 	.content-2a4AW9 > div[style="height: 8px;"], /* DM: Friend button spacing */
-	.channelTextArea_a7d72e .buttons_d0696b button[aria-label="Open sticker picker"],
-	.channelTextArea_a7d72e .buttons_d0696b button[aria-label="Open GIF picker"],
+	.button_dd4f85[aria-label="Open sticker picker"],
+	.button_dd4f85[aria-label="Open GIF picker"],
 	.inner-26JK4f, /* Loading spinner: User profile */
 	.spinningCircleInner_b6db20, /* Loading spinner: Search */
 	.spinner_b6db20 > span, /* Loading spinner: All */
