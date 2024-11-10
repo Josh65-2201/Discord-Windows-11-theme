@@ -2698,11 +2698,17 @@
 				height: calc(100% - 16px) !important;
 			}
 
-		.animatorRight_f88ae3, .animatorRight_f88ae3 > div:not(.popout_c5b389),
-		.animatorLeft_f88ae3, .animatorLeft_f88ae3 > div:not(.popout_c5b389),
+		.animatorRight_f88ae3, .animatorRight_f88ae3 > div, .animatorRight_f88ae3 > div > div:not(.popout_c5b389),
+		.animatorLeft_f88ae3, .animatorLeft_f88ae3 > div , .animatorLeft_f88ae3 > div > div:not(.popout_c5b389),
 		.userPopoutOuter_c69a7b{
 			height: 100%;
 			width: var(--userProfileWidth);
+			background-color: rgb(var(--backgroundContent));
+		}
+
+		/* Background */
+		.inner_c69a7b.biteSize_c69a7b{
+			background: transparent !important;
 		}
 
 		/* Profile actions */
