@@ -1,6 +1,6 @@
 /*
 * @name Discord Windows 11
-* @version 2025.1.30.0
+* @version 2025.2.21.0
 * @description Windows 11 styling for Discord.
 * @author Josh65-2201
 * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
@@ -1600,11 +1600,13 @@
 				height: 135px !important;
 			}
 			.animatedContainer_f37cb1{
-				position: relative;
+				padding-top: 48px;
+				z-index: 2;
 			}
 			.bannerImg_f37cb1, .bannerImage_f37cb1{
 				height: 100%;
 				width: var(--sidebarWidth);
+				top: auto;
 			}
 			.bannerImage_f37cb1, .animatedContainer_f37cb1{
 				height: 180px;
@@ -1615,19 +1617,26 @@
 				.layer_da8173:has(>div:not(.submenuPaddingContainer_c1e9c4)>.menu_c1e9c4){
 					top: 104px !important;
 				}
+			
+			/* Drop effect */
+			.bannerImage_f37cb1:before{
+				display: none !important;
+			}
 
 
 		/* Server name */
 		.header_f37cb1 {
 			background-color: rgb(var(--backgroundContent)) !important;
-			box-shadow: none !important;
 		}
 
 
 		/* Discord bug: Sidebar height fix */
-		.scroller__99e7c > .content__99f8c, /* DMs */
-		.scroller__629e4 > .content__99f8c{
+		.scroller__99e7c > .content__99f8c{ /* DMs */
 			height: 99% !important;
+		}
+		.scroller__629e4{
+			margin-top: 78px;
+			margin-bottom: -118px;
 		}
 
 		/* Server boost bar */
@@ -1863,25 +1872,43 @@
 						}
 
 
-			/* Messages */
-			.messageListItem__5126c{
-				margin-bottom: 4px;
-				background: rgb(var(--backgroundContent));
-				border-radius: 6px;
-			}
-				/* Quick actions */
-					/* Position */
-					.container__040f0{
-						top: -32px;
-						padding: 0px;
+			/* Message */
+				/* Shared */
+					/* Size */
+					.messageListItem__5126c{
+						margin-bottom: 4px;
+						border-radius: 6px;
 					}
 
-					.popoverReactionHoverBar_f84418{
-						background: rgb(var(--sidebarButtonHover));
-						border: none !important;
-						border-radius: 8px 8px 0px 0px;
-						box-shadow: none !important;
+					/* Quick actions */
+						/* Position */
+						.container__040f0{
+							top: -32px;
+							padding: 0px;
+						}
+
+						.popoverReactionHoverBar_f84418{
+							background: rgb(var(--sidebarButtonHover));
+							border: none !important;
+							border-radius: 8px 8px 0px 0px;
+							box-shadow: none !important;
+						}
+
+				/* Normal */
+					/* Background */
+					.messageListItem__5126c:not(.messagelogger-deleted):not(:has(.mentioned__5126c)){
+						background: rgb(var(--backgroundContent));
 					}
+
+				/* Mentioned */
+				.messagelogger-deleted .mentioned__5126c{
+					background-color: transparent;
+				}
+
+				/* Deleted */
+				.messagelogger-deleted {
+					background-color: rgb(var(--infobarBackgroundCritical)) !important;
+				}
 
 
 			/* Jump to present */
@@ -2353,7 +2380,7 @@
 				}
 
 				/* Background */
-				.mentioned__5126c{
+				li:not(.messagelogger-deleted) .mentioned__5126c{
 					border-radius: 8px;
 					background: color-mix(in srgb, var(--os-accent-color) 25%, transparent);
 				}
@@ -3883,7 +3910,6 @@
 	.art-2Y6Pk3, /* Custom status: Title art */
 	.modalCloseButton-Y-w1-a, /* Custom status: Extra close button */
 	.headerBar__0920e, /* DMs: Nitro page top random bar */
-	ul.content__99f8c > div:nth-child(1), /* Server sidebar: Blank gaps */
 	.content_f75fb0::before,
 	.upperBadge-1V6Iyi, /* Servers: Rocket icon */
 	#account-divider-2,
@@ -3917,9 +3943,6 @@
 	[data-list-id="guildsnav"]>div>div>div:has(>div[style*="background: url(\"https://cdn.discordapp.com/signups"]), /* servers bar ADs */
 	.iconWrapper__9293f[aria-label="Help"]{ /* Channel information bar: Help button */
 		display: none !important;
-	}
-	.scroller__629e4 > ul.content__99f8c > div:nth-child(2){ /* Server sidebar: Blank gaps */
-		height: 0px !important;
 	}
 
 
