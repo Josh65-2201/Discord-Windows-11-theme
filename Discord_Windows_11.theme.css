@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description Windows 11 styling for Discord.
  * @author Josh65
- * @version 2025.3.29.0
+ * @version 2025.3.29.1
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -13,21 +13,21 @@
 	/* Fluent icons from https://fluenticons.co/ */
 
 	/* Discolored by Nyria */
-	@import url('https://nyri4.github.io/Discolored/main.css');
+	@import url("https://nyri4.github.io/Discolored/main.css");
 
 	/* Channel icons by Xyhlo */
-	@import url('https://xhylo.github.io/ChannelIcons/Channelicons.css');
+	@import url("https://xhylo.github.io/ChannelIcons/Channelicons.css");
 
 	/* Windows 11 fluent emoji by DevilBro */
-	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/spritesheets.css');
-	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/people.css');
-	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/nature.css');
-	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/food.css');
-	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/activity.css');
-	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/travel.css');
-	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/objects.css');
-	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/symbols.css');
-	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/flags.css');
+	@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/spritesheets.css");
+	@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/people.css");
+	@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/nature.css");
+	@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/food.css");
+	@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/activity.css");
+	@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/travel.css");
+	@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/objects.css");
+	@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/symbols.css");
+	@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/flags.css");
 
 
 :root{
@@ -191,12 +191,12 @@
 			}
 				/* Top */
 				*:not(.scroller_ef3116)::-webkit-scrollbar-button:single-button:vertical:decrement{
-					background-image: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/scrollbarArrowUp.webp?raw=true');
+					background-image: url("https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/scrollbarArrowUp.webp?raw=true");
 					background-repeat: no-repeat;
 				}
 				/* Bottom */
 				*:not(.scroller_ef3116)::-webkit-scrollbar-button:single-button:vertical:increment{
-					background-image: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/scrollbarArrowDown.webp?raw=true');
+					background-image: url("https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/scrollbarArrowDown.webp?raw=true");
 					background-repeat: no-repeat;
 				}
 
@@ -803,7 +803,7 @@
 
 	/* Loading Spinner */
 	.spinner__0b5bb:after{
-		background-image: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/loadingSpinner.gif?raw=true');
+		background-image: url("https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/loadingSpinner.gif?raw=true");
 		background-size: cover;
 		width: 32px !important;
 		height: 32px !important;
@@ -1055,12 +1055,12 @@
 				margin: 16px 0px 0px 18px;
 				left: 0px;
 				top: 0px;
-				background: url('https://discord.com/assets/9f6f9cd156ce35e2d94c0e62e3eff462.png') center/18px no-repeat;
-				content: '';
+				background: url("https://discord.com/assets/9f6f9cd156ce35e2d94c0e62e3eff462.png") center/18px no-repeat;
+				content: "";
 			}
 				/* Light mode */
 				.theme-light .wordmark__421ed:before{
-					background: url('https://discord.com/assets/ca03beabe94d8f97ba6fbf75cbb695c4.png') center/18px no-repeat !important;
+					background: url("https://discord.com/assets/ca03beabe94d8f97ba6fbf75cbb695c4.png") center/18px no-repeat !important;
 				}
 
 			/* Text */
@@ -2603,7 +2603,7 @@
 
 			/* Loading icon */
 			.wrapper__0d1ef{
-				background-image: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/loadingSpinner.gif?raw=true');
+				background-image: url("https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/loadingSpinner.gif?raw=true");
 				background: no-repeat, center;
 			}
 			.wrapper_fc8177.cozy_fc8177{
@@ -2971,7 +2971,7 @@
 			/* Position */
 			.userPopout-2j1gM4 .avatarPositionNormal_f89da9 .wrapper__44b0c::before,
 			.userPopout-2j1gM4 .avatarPositionPremium-1zPBq9 .wrapper__44b0c::before{
-				content: '';
+				content: "";
 				background: var(--user-standardtus-background) center no-repeat;
 				background-size: cover;
 				position: fixed;
@@ -3026,7 +3026,7 @@
 	/* Full profile */
 		/* Position */
 		.root-8LYsGj .topSection-13QKHs .banner__68edb+.header-S26rhB .wrapper__44b0c::before{
-			content: '';
+			content: "";
 			background: var(--user-standardtus-background);
 			position: fixed;
 			margin-top: 68px;
@@ -3276,52 +3276,52 @@
 
 		/* My Account */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="My Account"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsMyAccount.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsMyAccount.svg") center/contain no-repeat;
 		}
 
 		/* Profiles */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Profile Customization"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsProfiles.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsProfiles.svg") center/contain no-repeat;
 		}
 
 		/* Content & social */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Content & Social"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsContentAndSocial.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsContentAndSocial.svg") center/contain no-repeat;
 		}
 
 		/* Data & privacy */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Data & Privacy"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsDataAndPrivacy.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsDataAndPrivacy.svg") center/contain no-repeat;
 		}
 
 		/* Family centre */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Family Center"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsFamilyCentre.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsFamilyCentre.svg") center/contain no-repeat;
 		}
 
 		/* Authorised Apps */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Authorized Apps"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsAuthorisedApps.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsAuthorisedApps.svg") center/contain no-repeat;
 		}
 
 		/* Devices */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Sessions"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsDevices.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsDevices.svg") center/contain no-repeat;
 		}
 
 		/* Connections */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Connections"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsConnections.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsConnections.svg") center/contain no-repeat;
 		}
 
 		/* Clips */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Settings Clips"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsClips.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsClips.svg") center/contain no-repeat;
 		}
 
 		/* Nitro */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Discord Nitro"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsNitro.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsNitro.svg") center/contain no-repeat;
 		}
 		.premiumLabel_e681d1 svg{
 			display: none;
@@ -3329,152 +3329,152 @@
 
 		/* Server boost */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Nitro Server Boost"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsServerBoost.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsServerBoost.svg") center/contain no-repeat;
 		}
 
 		/* Subscriptions */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Subscriptions"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsSubscriptions.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsSubscriptions.svg") center/contain no-repeat;
 		}
 
 		/* Gift inventory */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Library Inventory"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsGiftInventory.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsGiftInventory.svg") center/contain no-repeat;
 		}
 
 		/* Billing */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Billing"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsBilling.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsBilling.svg") center/contain no-repeat;
 		}
 
 		/* Appearance */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Appearance"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsAppearance.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsAppearance.svg") center/contain no-repeat;
 		}
 
 		/* Accessibility */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Accessibility"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsAccessibility.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsAccessibility.svg") center/contain no-repeat;
 		}
 
 		/* Voice & Video */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Voice & Video"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVoiceAndVideo.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVoiceAndVideo.svg") center/contain no-repeat;
 		}
 
 		/* Chat */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Text & Images"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsChat.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsChat.svg") center/contain no-repeat;
 		}
 
 		/* Notifications */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Notifications"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsNotifications.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsNotifications.svg") center/contain no-repeat;
 		}
 
 		/* Keybinds */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Keybinds"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsKeybinds.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsKeybinds.svg") center/contain no-repeat;
 		}
 
 		/* Language */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Language"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsLanguage.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsLanguage.svg") center/contain no-repeat;
 		}
 
 		/* Windows settings */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Windows"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsWindowsSettings.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsWindowsSettings.svg") center/contain no-repeat;
 		}
 
 		/* Streamer mode */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Streamer Mode"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsStreamerMode.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsStreamerMode.svg") center/contain no-repeat;
 		}
 
 		/* Advanced */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Advanced"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsAdvanced.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsAdvanced.svg") center/contain no-repeat;
 		}
 
 		/* OpenAsar */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="OpenAsar"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsOpenAsar.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsOpenAsar.svg") center/contain no-repeat;
 		}
 
 		/* Activity privacy */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Activity Privacy"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsActivityPrivacy.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsActivityPrivacy.svg") center/contain no-repeat;
 		}
 
 		/* Registered games */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Game Activity"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsRegisteredGames.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsRegisteredGames.svg") center/contain no-repeat;
 		}
 
 		/* Game overlay */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Overlay"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsGameOverlay.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsGameOverlay.svg") center/contain no-repeat;
 		}
 
-		/* What's new */
+		/* What"s new */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="changelog"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsWhatsNew.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsWhatsNew.svg") center/contain no-repeat;
 		}
 
 		/* Merch */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="merchandise"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsMerch.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsMerch.svg") center/contain no-repeat;
 		}
 
 		/* HypeSquad */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Hypesquad Online"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsHypeSquad.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsHypeSquad.svg") center/contain no-repeat;
 		}
 
 		/* Experiments */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Experiments"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsExperiments.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsExperiments.svg") center/contain no-repeat;
 		}
 
 		/* Developer options */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="Developer Options"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsDeveloperOptions.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsDeveloperOptions.svg") center/contain no-repeat;
 		}
 
 		/* Vencord */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="VencordSettings"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVencord.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVencord.svg") center/contain no-repeat;
 		}
 
 		/* Vencord: Plugins */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="VencordPlugins"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVencordPlugins.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVencordPlugins.svg") center/contain no-repeat;
 		}
 
 		/* Vencord: Themes */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="VencordThemes"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVencordThemes.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVencordThemes.svg") center/contain no-repeat;
 		}
 
 		/* Vencord: Updater */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="VencordUpdater"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVencordUpdater.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVencordUpdater.svg") center/contain no-repeat;
 		}
 
 		/* Vencord: Cloud */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="VencordCloud"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVencordCloud.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVencordCloud.svg") center/contain no-repeat;
 		}
 
 		/* Vencord: Backup & restore */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="VencordSettingsSync"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVencordBackupAndRestore.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVencordBackupAndRestore.svg") center/contain no-repeat;
 		}
 
 		/* Logout */
 		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="logout"]::before{
-			mask: url('https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsLogout.svg') center/contain no-repeat;
+			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsLogout.svg") center/contain no-repeat;
 		}
 
 /* Opened settings content */
@@ -3720,7 +3720,7 @@
 	/* Game overlay */
 
 
-	/* What's new */
+	/* What"s new */
 
 
 	/* Merch */
@@ -4018,7 +4018,7 @@
 	.scroller_d2b491, /* Your profile */
 	.videoGrid_a21736, /* Video call */
 	.inner_fea832.thin__99f8c.scrollerBase-_bVAAt, /* Group DM search */
-	[class^='channelTextArea'] .scrollableContainer__74017, /* Message bar */
+	[class^="channelTextArea"] .scrollableContainer__74017, /* Message bar */
 	.scroller_ed5743,
 	.description-zXiu5E, /* BD Plugin: BD Plugin & theme repo by DevilBro */
 	.menu_c1e9c4.styleFixed-2_NfVL.menu-1AgizY{
