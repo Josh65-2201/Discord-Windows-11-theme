@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description Windows 11 styling for Discord.
  * @author Josh65
- * @version 2025.3.30.0
+ * @version 2025.3.30.1
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -1968,11 +1968,6 @@
 						border: none !important;
 						border-radius: 8px 8px 0px 0px;
 						box-shadow: none !important;
-					}
-
-					.messageListItem__5126c[data-is-self="false"] div .buttonContainer_c19a55{
-						right: auto !important;
-						left: 0px;
 					}
 
 					/* Background */

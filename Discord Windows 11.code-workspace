@@ -1,8 +1,22 @@
 {
 	"folders": [
 		{
+			"name": "Github",
 			"path": "."
+		},
+		{
+			"name": "Vencord themes",
+			"path": "${userHome}/AppData/Roaming/Vencord/themes"
+		},
+		{
+			"name": "Better Discord themes",
+			"path": "${userHome}/AppData/Roaming/better discord/themes"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"editor.detectIndentation": false,
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false,
+		"editor.comments.insertSpace": false
+	}
 }
