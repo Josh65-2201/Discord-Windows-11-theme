@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description Windows 11 styling for Discord.
  * @author Josh65
- * @version 2025.3.29.1
+ * @version 2025.3.30.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -34,7 +34,6 @@
 /* Settings |Default = +| -------------------------------------------------------------------------------------------- */
 	--toasts: flex;					/* + on = flex     off = none */
 	--waveToUser: none;				/*   on = flex   + off = none */
-	--settingsSidebarWidth: 320px;	/* + 320px */
 
 
 
@@ -847,9 +846,6 @@
 			}
 
 			/* DMs users */
-			.channel__972a0{
-				max-width: var(--settingsSidebarWidth);
-			}
 			ul[class="membersWrap_c8ffbb"]{
 				height: min-content !important;
 				padding-bottom: 4px;
@@ -1015,8 +1011,8 @@
 		/* Custom offline message */
 		.container_a2f514::before{
 			position: absolute;
-			width: calc(100% - var(--settingsSidebarWidth) - 400px);
-			left: 400px;
+			width: 512px;
+			left: calc(50vw - 256px);
 			padding: 12px;
 			padding-left: 48px;
 			background: rgb(var(--infobarBackgroundCritical));
@@ -1024,11 +1020,6 @@
 			color: #fff;
 			content: "Unable to connect to discord, check your internet connection.";
 		}
-			@media only screen and (max-width: 1200px){
-				.container_a2f514::before{
-					width: calc(100% - var(--settingsSidebarWidth) - 156px) !important;
-				}
-			}
 
 
 	/* Title bar */
@@ -2620,12 +2611,19 @@
 				}
 
 			/* Hovered */
-			.chat_f75fb0 .mentioned__5126c.message__5126c:hover,
-			.chat_f75fb0 .message__5126c:hover{
+			.messageListItem__5126c .mentioned__5126c.message__5126c:hover,
+			.messageListItem__5126c .message__5126c:hover{
 				background: rgb(var(--backgroundCardHover)) !important;
 				border-radius: 8px;
+				
+			}
+			.messageListItem__5126c[data-is-self="false"] .message__5126c:hover{
+				border-top-left-radius: 0px !important;
+			}
+			.messageListItem__5126c[data-is-self="true"] .message__5126c:hover{
 				border-top-right-radius: 0px !important;
 			}
+
 
 			/* Selected */
 			.chat_f75fb0 .message__5126c.selected__5126c{
@@ -3212,7 +3210,7 @@
 	/* Position & background */
 		.sidebar__23e6b{
 			height: 100%;
-			width: var(--settingsSidebarWidth) !important;
+			width: calc(var(--custom-guild-sidebar-width) - 84px) !important;
 			padding: 4px !important;
 		}
 
