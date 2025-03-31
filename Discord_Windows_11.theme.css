@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description Windows 11 styling for Discord.
  * @author Josh65
- * @version 2025.3.30.1
+ * @version 2025.3.31.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -474,6 +474,7 @@
 
 
 		/* Size */
+		.search__41ed7, /* Channels & roles - browse */
 		.searchBar_cdb2b0, /* Server settings: Bans */
 		.searchBar__1ac1c.search__1ac1c, /* Discovery home page */
 		.searchBox_f69601, /* Server Settings: Server name - Forums: Search/new */
@@ -522,6 +523,7 @@
 
 
 		/* Unselected */
+		.search__41ed7, /* Channels & roles - browse */
 		.searchBar_cdb2b0, /* Server settings: Bans */
 		.note_fcb628, /* Full user profile: Notes */
 		.note_c90ad7, /* Mini user profile: Notes */
@@ -555,6 +557,7 @@
 			}
 
 		/* Hovered */
+		.search__41ed7:hover, /* Channels & roles - browse */
 		.searchBar_cdb2b0:hover, /* Server settings: Bans */
 		.note_fcb628:hover, /* Full user profile: Notes */
 		.note_c90ad7:hover, /* Mini user profile: Notes */
@@ -578,6 +581,7 @@
 		}
 
 		/* Selected */
+		.search__41ed7:focus-within, /* Channels & roles - browse */
 		.searchBar_cdb2b0:focus-within, /* Server settings: Bans */
 		.note_fcb628:focus-within, /* Full user profile: Notes */
 		.note_c90ad7:focus-within, /* Mini user profile: Notes */
@@ -817,23 +821,28 @@
 	
 	/* Sidebar buttons */
 		/* Position */
-		.wrappedLayout__91a9d, /* Discover page */
-		.privateChannelsHeaderContainer__99e7c, /* DMs categories */
-		.channel__972a0, /* DMs users */
-		.wrapper__29444, /* Server categories */
-		.wrapper__2ea32{ /* Server channel */
-			margin: 4px !important;
-		}
-		.privateChannelsHeaderContainer__99e7c .headerText__99e7c, /* DMs categories */
-		.linkTop__2ea32 .iconContainer__2ea32{ /* Server channels */
-			margin-left: 32px;
-			margin-right: 18px;
-		}
+			.wrappedLayout__91a9d, /* Discover page */
+			.privateChannelsHeaderContainer__99e7c, /* DMs categories */
+			.channel__972a0, /* DMs users */
+			.wrapper__29444, /* Server categories */
+			.wrapper__2ea32{ /* Server channel */
+				margin: 4px !important;
+			}
+			.linkTop__2ea32,
+			.content__65844{
+				gap: 0px !important;
+			}
 
-			/* Discover page icons */
-			.itemInner_f75d68>.avatar__91a9d,
-			.itemInner_c72b37>.avatar__91a9d{
-				margin-left: 14px;
+			/* In group */
+			.privateChannelsHeaderContainer__99e7c .headerText__99e7c, /* DMs categories */
+			.linkTop__2ea32 .iconContainer__2ea32{ /* Server channels */
+				margin-left: 32px;
+				margin-right: 18px;
+			}
+
+			/* No group */
+			.iconContainer__2ea32{
+				margin-right: 18px;
 			}
 
 
@@ -1672,6 +1681,11 @@
 			}
 
 
+		/* Server guide progress */
+		.progressBarContainer_baf530{
+			margin: 0px !important;
+		}
+
 		/* Server boost bar */
 			/* Icon */
 			.flowerStar-38IYO7{
@@ -1685,35 +1699,24 @@
 
 
 		/* Channels & roles button */
-			/* Customize */
-				.prompt__5d7c9{
-					background: rgb(var(--contextBackground))
+			.optionButtonWrapper__270d7{
+				background: rgb(var(--buttonStandard));
+				border: 1px solid var(--buttonBorder) !important;
+				border-radius: 4px;
+			}
+			.optionButtonWrapper__270d7:hover{
+				background: rgb(var(--buttonHover));
+			}
+			.optionButtonWrapper__270d7.selected__270d7{
+				background: rgb(var(--buttonSelected));
+			}
+				.buttonText__270d7{
+					padding-right: 18px !important;
 				}
 
-				/* Button */
-				.optionButtonWrapper__270d7{
-					background: rgb(var(--buttonStandard));
-					border: 1px solid var(--buttonBorder) !important;
-					border-radius: 4px;
-				}
-				.optionButtonWrapper__270d7:hover{
-					background: rgb(var(--buttonHover));
-				}
-				.optionButtonWrapper__270d7.selected__270d7{
-					background: rgb(var(--buttonSelected));
-				}
-					.buttonText__270d7{
-						padding-right: 18px !important;
-					}
-
-					.checkIcon__270d7{
-						top: calc(50% - 10px) !important;
-						right: 10px !important;
-					}
-
-			/* Browse Channels */
-				.channelRow_e4503a{
-					background: rgb(var(--buttonStandard)) !important;
+				.checkIcon__270d7{
+					top: calc(50% - 10px) !important;
+					right: 10px !important;
 				}
 
 		
@@ -1878,7 +1881,18 @@
 				display: none;
 			}
 
-			/* Background */
+			/* Customize */
+				/* Background */
+				.prompt__5d7c9{
+					background: rgb(var(--contextBackground))
+				}
+
+			/* Browse Channels */
+				/* Background */
+				.channelRow_e4503a{
+					background: rgb(var(--buttonStandard)) !important;
+				}
+
 
 
 		/* Messages */
@@ -2582,7 +2596,8 @@
 			}
 
 			/* Background */
-			.container__0b563, /* Channels and roles */
+			.visual-refresh .pageBody__41ed7, /* Channels and roles - Browse */
+			.visual-refresh .container__0b563, /* Channels and roles - Customise */
 			.messagesWrapper__36d07{ /* Threads sidebar */
 				background: rgb(var(--backgroundLayer2)) !important;
 			}
@@ -3254,16 +3269,16 @@
 		.sidebar__23e6b .side_b3f026 .item_b3f026{
 			display: flex;
 			align-items: center;
+			margin-bottom: 4px;
 		}
 		.sidebar__23e6b .side_b3f026 .item_b3f026::before {
 			content: "";
 			flex: 0 0 auto;
 			width: 24px;
 			height: 24px;
-			margin-right: 8px;
+			margin-right: 18px;
 			background: rgb(var(--textNormal));
 			z-index: 2;
-
 			mask: url(blank.svg) center/contain no-repeat;
 		}
 
