@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description Windows 11 styling for Discord.
  * @author Josh65
- * @version 2025.4.3.0
+ * @version 2025.4.4.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -1938,20 +1938,19 @@
 					.messageListItem__5126c[data-is-self="true"]{
 						margin-left: 20%;
 					}
-					.messageListItem__5126c[data-is-self="true"] .avatarDecoration_c19a55{
-						left: auto !important;
-						right: calc(var(--custom-message-margin-horizontal) - var(--custom-message-avatar-decoration-size)/2 + var(--custom-message-avatar-size)/2) !important;
-					}
-					.messageListItem__5126c[data-is-self="true"] .avatar_c19a55{
+					.messageListItem__5126c[data-is-self="true"]>.message__5126c>.contents_c19a55>.avatar_c19a55{
 						left: auto !important;
 						right: var(--custom-message-margin-horizontal);
 					}
-					.messageListItem__5126c[data-is-self="true"] div .contents_c19a55 .header_c19a55,
-					.messageListItem__5126c[data-is-self="true"] .message__5126c div .header_c19a55{
+					.messageListItem__5126c[data-is-self="true"]>.message__5126c>.contents_c19a55>.avatarDecoration_c19a55{
+						left: auto !important;
+						right: calc(var(--custom-message-margin-horizontal) - var(--custom-message-avatar-decoration-size)/2 + var(--custom-message-avatar-size)/2) !important;
+					}
+					.messageListItem__5126c[data-is-self="true"]>.message__5126c>.contents_c19a55>.header_c19a55{
 						display: flex;
 						flex-direction: row-reverse;
 					}
-					.messageListItem__5126c[data-is-self="true"] .message__5126c div .messageContent_c19a55{
+					.messageListItem__5126c[data-is-self="true"] .message__5126c>div>.messageContent_c19a55{
 						text-align: right;
 					}
 					.messageListItem__5126c[data-is-self="true"] .message__5126c{
@@ -1965,7 +1964,7 @@
 						margin-right: 8px !important;
 					}
 					/* Message attachments, reactions */
-					.messageListItem__5126c[data-is-self="true"] div .container_b7e1cb{
+					.messageListItem__5126c[data-is-self="true"] div .container_b7e1cb:not(:has(.embedCard__44c9a)){
 						direction: rtl;
 					}
 
