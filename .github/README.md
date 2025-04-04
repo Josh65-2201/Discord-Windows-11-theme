@@ -33,148 +33,22 @@
 
 <br>
 
-## Development
+## Editing
 ### Guidelines
-- Any editor will work, Visual Studios Code is recommended.
-- Indents use tabs at 4 spaces.
-- New sections follow the line gaps
+- Any text editor will work, Visual Studios Code is recommended.
+- Indent using tabs at 4 spaces.
+- New sections follow the below format.
 ```
-Main section 1 (E.G. Servers bar, Messages content)
+Main section 1 (E.G. Servers bar, Sidebar, Center content)
 	Sub section 1 (E.G. Server icon, Message)
 		Part 1 (Position, Background color)
+		CSS
+
 		Part 2 (Position, Background color)
+		CSS
 
 	Sub section 2 (E.G. Server icon, Message)
 
 
-Main section 2 (E.G. Servers bar, Messages content)
-```
-
-
-### File structure
-> [!NOTE]
-> File isn't updated to follow this yet
-
-```
-Theme imports and settings
-
-Discord
-	Title bar
-		Discord icon
-		Watermark text
-		Search bar
-			Search filters
-		Account icon
-		Window controls
-	Servers bar
-		Home button
-		Server folders
-		Server icons
-			Selected highlight
-			Unread message
-			Mention
-		Add server model
-		Discovery page
-		Discord Settings
-			Pages in order 
-		Server Settings
-			Pages in order
-	Home Page
-		Friends
-			Online
-			All
-			Pending
-			Blocked
-			Add friend
-		Nitro
-		Shop
-		Family centre
-			Activity
-			My family
-		DMs/groups
-			Add to groupchat
-			Sidebar user profile
-		Activity feed
-	Server page
-		Channels list
-			Server information
-				Banner image
-				Server type icon
-				Title
-				Boosts bar
-				Boost model
-			Events
-			Channels and roles
-				Customise
-				Browse
-			Members
-				Mod view
-			Channels
-				Group
-				Channel
-			Current activity/game
-			Voice chat connected
-		Messages content
-			Channel info
-			Channel controls
-				Threads
-				Pins
-				Inbox
-			Messages
-				Embeds
-				Reactions
-				Wave to user
-			Enter message
-				Text box
-				Reply controls
-				/ commands
-				Buttons
-		Search results
-		Members sidebar
-			Role header
-			Users
-	User profile mini
-		Profile icon
-		Badges
-		Roles
-		Notes
-	User profile full
-		Profile icon
-		Badges
-		Categories
-			User info
-			Mutual servers
-			Mutual groups
-			Mutual friends
-	Quick actions (Ctrl + T)
-	Offline notice bar
-
-Better Discord
-	Mod loader
-		Complie error content dialog
-	Plugins
-
-Vencord
-	Mod loader
-	Plugins
-
-Common controls
-	Toasts/Notifications
-	Scrollbars
-	Loading spinner
-	Check box
-	Radio buttons
-	Toggle switches
-	Sliders
-	Drop down box
-	Sidebar buttons
-		Selected highlight
-	Action buttons
-		Main accented
-		Secondary Other
-	Text inputs
-	Text selection
-	Hyper links
-	Tab selection
-	Context menu
+Main section 2 (E.G. Servers bar, Sidebar, Center content)
 ```
