@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.4.15.0
+ * @version 2025.4.15.1
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -1377,7 +1377,7 @@
 					background: rgb(var(--backgroundLayer1));
 				}
 				.wrapper__48112:not(.wrapper__48112:has(.collapsed__48112)){
-					padding: 4px 0px;
+					padding-top: 4px;
 				}
 					/* BD Plugin: Display servers as channels by DevilBro */
 					.styledGuildsAsChannels-DNHtg_ .wrapper_ef3116 .expandedFolderBackground__48112{
@@ -1439,6 +1439,11 @@
 					border-radius: 4px !important;
 					background: color-mix(in srgb, var(--os-accent-color) 65%, white) !important;
 				}
+					/* Home button */
+					.tutorialContainer__1f388 .item__58105[style*="height: 40px"]{
+						top: 16px !important;
+					}
+
 					/* Remove pill on anything other the selected */
 					.item__58105{
 						display: none;
@@ -1817,6 +1822,10 @@
 				border-radius: 4px;
 				z-index: 1 !important;
 			}
+				/* Threads */
+				.typeThread__2ea32 .unread__2ea32{
+					left: 4px !important;
+				}
 			
 			/* Text */
 				/* First letter to uppercase */
@@ -1973,7 +1982,7 @@
 						}
 
 
-			/* Messages (use) */
+			/* Conversations */
 				/* Position */
 					.messageListItem__5126c:has(> .groupStart__5126c ){
 						border-radius: 8px 8px 0px 0px;
@@ -2070,6 +2079,11 @@
 					/* Background */
 					.messageListItem__5126c:not(.messagelogger-deleted):not(:has(.mentioned__5126c)){
 						background: rgb(var(--backgroundCardBase));
+					}
+
+					/* Started threads */
+					.visual-refresh .cozy__235ca .iconContainer__235ca{
+						width: 24px !important;
 					}
 
 				/* Mentioned */
