@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.4.15.1
+ * @version 2025.4.24.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -480,6 +480,8 @@
 
 
 		/* Size */
+		textarea.input__0f084, /* Vencord: Themes, Online theme link */
+		input.input__0f084, /* Vencord: Plugins search */
 		.search__41ed7, /* Channels & roles - browse */
 		.searchBar_cdb2b0, /* Server settings: Bans */
 		.searchBar__1ac1c.search__1ac1c, /* Discovery home page */
@@ -503,12 +505,13 @@
 			border: 1px solid var(--border);
 		}
 			/* Width fix */
+				textarea.input__0f084, /* Vencord: Themes, Online theme link */
+				input.input__0f084, /* Vencord: Plugins search */
 				.inputWrapper__0f084.input__991a0, /* Add server content dialog Invite link */
 				.note_fcb628, /* Full user profile: Note */
 				.textArea__74017.textAreaSlate__74017.slateContainer_ec4baf, /* Messages: message input */
 				.container_fea832{ /* Sticker page */
 					width: 100% !important;
-					padding: 0px !important;
 				}
 				/* Custom status */
 				.input-3AAlUz{
@@ -529,6 +532,8 @@
 
 
 		/* Unselected */
+		textarea.input__0f084, /* Vencord: Themes, Online theme link */
+		input.input__0f084, /* Vencord: Plugins search */
 		.search__41ed7, /* Channels & roles - browse */
 		.searchBar_cdb2b0, /* Server settings: Bans */
 		.note_fcb628, /* Full user profile: Notes */
@@ -563,6 +568,8 @@
 			}
 
 		/* Hovered */
+		textarea.input__0f084:hover, /* Vencord: Themes, Online theme link */
+		input.input__0f084:hover, /* Vencord: Plugins search */
 		.search__41ed7:hover, /* Channels & roles - browse */
 		.searchBar_cdb2b0:hover, /* Server settings: Bans */
 		.note_fcb628:hover, /* Full user profile: Notes */
@@ -587,6 +594,8 @@
 		}
 
 		/* Selected */
+		textarea.input__0f084:focus-within, /* Vencord: Themes, Online theme link */
+		input.input__0f084:focus-within, /* Vencord: Plugins search */
 		.search__41ed7:focus-within, /* Channels & roles - browse */
 		.searchBar_cdb2b0:focus-within, /* Server settings: Bans */
 		.note_fcb628:focus-within, /* Full user profile: Notes */
@@ -1108,23 +1117,27 @@
 				height: 95% !important;
 				width: 100% !important;
 			}
-				/* Placeholder */
+				/* Placeholder text */
 				.search__97492 .DraftEditor-root .public-DraftEditor-content,
 				.search__97492 .DraftEditor-root .public-DraftEditorPlaceholder-root{
-					padding: 0px;
-					padding-top: 4px;
+					padding-top: 1px;
 					padding-left: 8px;
-					font-weight: 100;
-					font-size: 14px;
-					opacity: 0.7;
+					font-weight: 200;
+					color: rgb(var(--textNormal)) !important;
+					opacity: 0.7 !important;
 				}
 
 			/* Icon */
 			.icon__97492{
-				margin-top: 4px;
+				margin-top: 2px;
 				margin-right: 4px;
-				transform: scale(0.8);
+				transform: scale(0.75);
+				
 			}
+			.icon_fea832{
+				color: rgb(var(--textNormal)) !important;
+			}
+
 
 
 			/* Sub menu: Search options */
@@ -1313,8 +1326,9 @@
 				}
 				/* Force home button to top */
 				.guilds_c48ade .scroller_ef3116{
+					display: inline !important;
 					contain: unset;
-					margin-top: 56px;
+					margin-top: 60px;
 				}
 				.guilds_c48ade .scroller_ef3116 .tutorialContainer__1f388{
 					position: fixed;
@@ -1394,6 +1408,7 @@
 				}
 
 				.stack_dbd263{
+					margin-top: 4px;
 					gap: 0px !important;
 				}
 
@@ -2025,6 +2040,24 @@
 					.messageListItem__5126c[data-is-self="true"] div .container_b7e1cb:not(:has(.embedCard__44c9a)){
 						direction: rtl;
 					}
+
+					/* Images */
+					.visualMediaItemContainer_f4758a{
+						width: fit-content !important;
+					}
+
+					/* Link */
+						/* Image */
+						.messageListItem__5126c[data-is-self="true"] .embedThumbnail__623de{
+							margin-left: 0px !important;
+							margin-right: 16px !important;
+						}
+
+					/* Vencord: MessageLinkEmbeds plugin */
+					.embedCard__44c9a{
+						width: 100%;
+					}
+
 					/* Code block */
 					.markup__75297 pre{
 						text-align: left !important;
@@ -2498,7 +2531,7 @@
 
 						/* Disable if panel not shown */
 						button[aria-label="Deafen"],
-						button[aria-label="Mute"]{
+						button[aria-label="Mute"]:not(.centerButton_f1ceac){
 							display: none;
 						}
 						.panels_c48ade:has(.wrapper_e131a9 .container_e131a9) .container__37e49 .buttons__37e49 button[aria-label="Deafen"],
