@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.4.24.0
+ * @version 2025.4.25.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -500,7 +500,6 @@
 			height: max-content;
 			min-height: 32px !important;
 			padding: 4px;
-			padding-left: 8px !important;
 			border-radius: 4px !important;
 			border: 1px solid var(--border);
 		}
@@ -512,6 +511,16 @@
 				.textArea__74017.textAreaSlate__74017.slateContainer_ec4baf, /* Messages: message input */
 				.container_fea832{ /* Sticker page */
 					width: 100% !important;
+				}
+				/* Messages: message input */
+				.textArea__74017.textAreaSlate__74017.slateContainer_ec4baf{
+					height: fit-content !important;
+					padding: 0px !important;
+				}
+				
+				.textArea__74017>div>div>div,
+				.placeholder__1b31f{
+					padding-top: 4px !important;
 				}
 				/* Custom status */
 				.input-3AAlUz{
@@ -629,10 +638,6 @@
 				font-weight: 400 !important;
 				font-style: normal !important;
 				fill: #8B8B8B !important;
-			}
-
-			.textArea__74017 div div div{
-				padding-top: 4px;
 			}
 
 
@@ -2147,7 +2152,7 @@
 			/* Send message */
 				/* Position */
 				.inner__74017,
-				.slateTextArea_ec4baf{
+				.slateTextArea_ec4baf:not(.placeholder__1b31f){
 					padding: 0px !important;
 				}
 				.textArea__74017.textAreaSlate__74017.slateContainer_ec4baf{
