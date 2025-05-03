@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.4.25.0
+ * @version 2025.5.03.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -1286,7 +1286,6 @@
 			.listItem__650eb{
 				display: block;
 				width: 64px;
-				margin: 0px;
 				background: transparent;
 			}
 			.wrapperSimple_cc5dd2{
@@ -1339,6 +1338,11 @@
 					position: fixed;
 					top: 48px;
 				}
+			
+			.tutorialContainer__1f388 .wrapper__6e9f8{
+				background: transparent !important;
+			}
+
 
 			/* Size */
 				.childWrapper_a6ce15 svg,
@@ -1361,48 +1365,43 @@
 
 		/* Folders */
 			/* Collapsed icon */
-				/* Background */
-				.folderIconWrapper__48112{
-					border-radius: 0px;
+				/* Folder */
+				.folderPreviewWrapper__48112{
+					padding: 0px !important;
+					border-radius: 4px;
 				}
 
 				/* Inner server icons */
-				.guildIcon__48112{
-					border-radius: 0px !important;
-				}
-				.closedFolderIconWrapper__48112{
+				.folderPreview__48112{
 					height: var(--guildbar-folder-size) !important;
 					width: var(--guildbar-folder-size) !important;
 					gap: 0px !important;
 				}
-				.guildIcon__48112{
-					--custom-guild-icon-size: calc(var(--guildbar-folder-size)/2) !important;
+				.folderPreviewGuildIcon__48112{
+					height: calc(var(--guildbar-folder-size)/2);
+					width: calc(var(--guildbar-folder-size)/2);
+					border-radius: 0px !important;
 				}
-				
+
 
 			/* Expanded icon */
 			.folder__48112{
 				background-color: rgb(var(--backgroundLayer1));	
 			}
-				/* Expanded track */
-				.wrapper__48112>ul[role="group"]{
-					height: fit-content !important;
-				}
-				.wrapper__48112:has(.expandedFolderBackground__48112){
-					width: 64px;
-					margin-top: 4px;
-					left: 4px;
-					border-radius: 8px !important;
-					background: rgb(var(--backgroundLayer1));
-				}
-				.wrapper__48112:not(.wrapper__48112:has(.collapsed__48112)){
-					padding-top: 4px;
-				}
-					/* BD Plugin: Display servers as channels by DevilBro */
-					.styledGuildsAsChannels-DNHtg_ .wrapper_ef3116 .expandedFolderBackground__48112{
-						left: 0px;
-					}
+			.folderGroup__48112{
+				margin-top: 4px !important;
+			}
 
+			/* Expanded track */
+			.folderGuildsList__48112{
+				height: fit-content !important;
+			}
+			.folderGroupBackground__48112{
+				width: 64px;	
+				left: 0px;
+				border-radius: 4px !important;
+				background: rgb(var(--backgroundLayer1));
+			}
 
 		/* Servers */
 			/* Icon */
@@ -1416,6 +1415,12 @@
 					margin-top: 4px;
 					gap: 0px !important;
 				}
+
+				/* Background */
+				.wrapper__6e9f8{
+					background: rgb(var(--backgroundLayer2));
+				}
+				
 
 			.listItemWrapper_dfb2f8 .wrapper_cc5dd2:has( svg foreignObject div img), /* DMs */
 			div[aria-label="Servers"]>*{
