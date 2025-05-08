@@ -1,0 +1,11 @@
+name: Feature request
+description: "Make a suggestion"
+title: ''
+labels: ["Type - Request", "Needs - Review"]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description: Please describe the issue. You can include screenshot or video
+    validations:
+      required: true

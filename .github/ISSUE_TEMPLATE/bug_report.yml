@@ -1,0 +1,25 @@
+name: Bug Report
+description: "Report an issue"
+title: ''
+labels: ["Type - Bug", "Needs - Review"]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Steps To Reproduce
+      placeholder: |
+          1. 
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Theme version
+    validations:
+      required: true
