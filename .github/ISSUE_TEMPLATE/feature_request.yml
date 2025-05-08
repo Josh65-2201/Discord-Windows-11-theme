@@ -1,6 +1,5 @@
 name: Feature request
 description: "Make a suggestion"
-title: ''
 labels: ["Type - Request", "Needs - Review"]
 body:
   - type: textarea
