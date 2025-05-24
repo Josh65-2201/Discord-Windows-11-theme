@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.5.22.0
+ * @version 2025.5.24.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -2145,29 +2145,34 @@
 					}
 
 				/* Mentioned */
-				.messagelogger-deleted .mentioned__5126c{
-					background-color: transparent;
-				}
+					.messagelogger-deleted .mentioned__5126c{
+						background-color: transparent;
+					}
 
 				/* Deleted */
-				.messagelogger-deleted{
-					background-color: rgb(var(--infobarBackgroundCritical)) !important;
-				}
+					.messagelogger-deleted{
+						background-color: rgb(var(--infobarBackgroundCritical)) !important;
+					}
+
+					/* Images */
+					.messagelogger-deleted :is(.messagelogger-deleted-attachment,.emoji,[data-type=sticker],[class*=embedIframe],[class*=embedSpotify],[class*=imageContainer]){
+						filter: none !important;
+					}
 
 
 			/* Jump to present */
-			.jumpToPresentBar__0f481{
-				width: 75%;
-				max-width: 576px;
-				height: 52px !important;
-				margin: 0 auto;
-				margin-bottom: 6px;
-				padding: 0px;
-				padding-left: 42px;
-				background: rgb(var(--infobarBackgroundMessage)) !important;
-				opacity: 1 !important;
-				border-radius: 4px;
-			}
+				.jumpToPresentBar__0f481{
+					width: 75%;
+					max-width: 576px;
+					height: 52px !important;
+					margin: 0 auto;
+					margin-bottom: 6px;
+					padding: 0px;
+					padding-left: 42px;
+					background: rgb(var(--infobarBackgroundMessage)) !important;
+					opacity: 1 !important;
+					border-radius: 4px;
+				}
 
 			/* Send message */
 				/* Position */
