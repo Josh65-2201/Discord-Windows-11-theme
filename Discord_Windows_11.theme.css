@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.5.28.0
+ * @version 2025.5.28.1
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -1053,6 +1053,7 @@
 
 	/* Title bar */
 		.bar_c38106{
+			top: -16px;
 			height: 8px;
 			min-height: 8px !important;
 		}
@@ -1254,7 +1255,7 @@
 		/* Window control buttons */
 			/* Position */
 			.winButton_c38106{
-				margin-top: 8px;
+				margin-top: 40px;
 				height: 48px;
 				width: 48px;
 			}
