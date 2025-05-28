@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.5.24.0
+ * @version 2025.5.28.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -1056,7 +1056,7 @@
 			height: 8px;
 			min-height: 8px !important;
 		}
-		.content_c48ade{
+		.base_c48ade{
 			padding-top: 16px;
 		}
 
@@ -1254,7 +1254,7 @@
 		/* Window control buttons */
 			/* Position */
 			.winButton_c38106{
-				margin-top: 40px;
+				margin-top: 8px;
 				height: 48px;
 				width: 48px;
 			}
@@ -2610,6 +2610,14 @@
 
 
 		/* Channel bar */
+			/* Position */
+			.upperContainer__9293f{
+				padding-right: 42px;
+			}
+			.inviteToolbar__133bf{
+				padding-right: 0px;
+			}
+
 			/* Pinned message */
 				/* Header */
 				.layer-2aCOJ3 .header__45690{
@@ -2678,8 +2686,8 @@
 				}
 				.recentsIcon_c99c29{
 					position: fixed;
-					top: 57px;
-					right: 208px;
+					top: 56px;
+					right: 8px;
 				}
 
 				/* Background */
@@ -2697,6 +2705,9 @@
 						margin-top: 4px !important;
 						margin-right: 24px !important;
 						padding: 0px !important;
+					}
+					.headerTabs_ab6641{
+						margin: 0px;
 					}
 
 				/* Message server location */
