@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.5.28.1
+ * @version 2025.06.04.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -2992,24 +2992,24 @@
 		}
 
 		/* Profile actions */
-		.wrapper_da5890.biteSize_da5890{ /* Server profiles */
+		.user-profile-popout .wrapper_da5890{ /* Server profiles */
 			top: 104px;
 			right: 4px;
 		}
-		.wrapper_da5890.panel_da5890{ /* DMs */
+		.user-profile-sidebar .wrapper_da5890{ /* DMs */
 			top: 82px;
 			right: 4px;
 		}
 
 		/* Profile picture */
-		.avatar__75742.biteSize__75742{ /* Server profiles */
+		.user-profile-popout :where(.avatar__75742){ /* Server profiles */
 			top: 52px;
 			left: 8px;
 			background: black;
 			border-radius: 0px;
 		}
-		.avatar__75742.panel__75742{ /* DMs */
-			top: 52px;
+		.user-profile-sidebar :where(.avatar__75742){ /* DMs */
+			top: 34px;
 			left: 4px;
 			background: black;
 			border-radius: 0px;
@@ -3219,7 +3219,7 @@
 
 		/* Profile image */
 			/* Position */
-			.avatar__75742.fullSize__75742{
+			.user-profile-modal :where(.avatar__75742){
 				top: -132px;
 				left: 8px;
 				background: black;
@@ -3233,14 +3233,14 @@
 
 
 		/* Profile actions */
-		.wrapper_da5890.fullSize_da5890{
+		.user-profile-modal .wrapper_da5890{
 			top: 170px;
 			right: 8px;
 		}
 		.headerButtons__24502{
 			position: fixed;
 			top: 151px;
-			right: 128px;
+			right: 168px;
 		}
 
 
