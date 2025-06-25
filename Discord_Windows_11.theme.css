@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.06.04.0
+ * @version 2025.06.25.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -1312,7 +1312,7 @@
 
 		/* Background */
 			.wrapper_ef3116{
-				background: transparent !important;
+				background: rgb(var(--backgroundLayer0)) !important;
 			}
 			.layer__960e4.baseLayer__960e4{
 				opacity: 1 !important;
@@ -2255,7 +2255,11 @@
 		.container_c8ffbb{
 			background: rgb(var(--backgroundLayer1)) !important;
 		}
-	
+
+		/* Recent activity header */
+		.membersGroup_c8ffbb:has(.headerContainer__095fe){
+			display: none !important;
+		}
 
 		/* Role header */
 		.membersGroup_c8ffbb{
