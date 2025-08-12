@@ -1841,6 +1841,11 @@
 					height: fit-content !important;
 				}
 
+				/* Discord bug - Missing text */
+				.wrapperCommon__29444 .mainContent__29444{
+					height: fit-content !important;
+				}
+
 			/* Create channel icon */
 				.addButton__29444{
 					margin-right: 24px;
@@ -2966,7 +2971,7 @@
 		}
 
 		.layer_da8173:has(> .loadingPopout__58f1c),
-		.layer_da8173:has(> .animatorLeft_faf9c0), .layer_da8173:has(> .animatorRight_faf9c0>div[role="dialog"]){
+		.layer_da8173:not(#popout_5348):has(> .animatorLeft_faf9c0), .layer_da8173:has(> .animatorRight_faf9c0>div[role="dialog"]){
 			height: calc(100% - 49px);
 			width: var(--rightPaneWidth);
 			left: revert !important;
@@ -2979,7 +2984,8 @@
 			}
 
 		.animatorRight_faf9c0, .animatorRight_faf9c0>div, .animatorRight_faf9c0>div>div:not(.popout__76f04),
-		.animatorLeft_faf9c0, .animatorLeft_faf9c0>div , .animatorLeft_faf9c0>div>div:not(.popout__76f04),
+		.animatorLeft_faf9c0 div:has(>.user-profile-popout), .animatorLeft_faf9c0 div .user-profile-popout,
+		.animatorLeft_faf9c0>div:not(#emoji-picker-tab-panel)>div:not(.popout__76f04),
 		.userPopoutOuter_c69a7b{
 			height: 100%;
 			width: var(--rightPaneWidth);
