@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.06.25.0
+ * @version 2025.08.17.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -3608,7 +3608,7 @@
 		}
 
 		/* Vencord */
-		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="VencordSettings"]::before{
+		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="settings/tabs"]::before{
 			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVencord.svg") center/contain no-repeat;
 		}
 
@@ -3633,7 +3633,7 @@
 		}
 
 		/* Vencord: Backup & restore */
-		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="VencordSettingsSync"]::before{
+		.sidebar__23e6b .side_b3f026 .item_b3f026[data-tab-id="settings/tabsSync"]::before{
 			mask: url("https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/refs/heads/main/assets/settingsVencordBackupAndRestore.svg") center/contain no-repeat;
 		}
 
