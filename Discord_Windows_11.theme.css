@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.08.23.0
+ * @version 2025.09.06.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -1051,14 +1051,14 @@
 		}
 
 
-	/* Title bar */
+	/* Titlebar */
 		.bar_c38106{
 			top: -16px;
 			height: 8px;
 			min-height: 8px !important;
 		}
 		.base_c48ade{
-			padding-top: 16px;
+			padding-top: 16px !important;
 		}
 
 		/* Center text */
@@ -3192,76 +3192,7 @@
 
 
 	/* Full profile */
-		/* Position */
-		.root-8LYsGj .topSection-13QKHs .banner__68edb+.header-S26rhB .wrapper__44b0c::before{
-			content: "";
-			background: var(--user-standardtus-background);
-			position: fixed;
-			margin-top: 68px;
-			left: 0px;
-			width: 100%;
-			height: 110px;
-		}
-		.body__24502{
-			margin: 12px;
-		}
-		.outer_ab8609.fullSize_ab8609{
-			min-width: calc(var(--rightPaneWidth) - 16px);
-			max-width: none;
-			margin: 0px 2px 0px 4px;
-			border-radius: 8px;
-		}
-
-
-		/* Online status */
-		.wrapper__44b0c[style*="120px"] rect{
-			width: 120px;
-			height: 120px;
-			transform: translate(-88px, -88px);
-			stroke-width: 2px;
-		}
-
-
-		/* Status message */
-		.container_ab8609.fullSize_ab8609{
-			min-width: 592px !important;
-			top: 0px;
-			left: 4px;
-		}
-
-
-		/* Profile image */
-			/* Position */
-			.user-profile-modal :where(.avatar__75742){
-				top: -132px;
-				left: 8px;
-				background: black;
-				border-radius: 0px;
-			}
-			
-			/* Background */
-			.mask__68edb>mask{
-				display: none !important;
-			}
-
-
-		/* Profile actions */
-		.user-profile-modal .wrapper_da5890{
-			top: 170px;
-			right: 8px;
-		}
-		.headerButtons__24502{
-			position: fixed;
-			top: 151px;
-			right: 168px;
-		}
-
-
-		/* About me tab */
-			/* Connections */
-			.connectedAccountContainer_e6abe8{
-				background: rgb(var(--buttonStandard));
-			}
+		/* TODO: Restyle for Discord update */
 
 
 	/* Shared */
@@ -3334,7 +3265,6 @@
 			background: rgb(var(--backgroundLayer1));
 		}
 			/* Notes text */
-			.textarea_dde0a8, /* Full profile */
 			.textarea_dde0a8{ /* DMs sidebar */
 				font-size: 14px !important;
 				line-height: 20px !important;
@@ -4215,7 +4145,7 @@
 	.wrapper_f563df, /* Context menu: Emoji suggestions */
 	.art-1TvEXv, .close-1mLglB, .headerDescription-yFPU-Q, /* Share screen: Header */
 	.option__56fec:after,
-	.nameTag__37e49, /* Title bar: Logged in user name */
+	.nameTag__37e49, /* Titlebar: Logged in user name */
 	.listItem__650eb>.guildSeparator__252b6, /* servers bar: Divider */
 	.expandedFolderBackground__48112, /* servers bar: Folder background */
 	.tabBarItemContainer_c7e907>svg, /* Server settings: Delete channel icon */
