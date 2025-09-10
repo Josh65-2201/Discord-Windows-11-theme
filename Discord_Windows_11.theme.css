@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.09.06.0
+ * @version 2025.09.10.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -1178,15 +1178,15 @@
 				/* Position */
 				.avatar__37e49{
 					margin: 0px;
-					margin-top: -48px;
+					margin-top: -56px;
 					padding: 0px;
 					left: 111px;
-					transform: scale(0.7);
+					transform: scale(0.85);
 				}
 
 				/* Hovered */
 				.avatar__37e49:hover{
-					transform: scale(0.65);
+					transform: scale(0.8);
 					transition: 100ms ease-in-out;
 					opacity: 1 !important;
 				}
@@ -2030,6 +2030,13 @@
 
 			/* Conversations */
 				/* Position */
+					.scroller__36d07{
+						margin-bottom: 40px;
+					}
+					.scrollerSpacer__36d07{
+						height: 16px !important;
+					}
+
 					.messageListItem__5126c:has(> .groupStart__5126c ){
 						border-radius: 8px 8px 0px 0px;
 					}
@@ -2077,7 +2084,7 @@
 						width: fit-content !important;
 					}
 
-					/* Link */
+					/* Links */
 						/* Image */
 						.messageListItem__5126c[data-is-self="true"] .embedThumbnail__623de{
 							margin-left: 0px !important;
@@ -2180,6 +2187,15 @@
 					border-radius: 4px;
 				}
 
+			/* Is typing/slow mode */
+			.chatGradient__36d07,
+			.chatTypingGradientAtBottom__36d07,
+			.chatTypingGradientNotAtBottom__36d07{
+				height: 40px !important;
+				width: 100%;
+				background: rgb(var(--backgroundLayer1)) !important;
+			}
+
 			/* Send message */
 				/* Position */
 				.inner__74017,
@@ -2234,6 +2250,8 @@
 						.attachButton__0923f{
 							height: 32px !important;
 							width: 32px !important;
+						}
+						.align-chat-input .attachWrapper__0923f{
 							padding: 0px !important;
 						}
 						.attachWrapper__0923f{
@@ -2697,9 +2715,9 @@
 				.trailing_c38106{
 					z-index: 101 !important;
 				}
-				.recentsIcon_c99c29{
+				.clickable_c99c29{
 					position: fixed;
-					top: 56px;
+					top: 60px;
 					right: 8px;
 				}
 
@@ -2974,7 +2992,8 @@
 		}
 
 		.layer_da8173:has(> .loadingPopout__58f1c),
-		.layer_da8173:not(#popout_5348):has(> .animatorLeft_faf9c0), .layer_da8173:has(> .animatorRight_faf9c0>div[role="dialog"]){
+		.layer_da8173:not(#popout_5348):has(> .animatorLeft_faf9c0),
+		.layer_da8173:has(> .animatorRight_faf9c0>div[role="dialog"]){
 			height: calc(100% - 49px);
 			width: var(--rightPaneWidth);
 			left: revert !important;
@@ -2984,6 +3003,10 @@
 			/* Height fix when loading */
 			.loadingPopout__58f1c{
 				height: calc(100% - 16px) !important;
+			}
+
+			.animatorLeft_faf9c0{
+				height: 100%;
 			}
 
 		.animatorRight_faf9c0, .animatorRight_faf9c0>div, .animatorRight_faf9c0>div>div:not(.popout__76f04),
