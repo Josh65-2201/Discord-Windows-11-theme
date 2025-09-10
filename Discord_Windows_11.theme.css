@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.09.10.0
+ * @version 2025.09.10.1
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -2257,6 +2257,9 @@
 						.attachWrapper__0923f{
 							right: 0px;
 							position: absolute;
+						}
+						.attachButton__74017{
+							margin-right: 0px !important;
 						}
 
 				.scrollableContainer__74017{
