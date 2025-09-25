@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.09.10.1
+ * @version 2025.09.25.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -552,7 +552,6 @@
 		.inputDefault__0f084.input-2g-os5.input_df4dd0, /* Mini user profile: Message user */
 		.searchBar__97492, /* Conversation search bar */
 		.addFriendInput__72ba7, /* Home: Add friend */
-		.searchBar__5ec2f, /* Home: Search friends */
 		.input__72d38, /* Settings: Key binds */
 		.textArea__74017, /* Messages: message input */
 		.inputWrapper__0f084.input__991a0, /* Add server viewModal */
@@ -587,7 +586,6 @@
 		.inputDefault__0f084.input-2g-os5.input-3AAlUz:hover, /* Custom status */
 		.searchBar__97492:hover, /* Sidebar search */ 
 		.addFriendInput__72ba7:hover, /* Home: Add friend */
-		.searchBar__5ec2f:hover, /* Home: Search friends */
 		.input__72d38:hover, /* Settings: Key binds */
 		.inputDefault__0f084.input-2g-os5.input_df4dd0:hover,  /* Mini profile: Message user */
 		.textArea__74017:hover, /* Messages: message input */
@@ -613,7 +611,6 @@
 		.inputDefault__0f084.input-2g-os5.input-3AAlUz:focus-within, /* Custom status */
 		.searchBar__97492:focus-within, /* Sidebar search */
 		.addFriendInput__72ba7:focus-within, /* Home: Add friend */
-		.searchBar__5ec2f:focus-within, /* Home: Search friends */
 		.input__72d38:focus-within, /* Settings: Key binds */
 		.inputDefault__0f084.input-2g-os5.input_df4dd0:focus-within,  /* Mini profile: Message user */
 		.textArea__74017:focus-within, /* Messages: message input */
@@ -1098,8 +1095,7 @@
 		/* Search bar */
 			/* Position */
 			.searchBar__97492, /* User/channel */
-			.searchBar__1ac1c.search__1ac1c, /* Discovery */
-			.searchBar__5ec2f{ /* Friends */
+			.searchBar__1ac1c.search__1ac1c{ /* Discovery */
 				position: fixed !important;
 				height: 32px !important;
 				width: 31.25% !important;
@@ -1112,9 +1108,9 @@
 				.bd-search-wrapper{
 					top: 8px;	
 				}
-				/* Home - Friends */
-				.searchBar__5ec2f{
-					margin: 0px !important;
+				/* Home: Friends */
+				.wrapper__3412a{
+					border: none !important;
 				}
 
 
@@ -1138,7 +1134,9 @@
 				margin-top: 2px;
 				margin-right: 4px;
 				transform: scale(0.75);
-				
+			}
+			.icon__0f084{ /* Home: Friends */
+				display: none;
 			}
 			.icon_fea832{
 				color: rgb(var(--textNormal)) !important;
@@ -1148,7 +1146,7 @@
 
 			/* Sub menu: Search options */
 				/* Position */
-				.layer_da8173[style^="position: absolute; top: 86px; left"]{
+				.layer__59d0d[style^="position: absolute; top: 86px; left"]{
 					width: 100%;
 					top: 40px !important;
 					left: 0px !important;
@@ -1259,6 +1257,9 @@
 				height: 48px;
 				width: 48px;
 			}
+			.show_c38106{ /* Discord bug: Window controls duplicated on settings page */
+				display: contents !important;
+			}
 			.winButtons_c38106{
 				color: rgb(var(--textNormal)) !important;
 				gap: 0px !important;
@@ -1311,7 +1312,8 @@
 
 
 		/* Background */
-			.wrapper_ef3116{
+			.wrapper_ef3116, /* Servers bar */
+			.appAsidePanelWrapper_a3002d{ /* Titlebar */
 				background: rgb(var(--backgroundLayer0)) !important;
 			}
 			.layer__960e4.baseLayer__960e4{
@@ -3301,6 +3303,7 @@
 /* 6. Settings ------------------------------------------------------------------------------------------------------- */
 /* Discord background */
 .standardSidebarView__23e6b{
+	top: 48px;
 	background: transparent !important;
 }
 
@@ -3341,7 +3344,6 @@
 		}
 
 		.sidebarRegion__23e6b{
-			margin-top: 49px;
 			margin-left: 73px;
 			background: rgb(var(--backgroundLayer1));
 			border-top-left-radius: 8px;
@@ -3609,8 +3611,6 @@
 		}
 
 		.contentRegion__23e6b{
-			top: 49px;
-			margin-bottom: 48px;
 			background: rgb(var(--backgroundCardBase)) !important;
 		}
 
@@ -4084,7 +4084,6 @@
 /* 9. Disabled elements --------------------------------------------------------------------------------------------- */
 	/* D: Background */
 	.contentTransitionWrap__23e6b, /* Settings: Content background */
-	.input__0f084, /* Text input */
 	.appMount__51fd7, body, /* Discord */
 	.name__29444.container-q97qHp, /* Server channel category text hover */
 	.elevationHigh__08882,
