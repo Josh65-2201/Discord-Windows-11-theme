@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.09.25.0
+ * @version 2025.09.27.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -425,7 +425,6 @@
 
 
 	/* Drop down box */
-		
 
 
 	/* Text inputs */
@@ -463,7 +462,7 @@
 				margin-top: 12px;
 			}
 			.channelTextArea-3xG1BQ, .channelTextAreaInner-2_mflx{
-				min-height: 0px !important;			
+				min-height: 0px !important;
 			}
 
 			/* Forms: File upload */
@@ -1740,6 +1739,14 @@
 			margin: 0px !important;
 		}
 
+		/* Discord bug: Gap below server image */
+		.content_d125d2>div:nth-child(1){
+			height: 0px !important;
+		}
+		#channels .content_d125d2>div:nth-child(2){
+			height: 8px !important;
+		}
+
 		/* Server boost bar */
 			/* Icon */
 			.flowerStar-38IYO7{
@@ -1843,7 +1850,7 @@
 					height: fit-content !important;
 				}
 
-				/* Discord bug - Missing text */
+				/* Discord bug: Missing text */
 				.wrapperCommon__29444 .mainContent__29444{
 					height: fit-content !important;
 				}
@@ -2498,7 +2505,7 @@
 			}
 
 			/* Background */
-			.scroller__99e7c.thin__99f8c, .userProfileInner-3F03PX:before, /* DMs */
+			.scroller__99e7c.thin_d125d2, .userProfileInner-3F03PX:before, /* DMs */
 			.container__2637a{ /* Server */
 				background: rgb(var(--backgroundLayer1)) !important;
 			}
