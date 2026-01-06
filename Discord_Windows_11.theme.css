@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2025.12.31.0
+ * @version 2026.01.06.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -549,7 +549,7 @@
 		.searchBox_f69601, /* Server Settings: Server name - Forums: Search/new */
 		.inputDefault__0f084.input-2g-os5.input-3AAlUz, /* Custom status */
 		.inputDefault__0f084.input-2g-os5.input_df4dd0, /* Mini user profile: Message user */
-		._974928fe84ca9647-searchBar, /* Conversation search bar */
+		.c322aadb96ff59c9-searchBar, /* Conversation search bar */
 		._72ba79a5dfa2ce86-addFriendInput, /* Home: Add friend */
 		.input__72d38, /* Settings: Key binds */
 		._740174f3d6a2c8fe-textArea, /* Messages: message input */
@@ -559,7 +559,7 @@
 		.bd-search-wrapper, /* BD Plugin + Themes picker */
 		.inner__999f6, /* BD Plugin + Themes repo */
 		.e6b7699ce8339e1c-searchBar .searchBarComponent__35e86,
-		.search-1FM8Qc ._974928fe84ca9647-searchBar,
+		.search-1FM8Qc .c322aadb96ff59c9-searchBar,
 		._3fb48a36faa8fdf6-libraryFilter,
 		.browseSearch-e9jF-f .searchBar-s2JxlI{
 			background: rgb(var(--textboxStandard)) !important;
@@ -583,7 +583,7 @@
 		.note_c90ad7:hover, /* Mini user profile: Notes */
 		.searchBox_f69601:hover, /* Server Settings: Server name - Forums: Search/new */
 		.inputDefault__0f084.input-2g-os5.input-3AAlUz:hover, /* Custom status */
-		._974928fe84ca9647-searchBar:hover, /* Sidebar search */ 
+		.c322aadb96ff59c9-searchBar:hover, /* Sidebar search */ 
 		._72ba79a5dfa2ce86-addFriendInput:hover, /* Home: Add friend */
 		.input__72d38:hover, /* Settings: Key binds */
 		.inputDefault__0f084.input-2g-os5.input_df4dd0:hover,  /* Mini profile: Message user */
@@ -608,7 +608,7 @@
 		.note_c90ad7:focus-within, /* Mini user profile: Notes */
 		.searchBox_f69601:focus-within, /* Server Settings: Server name - Forums: Search/new */
 		.inputDefault__0f084.input-2g-os5.input-3AAlUz:focus-within, /* Custom status */
-		._974928fe84ca9647-searchBar:focus-within, /* Sidebar search */
+		.c322aadb96ff59c9-searchBar:focus-within, /* Sidebar search */
 		._72ba79a5dfa2ce86-addFriendInput:focus-within, /* Home: Add friend */
 		.input__72d38:focus-within, /* Settings: Key binds */
 		.inputDefault__0f084.input-2g-os5.input_df4dd0:focus-within,  /* Mini profile: Message user */
@@ -618,9 +618,9 @@
 		._1ac1c54c56e5807c-searchBar._1ac1c54c56e5807c-search:focus-within, /* Discovery home page */
 		.bd-search-wrapper:focus-within, /* BD Plugin + Themes picker */
 		.inner__999f6:focus-within, /* BD Plugin + Themes repo */
-		._9293f6b2fc12398a-container ._974928fe84ca9647-searchBar .bd818628221af7aa-searchFilter, 
-		._9293f6b2fc12398a-container ._974928fe84ca9647-searchBar .bd818628221af7aa-searchAnswer,
-		.focused-8aNhVB ._974928fe84ca9647-searchBar, .open-3y3yI_ ._974928fe84ca9647-searchBar, 
+		._9293f6b2fc12398a-container .c322aadb96ff59c9-searchBar .bd818628221af7aa-searchFilter, 
+		._9293f6b2fc12398a-container .c322aadb96ff59c9-searchBar .bd818628221af7aa-searchAnswer,
+		.focused-8aNhVB .c322aadb96ff59c9-searchBar, .open-3y3yI_ .c322aadb96ff59c9-searchBar, 
 		._3fb48a36faa8fdf6-focused,
 		.focused-20l6Zp{
 			background: rgb(var(--textboxSelected)) !important;
@@ -629,7 +629,7 @@
 			/* Text + icon color */
 			.input__72d38:focus-within, /* Settings: Key binds */
 			.focused-8aNhVB .iconContainer_fea832>svg>path,
-			.focused-8aNhVB ._974928fe84ca9647-searchBar, .open-3y3yI_ ._974928fe84ca9647-searchBar .DraftEditor-root .public-DraftEditorPlaceholder-root{
+			.focused-8aNhVB .c322aadb96ff59c9-searchBar, .open-3y3yI_ .c322aadb96ff59c9-searchBar .DraftEditor-root .public-DraftEditorPlaceholder-root{
 				color: #8B8B8B !important;
 				font-weight: 400 !important;
 				font-style: normal !important;
@@ -829,7 +829,7 @@
 		content: "";
 	}
 		/* Search fixes */
-		._46696d17714f10ab-spinner._46696d17714f10ab-spinningCircle.f3b986a284a18c78-spinner{
+		._46696d17714f10ab-spinner._46696d17714f10ab-spinningCircle.ae7890a1b8e75804-spinner{
 			width: 200%;
 			margin-left: 24px;
 		}
@@ -1092,7 +1092,7 @@
 
 		/* Search bar */
 			/* Position */
-			._974928fe84ca9647-searchBar, /* User/channel */
+			.c322aadb96ff59c9-searchBar, /* User/channel */
 			._1ac1c54c56e5807c-searchBar._1ac1c54c56e5807c-search{ /* Discovery */
 				position: fixed !important;
 				height: 32px !important;
@@ -1118,8 +1118,8 @@
 				width: 100% !important;
 			}
 				/* Placeholder text */
-				._974928fe84ca9647-search .DraftEditor-root .public-DraftEditor-content,
-				._974928fe84ca9647-search .DraftEditor-root .public-DraftEditorPlaceholder-root{
+				.c322aadb96ff59c9-search .DraftEditor-root .public-DraftEditor-content,
+				.c322aadb96ff59c9-search .DraftEditor-root .public-DraftEditorPlaceholder-root{
 					padding-top: 1px;
 					padding-left: 8px;
 					font-weight: 200;
@@ -1128,7 +1128,7 @@
 				}
 
 			/* Icon */
-			._974928fe84ca9647-icon{
+			.c322aadb96ff59c9-icon{
 				margin-top: 2px;
 				margin-right: 4px;
 				transform: scale(0.75);
@@ -2473,28 +2473,28 @@
 	/* Shared */
 		/* Search results */
 			/* Background */
-			.a9e7064fdee8e9b0-searchResultsWrap{
+			.a98f3b020416ad54-searchResultsWrap{
 				width: 512px !important;
 				background: rgb(var(--contentDialogBackdrop));
 			}
-			.a9e7064fdee8e9b0-scroller{
+			.a98f3b020416ad54-scroller{
 				padding: 0px;
 				background: rgb(var(--backgroundCardBase));
 			}
 
 			/* Header */
-			.f3b986a284a18c78-searchHeader,
-			.a9e7064fdee8e9b0-searchResultsWrap .channelName-3w2Y3c{
+			.ae7890a1b8e75804-searchHeader,
+			.a98f3b020416ad54-searchResultsWrap .channelName-3w2Y3c{
 				background: rgb(var(--backgroundCardBase));
 				padding: 8px 16px;
 			}
 
 			/* Messages */
-			.a9e7064fdee8e9b0-searchResultsWrap ._02a39cb2980ceaaf-searchResult{
+			.a98f3b020416ad54-searchResultsWrap ._80bf8435713f6adb-searchResult{
 				background: transparent;
 				border-radius: 12px;
 			}
-			.a9e7064fdee8e9b0-searchResultsWrap ._02a39cb2980ceaaf-searchResult:hover{
+			.a98f3b020416ad54-searchResultsWrap ._80bf8435713f6adb-searchResult:hover{
 				background: rgb(var(--buttonHover));
 			}
 
@@ -4178,7 +4178,7 @@
 	._1fed1dd06c7aabf7-accountProfileCard>.bannerSVGWrapper_b32cc2, /* Settings: User profile: preview */
 	.f563df886a7377be-wrapper, /* Context menu: Emoji suggestions */
 	.art-1TvEXv, .close-1mLglB, .headerDescription-yFPU-Q, /* Share screen: Header */
-	._56fec8e8b8048fe0-option:after,
+	._16eb0bfd5c5a90d1-option:after,
 	._37e49614b9f110a9-nameTag, /* Titlebar: Logged in user name */
 	._650eb104245d257b-listItem>._252b6afd49fda06f-guildSeparator, /* servers bar: Divider */
 	._48112cbe77dc5022-folderGroupBackground, /* servers bar: Folder background */
