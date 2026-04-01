@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2026.02.12.0
+ * @version 2026.04.1.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -530,7 +530,9 @@
         }
         /* Send message */
         .slateTextArea_ec4baf{
+          max-height: 256px !important;
           min-height: 32px !important;
+          overflow-y: auto;
         }
 
       /* Mini profile - Message */
