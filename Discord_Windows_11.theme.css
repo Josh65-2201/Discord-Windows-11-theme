@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2026.04.1.0
+ * @version 2026.04.22.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -141,6 +141,11 @@
 
 
 /* 1. Shared controls ------------------------------------------------------------------------------------------------ */
+  /* Top bar notice */
+  .notice__6e2b9{
+    margin-top: 16px;
+  }
+  
   /* Toasts/Notifications */
     /* Style */
     .bd-toast, /* Loading: bottom */
@@ -1058,9 +1063,27 @@
       min-height: 8px !important;
     }
 
-    /* Center text */
-    .title_c38106{
+    /* Devtool */
+    .trailing_c38106 > div:nth-of-type(2){
       display: none;
+    }
+
+
+    /* Update ready to install */
+    .trailing_c38106 > div:nth-of-type(3){
+      top: 20px;
+      left: calc(100% - 648px)
+    }
+
+
+    /* Navigation arrows */
+    .leading_c38106{
+      margin-top: 40px;
+      margin-left: 8px;
+    }
+    .button__63abb{
+      padding: 4px 8px !important;
+      border-radius: 4px !important;
     }
 
 
@@ -1091,6 +1114,10 @@
         font-weight: 400;
       }
 
+    /* Center text */
+    .title_c38106{
+      display: none;
+    }
 
     /* Search bar */
       /* Position */
@@ -1420,6 +1447,10 @@
         .wrapper_cc5dd2{
           height: 56px !important;
           width: 64px !important;
+        }
+
+        .wrapper_cc5dd2 > svg > mask{
+          display: none !important;
         }
 
         .stack_dbd263{
@@ -2200,84 +2231,92 @@
           border-radius: 4px;
         }
 
-      /* Is typing/slow mode */
-      .chatGradient__36d07,
-      .chatTypingGradientAtBottom__36d07,
-      .chatTypingGradientNotAtBottom__36d07{
-        height: 40px !important;
-        width: 100%;
-        background: rgb(var(--backgroundLayer1)) !important;
-      }
 
-      /* Send message */
-        /* Position */
-        .inner__74017,
-        .slateTextArea_ec4baf:not(.placeholder__1b31f){
-          padding: 0px !important;
-        }
-        .textArea__74017.textAreaSlate__74017.slateContainer_ec4baf{
-          margin-right: 8px;
-        }
-
-        /* Background */
-        .channelTextArea_f75fb0{
-          background: transparent !important;
-          border: none !important;
-        }
-        .form_f75fb0{
-          padding-top: 8px !important;
+      /* Message bar */
+        /* Is typing/slow mode */
+        .chatGradient__36d07,
+        .chatTypingGradientAtBottom__36d07,
+        .chatTypingGradientNotAtBottom__36d07{
+          height: 40px !important;
+          width: 100%;
           background: rgb(var(--backgroundLayer1)) !important;
         }
 
-        /* Buttons */
-          /* Position */
-            .sansAttachButton__74017 .buttons__74017{ /* Shift left for attach button */
-              height: 32px;
-              margin-right: 36px !important;
-              gap: 4px !important
-            }
-
-          /* Vencord: plugin Send timestamp */
-            .buttonWrapper__24af7 svg{
-              scale: 1 !important;
-            }
-
-          /* Emote button */
-            .sprite__04eed.spriteGreyscale__04eed {
-              background-image: none !important;
-            }
-            .spriteContainer__04eed{
-              transform: scale(1) !important;
-            }
-
-          /* Send button */
-            .separator_aa63ab{
-              display: none;
-            }
-            /* Removed blue color */
-            .activeButtonChild_aa63ab{
-              color: var(--textNormal) !important;
-            }
-
-          /* Attach button */
-            .attachButton__0923f{
-              height: 32px !important;
-              width: 32px !important;
-            }
-            .align-chat-input .attachWrapper__0923f{
-              padding: 0px !important;
-            }
-            .attachWrapper__0923f{
-              right: 0px;
-              position: absolute;
-            }
-            .attachButton__74017{
-              margin-right: 0px !important;
-            }
-
-        .scrollableContainer__74017{
-          border-radius: 4px !important;
+        /* Vencord plugin: Character counter */
+        .vc-charCounter-counter{
+          margin-bottom: 36px;
         }
+
+        /* Send message */
+          /* Position */
+          .inner__74017,
+          .slateTextArea_ec4baf:not(.placeholder__1b31f){
+            padding: 0px !important;
+          }
+          .textArea__74017.textAreaSlate__74017.slateContainer_ec4baf{
+            margin-right: 8px;
+          }
+
+          /* Background */
+          .channelTextArea_f75fb0{
+            background: transparent !important;
+            border: none !important;
+          }
+          .form_f75fb0{
+            padding-top: 8px !important;
+            background: rgb(var(--backgroundLayer1)) !important;
+          }
+
+          /* Buttons */
+            /* Position */
+              .sansAttachButton__74017 .buttons__74017{ /* Shift left for attach button */
+                height: 32px;
+                margin-right: 38px !important;
+                gap: 4px !important
+              }
+
+            /* Vencord: plugin Send timestamp */
+              .buttonWrapper__24af7 svg{
+                scale: 1 !important;
+              }
+
+            /* Emote button */
+              .sprite__04eed.spriteGreyscale__04eed {
+                background-image: none !important;
+              }
+              .spriteContainer__04eed{
+                transform: scale(1) !important;
+              }
+
+            /* Send button */
+              .separator_aa63ab{
+                display: none;
+              }
+              /* Removed blue color */
+              .activeButtonChild_aa63ab{
+                color: var(--textNormal) !important;
+              }
+
+            /* Attach button */
+              .attachButton__0923f{
+                height: 32px !important;
+                width: 32px !important;
+              }
+              .align-chat-input .attachWrapper__0923f{
+                padding: 0px !important;
+              }
+              .attachWrapper__0923f{
+                right: 0px;
+                bottom: -10px;
+                position: absolute;
+              }
+              .attachButton__74017{
+                margin-right: -8px !important;
+              }
+
+          .scrollableContainer__74017{
+            border-radius: 4px !important;
+          }
 
 
   /* Members list */
@@ -2658,7 +2697,7 @@
     /* Channel bar */
       /* Position */
       .upperContainer__9293f{
-        padding-right: 42px;
+        padding-right: 76px;
       }
       .inviteToolbar__133bf{
         padding-right: 0px;
@@ -2725,15 +2764,23 @@
           }
 
 
+      /* Help */
+      .trailing_c38106 > a{
+        position: fixed;
+        top: 60px;
+        right: 8px;
+      }
+
+
       /* Inbox */
         /* Button */
         .trailing_c38106{
           z-index: 101 !important;
         }
-        .clickable_c99c29{
+        .trailing_c38106 > div:nth-of-type(1){
           position: fixed;
           top: 60px;
-          right: 8px;
+          right: 48px;
         }
 
         /* Background */
