@@ -1,7 +1,7 @@
 {
   "folders": [
     {
-      "name": "Github",
+      "name": "GitHub",
       "path": "."
     },
     {
@@ -17,6 +17,5 @@
     "editor.detectIndentation": false,
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
-    "editor.comments.insertSpace": false
   }
 }
