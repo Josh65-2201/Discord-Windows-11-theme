@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2026.08.31.1
+ * @version 2026.08.31.2
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -907,10 +907,6 @@
         .trailing_c38106{
           z-index: 1003 !important;
         }
-        .notAppAsidePanel_a3002d:has(.layerContainer__59d0d.layer_bc663c > div:not([id]):not([class])) .trailing_c38106 .iconWrapper__468db{
-          display: none;
-        }
-
 
         .bar_c38106:not(.show_c38106) .trailing_c38106 > div:nth-of-type(1){
           position: fixed;
@@ -934,7 +930,6 @@
             right: 24px;
           }
         }
-
 
     /* Conversation */
       /* Shared */
@@ -978,17 +973,20 @@
 
         /* Messages */
           /* Size */
-          .messageListItem__5126c .message__5126c{
+          .messageListItem__5126c .message__5126c,
+          .quotedChatMessage__5126c .message__5126c{ /* Threads */
             margin-left: 6px;
             margin-right: 6px;
           }
-          .messageListItem__5126c .message__5126c.groupStart__5126c{ /* TODO Detect group message from same user */
+          .messageListItem__5126c .message__5126c.groupStart__5126c, /* TODO Detect group message from same user */
+          .quotedChatMessage__5126c .message__5126c{ /* Threads */
             border-radius: 8px;
           }
 
           /* Mentioned */
             /* Background */
-            .messageListItem__5126c:not(.messagelogger-deleted) .message__5126c.mentioned__5126c{
+            .messageListItem__5126c:not(.messagelogger-deleted) .message__5126c.mentioned__5126c,
+            .quotedChatMessage__5126c .message__5126c.mentioned__5126c{ /* Threads */
               background: color-mix(in srgb, var(--accent) 25%, transparent);
             }
 
@@ -999,9 +997,8 @@
 
           /* Hovered */
             /* Background */
-            .messageListItem__5126c .message__5126c:hover, /* Threads */
-            .messageListItem__5126c .message__5126c.mentioned__5126c:hover,
-            .messageListItem__5126c.messagelogger-deleted .message__5126c:hover{
+            .messageListItem__5126c .message__5126c:hover,
+            .quotedChatMessage__5126c .message__5126c:hover{ /* Threads */
               background: var(--backgroundCardHover) !important;
             }
             .messageListItem__5126c .message__5126c:hover{
@@ -1033,7 +1030,7 @@
             /* Background */
             .messageListItem__5126c .message__5126c.selected__5126c{
               border-radius: 8px;
-              background: color-mix(in srgb, var(--accent) 50%, transparent) !important;
+              background: color-mix(in srgb, var(--accent) 35%, transparent) !important;
             }
 
           /* Message failed to send */
@@ -1058,7 +1055,8 @@
 
           /* Message sent */
             /* Background */
-            .messageListItem__5126c:not(.messagelogger-deleted) .message__5126c{
+            .messageListItem__5126c:not(.messagelogger-deleted) .message__5126c,
+            .quotedChatMessage__5126c .message__5126c{ /* Threads */
               background: var(--backgroundCardBase);
             }
 
@@ -1740,8 +1738,8 @@
 
   /* Text selection */
   ::selection{
-    background: var(--os-accent-color);
-    color: var(--text)
+    background: var(--os-accent-color, #4cc2ff);
+    color: var(--text);
   }
 
 
