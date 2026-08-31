@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2026.08.31.2
+ * @version 2026.08.31.3
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -41,16 +41,16 @@
 
   /* Colours from WinUI 3 gallery */
   .theme-dark, .theme-darker, .theme-midnight{
-    --backgroundLayer0: #20202000; /* Mica Solid background base */
-    --backgroundLayer1: #33333360; /* Mica Card background secondary */
-    --backgroundLayer1Alt: #2c2c2c; /* Card background default */
+    --backgroundLayer0: #20202000;
+    --backgroundLayer1: #33333360;
+    --backgroundLayer1Alt: #2c2c2c;
     --backgroundLayer2: #373737;
-    --backgroundLayer2Alt: #1d1d1d; /* Card stroke default */
-    --backgroundCardBase: #61616160; /* Mica */
-    --backgroundCardHover: #83818160; /* Mica */
+    --backgroundLayer2Alt: #11111160;
+    --backgroundLayer3: #48484860;
+    --backgroundLayer3Hover: #67676760;
     --backgroundDialogContent: #262626;
     --backgroundDialogFooter: #1E1E1E;
-    --backgroundContextMenu: #202020f1;
+    --backgroundContextMenu: #2c2c2c;
     --backgroundInfobarMessage: #2E2E2E;
     --backgroundInfobarSuccess: #393D1B;
     --backgroundInfobarCaution: #433519;
@@ -87,8 +87,8 @@
     --backgroundLayer1Alt: #2c2c2c; /* Card background default */
     --backgroundLayer2: #373737;
     --backgroundLayer2Alt: #1d1d1d; /* Card stroke default */
-    --backgroundCardBase: #61616160; /* Mica */
-    --backgroundCardHover: #83818160; /* Mica */
+    --backgroundLayer3: #61616160; /* Mica */
+    --backgroundLayer3Hover: #83818160; /* Mica */
     --backgroundDialogContent: #262626;
     --backgroundDialogFooter: #1E1E1E;
     --backgroundContextMenu: #202020;
@@ -299,11 +299,6 @@
       border-radius: 4px !important;
     }
 
-    /* TODO add comment */
-    .scroller_ef3116{
-      padding: 0px;
-    }
-
     /* Hover */
     .wrapper_cc5dd2:hover{
       background-color: var(--buttonHover);
@@ -433,7 +428,7 @@
     }
     .panels__5e434 .buttons__37e49 > button{
       position: fixed;
-      bottom: 8px !important;
+      bottom: 9px !important;
       left: 4px !important;
       z-index: 11 !important;
       width: 64px !important;
@@ -596,7 +591,7 @@
 
       /* Selected */
       .modeSelected__2ea32 .link__2ea32{
-        background: var(--backgroundCardBase);
+        background: var(--backgroundLayer3);
       }
 
 
@@ -803,12 +798,12 @@
           /* Background */
           .flex__7c0ba button,
           .audioButtonParent__5e764{
-            background: var(--backgroundCardBase);
+            background: var(--backgroundLayer3);
             border-radius: 4px;
             width: 48px
           }
           .button_e131a9.buttonColor_e131a9{
-            background: var(--backgroundCardBase);
+            background: var(--backgroundLayer3);
             border: none;
           }
 
@@ -934,14 +929,11 @@
     /* Conversation */
       /* Shared */
         /* Position */
-        .messagesWrapper__36d07 {
-          margin-bottom: -123px;
+        .scrollerSpacer__36d07{
+          height: 6px !important;
         }
         .scroller__36d07{
-          border-radius: 0px 8px 0px 8px;
-        }
-        .scrollerSpacer__36d07{
-          height: 132px !important;
+          margin-bottom: 16px;
         }
 
         /* User introduction links */
@@ -974,19 +966,19 @@
         /* Messages */
           /* Size */
           .messageListItem__5126c .message__5126c,
-          .quotedChatMessage__5126c .message__5126c{ /* Threads */
+          .quotedChatMessage__5126c .message__5126c{ /* Threads first message */
             margin-left: 6px;
             margin-right: 6px;
           }
-          .messageListItem__5126c .message__5126c.groupStart__5126c, /* TODO Detect group message from same user */
-          .quotedChatMessage__5126c .message__5126c{ /* Threads */
+          .messageListItem__5126c .message__5126c.groupStart__5126c,
+          .quotedChatMessage__5126c .message__5126c{ /* Threads first message */
             border-radius: 8px;
           }
 
           /* Mentioned */
             /* Background */
             .messageListItem__5126c:not(.messagelogger-deleted) .message__5126c.mentioned__5126c,
-            .quotedChatMessage__5126c .message__5126c.mentioned__5126c{ /* Threads */
+            .quotedChatMessage__5126c .message__5126c.mentioned__5126c{ /* Threads first message */
               background: color-mix(in srgb, var(--accent) 25%, transparent);
             }
 
@@ -998,10 +990,10 @@
           /* Hovered */
             /* Background */
             .messageListItem__5126c .message__5126c:hover,
-            .quotedChatMessage__5126c .message__5126c:hover{ /* Threads */
-              background: var(--backgroundCardHover) !important;
+            .quotedChatMessage__5126c .message__5126c:hover{ /* Threads first message */
+              background: var(--backgroundLayer3Hover) !important;
             }
-            .messageListItem__5126c .message__5126c:hover{
+            .messageListItem__5126c:not(.messagelogger-deleted) .message__5126c:hover{
               border-top-right-radius: 0px !important;
             }
 
@@ -1023,13 +1015,12 @@
 
               /* Background */
               .wrapper_f7ecac{
-                background: var(--backgroundCardHover) !important;
+                background: var(--backgroundLayer3Hover) !important;
               }
 
           /* Selected */
             /* Background */
             .messageListItem__5126c .message__5126c.selected__5126c{
-              border-radius: 8px;
               background: color-mix(in srgb, var(--accent) 35%, transparent) !important;
             }
 
@@ -1045,7 +1036,7 @@
               background: transparent !important;
             }
             .messageListItem__5126c.messagelogger-deleted .message__5126c{ /* Vencord: Message logger plugin */
-              background: var(--backgroundInfobarCritical) !important;
+              background: var(--backgroundInfobarCritical);
             }
 
             /* Images */
@@ -1056,8 +1047,8 @@
           /* Message sent */
             /* Background */
             .messageListItem__5126c:not(.messagelogger-deleted) .message__5126c,
-            .quotedChatMessage__5126c .message__5126c{ /* Threads */
-              background: var(--backgroundCardBase);
+            .quotedChatMessage__5126c .message__5126c{ /* Threads first message */
+              background: var(--backgroundLayer3);
             }
 
           /* Embed content */
@@ -1076,7 +1067,7 @@
           margin-left: 20%;
         }
 
-/* TODO add comments */
+        /* TODO add comments */
         .messageListItem__5126c[data-is-self="true"] > .message__5126c > .contents_c19a55 > .avatar_c19a55{
           left: auto !important;
           right: var(--custom-message-margin-horizontal);
@@ -1106,7 +1097,7 @@
         .chatGradient__36d07{
           display: none;
         }
-/* TODO add comments end */
+        /* TODO add comments end */
 
         /* Message attachments, reactions */
         .messageListItem__5126c[data-is-self="true"] div .container_b7e1cb:not(:has(.embedCard__44c9a)){
@@ -1149,7 +1140,7 @@
 
       /* Other user message */
         /* Message area */
-        .quotedChatMessage__5126c, /* Threads, first message */
+        .quotedChatMessage__5126c, /* Threads first message */
         .messageListItem__5126c[data-is-self="false"]{
           margin-right: 20%;
         }
@@ -1176,12 +1167,12 @@
       /* Items */
         /* Background */
         .mainCard_f369db{
-          background: var(--backgroundCardBase);
+          background: var(--backgroundLayer3);
           border: none;
           transition: none !important;
         }
         .mainCard_f369db:hover{
-          background: var(--backgroundCardHover);
+          background: var(--backgroundLayer3Hover);
         }
 
         /* Text */
@@ -1229,11 +1220,8 @@
     /* Message bar */
       /* Position */
       .chatContent_f75fb0 .form_f75fb0{
-        margin: 6px;
-        margin-right: 18px;
         padding: 4px;
-        border: 1px solid var(--border);
-        border-radius: 8px;
+        border-radius: 0px 0px 8px 8px;
         background-color: var(--backgroundLayer2Alt);
       }
 
@@ -1250,7 +1238,7 @@
           border-top: 1px solid #7e7d7d;
         }
 
-        /* Not visible placeholder */
+        /* Not visible */
         .chatContent_f75fb0 .form_f75fb0:not(:has(.inTextChannel_b88801.base_b88801)) > div{
           margin-bottom: 24px;
           border-bottom: 1px solid #7e7d7d;
