@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2026.08.31
+ * @version 2026.08.31.1
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -125,18 +125,19 @@
 
   /* Discord variables | DO NOT EDIT */
   .theme-light, .theme-dark, .theme-darker, .theme-midnight{
+    --accent: color-mix(in srgb, var(--os-accent-color, #4cc2ff) 65%, #ffffff);
+
     --background-base-lowest: var(--backgroundLayer0);
     --background-base-lower: var(--backgroundLayer1);
     --background-base-low: var(--backgroundLayer2);
     --custom-app-top-bar-height: 48px;
     --font-primary: "Segoe UI Variable Text";
-    --text-link: var(--os-accent-color, #4cc2ff);
+    --text-link: var(--accent);
     --background-scrim: #00000066; /* Content dialog background */
     --modal-footer-background: var(--backgroundDialogFooter);
     --modal-background: var(--backgroundDialogContent);
     --channels-default: var(--text);
     --channel-icon: var(--text);
-
     --connecting-content-fade-duration: 0ms;
     --connecting-container-fade-duration: 0ms;
   }
@@ -379,7 +380,7 @@
 
       /* Selected */
       .listItem__650eb .wrapper__58105 .item__58105.visible__58105.selected__58105{
-        background-color: var(--os-accent-color, #4cc2ff) !important;
+        background-color: var(--accent) !important;
       }
 
 
@@ -610,14 +611,14 @@
       }
 
       /* Selected badge */
-      .selectedChannel_c69b6d:before{
+      .modeSelected__2ea32:after{
         content: "";
         position: fixed;
-        background: color-mix(in srgb, var(--os-accent-color) 65%, white) !important;
+        background: var(--accent) !important;
         height: 16px;
         width: 3px;
         border-radius: 4px;
-        margin-top: 8px;
+        margin-top: -24px;
       }
 
       /* Channel icons */
@@ -675,7 +676,7 @@
 
           /* Joined Voice Channel */
           .iconLive_c69b6d{
-            color: var(--os-accent-color, #4cc2ff) !important;
+            color: var(--accent) !important;
           }
 
     /* Server name */
@@ -906,6 +907,11 @@
         .trailing_c38106{
           z-index: 1003 !important;
         }
+        .notAppAsidePanel_a3002d:has(.layerContainer__59d0d.layer_bc663c > div:not([id]):not([class])) .trailing_c38106 .iconWrapper__468db{
+          display: none;
+        }
+
+
         .bar_c38106:not(.show_c38106) .trailing_c38106 > div:nth-of-type(1){
           position: fixed;
           top: calc(var(--custom-app-top-bar-height) + 12px);
@@ -945,7 +951,7 @@
 
         /* User introduction links */
         .container__703b9:not(.name__5d473) .nameContainer__703b9 .name__703b9 {
-          color: var(--os-accent-color, #4cc2ff);
+          color: var(--accent);
         }
 
         /* New message line */
@@ -983,7 +989,7 @@
           /* Mentioned */
             /* Background */
             .messageListItem__5126c:not(.messagelogger-deleted) .message__5126c.mentioned__5126c{
-              background: color-mix(in srgb, var(--os-accent-color) 20%, transparent);
+              background: color-mix(in srgb, var(--accent) 25%, transparent);
             }
 
             /* Left side highlight */
@@ -1027,7 +1033,7 @@
             /* Background */
             .messageListItem__5126c .message__5126c.selected__5126c{
               border-radius: 8px;
-              background: color-mix(in srgb, var(--os-accent-color) 50%, transparent) !important;
+              background: color-mix(in srgb, var(--accent) 50%, transparent) !important;
             }
 
           /* Message failed to send */
@@ -1734,7 +1740,8 @@
 
   /* Text selection */
   ::selection{
-    background: var(--os-accent-color, #4cc2ff);
+    background: var(--os-accent-color);
+    color: var(--text)
   }
 
 
@@ -1847,7 +1854,7 @@
     .wrapper__72c38.container__75098:focus-within, /* Home/DMs friends search */
     .editor__1b31f.slateTextArea_ec4baf:focus-within, /* Server channel send message */
     .searchBar_c322aa:focus-within{ /* Server search */
-      border-bottom: 2px solid var(--os-accent-color, #4cc2ff);
+      border-bottom: 2px solid var(--accent);
       background: #1f1f1f;
     }
 
