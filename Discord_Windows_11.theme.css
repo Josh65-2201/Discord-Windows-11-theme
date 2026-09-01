@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2026.09.1.0
+ * @version 2026.09.1.1
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -923,6 +923,11 @@
           margin-bottom: 16px;
         }
 
+        /* Bottom bar */
+        .chatTypingGradientAtBottom__36d07{
+          display: none;
+        }
+
         /* User introduction links */
         .container__703b9:not(.name__5d473) .nameContainer__703b9 .name__703b9 {
           color: var(--accent);
@@ -1097,11 +1102,6 @@
         /* Images */
         .visualMediaItemContainer_f4758a{
           width: fit-content !important;
-        }
-
-        /* Video */
-        .imageWrapper_af017a{
-          max-height: 512px;
         }
 
         /* Links */
@@ -1342,7 +1342,6 @@
 
     /* Role header */
     .membersGroup_c8ffbb{
-      padding-top: 10px;
       border-bottom: 1px solid var(--text);
     }
     .membersGroupHeader_c8ffbb{
