@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2026.09.3.0
+ * @version 2026.09.3.1
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -39,7 +39,7 @@
     }
 
 
-  /* Colours from WinUI 3 gallery */
+  /* Colors from WinUI 3 gallery */
   .theme-dark, .theme-darker, .theme-midnight{
     --backgroundLayer0: #20202000;
     --backgroundLayer1: #33333360;
@@ -80,7 +80,7 @@
   }
 
 
-  /* Colours from WinUI 3 gallery */ /* TODO Get light mode colors */
+  /* Colors from WinUI 3 gallery */ /* TODO Get light mode colors */
   .theme-light{
     --backgroundLayer0: #20202000; /* Mica Solid background base */
     --backgroundLayer1: #33333360; /* Mica Card background secondary */
@@ -930,6 +930,7 @@
         }
 
         /* Bottom bar */
+        .chatTypingGradientNotAtBottom__36d07,
         .chatTypingGradientAtBottom__36d07{
           display: none;
         }
@@ -1061,17 +1062,25 @@
             /* Code blocks */
 
 
-            /* Thread */
-            .container_b7e1cb .container__9271d{
-              max-width: 100%;
-              width: 100%;
-            }
-
-
       /* Your messages, Vencord: Theme attributes plugin needed */
         /* Message area */
         .messageListItem__5126c[data-is-self="true"]{
           margin-left: 20%;
+        }
+
+        /* Replies */
+        .messageListItem__5126c[data-is-self="true"] .repliedMessageClickableSpine_c19a55{
+          direction: rtl;
+        }
+        .messageListItem__5126c[data-is-self="true"] .repliedMessage_c19a55{
+          width: fit-content;
+          margin-left: auto;
+        }
+
+        /* User started thread */
+        .messageListItem__5126c[data-is-self="true"] .contents_c19a55{
+          width: fit-content;
+          margin-left: auto;
         }
 
         /* TODO add comments */
@@ -1090,8 +1099,8 @@
         .messageListItem__5126c[data-is-self="true"] .message__5126c > div > .messageContent_c19a55{
           text-align: right;
         }
-        .messageListItem__5126c[data-is-self="true"] .message__5126c{
-          padding-left: var(--space-xl) !important;
+        .messageListItem__5126c[data-is-self="true"] .message__5126c:not(.systemMessage__5126c){
+          padding-left: 8px !important;
           padding-right: var(--custom-message-margin-left-content-cozy) !important;
         }
         .messageListItem__5126c[data-is-self="true"] div .contents_c19a55 .header_c19a55 > .headerText_c19a55{
@@ -1106,37 +1115,42 @@
         }
 
         /* Embeds */
-        .messageListItem__5126c[data-is-self="true"] div .container_b7e1cb:not(:has(.embedCard__44c9a, .container__9271d)){
-          direction: rtl;
-        }
-        /*.messageListItem__5126c[data-is-self="true"] div :is(.topLine__9271d, .bottomLine__9271d){
+          /* Message has thread */
+          .messageListItem__5126c[data-is-self="true"] div .container_b7e1cb:not(:has(.embedCard__44c9a, .container__9271d)){
+            direction: rtl;
+          }
+          .messageListItem__5126c[data-is-self="true"] div :is(.topLine__9271d, .bottomLine__9271d){
+            width: fit-content;
+            margin-left: auto;
+          }
+          .messageListItem__5126c[data-is-self="true"] .cozy_c19a55.hasThread_c19a55:after{
+            direction: rtl;
+          }
+          .messageListItem__5126c[data-is-self="true"] .container_b7e1cb .container__9271d{
+            max-width: calc(100% - 18px);
+            width: 100%;
+          }
 
-        }*/
+          /* Embed image */
+          .messageListItem__5126c[data-is-self="true"] .embedThumbnail__623de{
+            margin-left: 0px !important;
+            margin-right: 16px !important;
+          }
 
-        /* Embed image */
-        .messageListItem__5126c[data-is-self="true"] .embedThumbnail__623de{
-          margin-left: 0px !important;
-          margin-right: 16px !important;
-        }
+          /* Vencord: MessageLinkEmbeds plugin */
+          .embedCard__44c9a{
+            width: 100%;
+          }
 
-        /* Vencord: MessageLinkEmbeds plugin */
-        .embedCard__44c9a{
-          width: 100%;
-        }
+          /* Code block */
+          .markup__75297 pre{
+            text-align: left !important;
+            max-width: none !important;
+          }
+          .vc-shiki-code .vc-shiki-lang, .vc-shiki-code .vc-shiki-table{
+            direction: ltr !important;
+          }
 
-        /* Code block */
-        .markup__75297 pre{
-          text-align: left !important;
-          max-width: none !important;
-        }
-        .vc-shiki-code .vc-shiki-lang, .vc-shiki-code .vc-shiki-table{
-          direction: ltr !important;
-        }
-
-        /* Thread */
-        .messageListItem__5126c[data-is-self="true"] .cozy_c19a55.hasThread_c19a55:after{
-          direction: rtl;
-        }
         /* TODO add comments end */
 
       /* Other user message */
@@ -1154,10 +1168,13 @@
           float: left;
         }
 
-      /* Bottom fade */
-      .chatTypingGradientNotAtBottom__36d07{
-        display: none;
-      }
+        /* Embeds */
+          /* Message has threads */
+          .container_b7e1cb .container__9271d{
+            max-width: 100%;
+            width: 100%;
+          }
+
 
     /* Forums */
       /* Background */

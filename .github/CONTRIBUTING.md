@@ -93,7 +93,7 @@ Home Page
     Activity
     My family
   DMs/groups
-    Add to groupchat
+    Add to group chat
     Sidebar user profile
   Activity feed
 Server page
@@ -106,7 +106,7 @@ Server page
       Boost model
     Events
     Channels and roles
-      Customise
+      Customize
       Browse
     Members
       Mod view

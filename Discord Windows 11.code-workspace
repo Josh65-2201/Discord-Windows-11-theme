@@ -17,5 +17,15 @@
     "editor.detectIndentation": false,
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
+    "cSpell.words": [
+      "infobar",
+      "Kokussz",
+      "Nyria",
+      "Vencord"
+    ],
+    "cSpell.ignoreRegExpList": [
+      "/.*{/",
+      "/.*,/"
+    ],
   }
 }

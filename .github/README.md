@@ -7,7 +7,7 @@
   1. Open https://raw.githubusercontent.com/Josh65-2201/Discord-Windows-11-theme/main/Discord_Windows_11.theme.css
   2. Right click
   3. Save as
-  4. Go to BetterDiscord themes folder (%AppData%\BetterDiscord\themes) 
+  4. Go to BetterDiscord themes folder (%AppData%\BetterDiscord\themes)
   5. Save
 
 ### Vencord
@@ -20,8 +20,6 @@
   3. Click "Themes"
   4. Click "Online themes"
   5. Paste in "Theme links"
-
-<br>
 
 ## Functionality changes
 

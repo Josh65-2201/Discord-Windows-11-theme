@@ -1,4 +1,4 @@
-## Formatting rules
+# Formatting rules
 
 Follow .github/CONTRIBUTING.md and the below rules
 
