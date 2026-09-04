@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2026.09.3.1
+ * @version 2026.09.4.0
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -1019,8 +1019,11 @@
 
           /* Selected */
             /* Background */
-            .messageListItem__5126c .message__5126c.selected__5126c{
+            .messageListItem__5126c .message__5126c:is(.selected__5126c, .replying__5126c){
               background: color-mix(in srgb, var(--accent) 35%, transparent) !important;
+            }
+            .replying__5126c:before{
+              background: none;
             }
 
           /* Message failed to send */
@@ -1243,30 +1246,22 @@
         background-color: var(--backgroundLayer2Alt);
       }
 
+      /* Reply bar */
+      .stackedBars__74017{
+        background: transparent;
+        border-color: #7e7d7d !important;
+        margin-bottom: 8px;
+      }
+      .clipContainer__841c8{
+        padding: 0px;
+      }
+
+
       /* Attachments preview bar */
       .channelAttachmentArea_b77158{
         padding: 0px;
         padding-bottom: 8px;
       }
-
-      /* Is typing/slow mode */
-        /* Placeholder */
-        .chatContent_f75fb0 .form_f75fb0:not(:has(.inTextChannel_b88801.base_b88801)) > div{
-          margin-bottom: 24px;
-          border-bottom: 1px solid #7e7d7d;
-        }
-
-        /* Discord visible */
-        .inTextChannel_b88801.base_b88801{
-          position: unset;
-          border-top: 1px solid #7e7d7d;
-        }
-
-        /* Vencord plugin: Character counter */
-        .vc-charCounter-counter{
-          bottom: -30px;
-          right: calc(50% - 17px); /* TODO find a dynamic way of centring */
-        }
 
       /* Text input */
         /* Background */
@@ -1329,6 +1324,25 @@
             width: 32px !important;
             height: 32px !important;
           }
+
+      /* Is typing/slow mode */
+        /* Placeholder */
+        .chatContent_f75fb0 .form_f75fb0:not(:has(.inTextChannel_b88801.base_b88801)) > div{
+          margin-bottom: 24px;
+          border-bottom: 1px solid #7e7d7d;
+        }
+
+        /* Discord visible */
+        .inTextChannel_b88801.base_b88801{
+          position: unset;
+          border-top: 1px solid #7e7d7d;
+        }
+
+        /* Vencord plugin: Character counter */
+        .vc-charCounter-counter{
+          bottom: -30px;
+          right: calc(50% - 17px); /* TODO find a dynamic way of centring */
+        }
 
 
   /* Members */
@@ -1827,10 +1841,10 @@
     }
 
     /* Size */
-    .textArea__74017.textAreaSlate__74017.slateContainer_ec4baf{ /* Server channel send message */
+    .textArea__74017 .editor__1b31f.slateTextArea_ec4baf{ /* Server channel send message */
       max-height: 114px;
       min-height: 32px !important;
-      overflow: auto;
+      overflow: hidden auto;
     }
     .editor__1b31f.slateTextArea_ec4baf{ /* Server channel send message */
       padding: 0px;
