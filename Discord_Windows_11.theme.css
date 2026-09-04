@@ -2,7 +2,7 @@
  * @name Discord Windows 11
  * @description WinUI 3 app design in Discord
  * @author Josh65
- * @version 2026.09.4.0
+ * @version 2026.09.4.1
  * @source https://github.com/Josh65-2201/Discord-Windows-11-theme
  * @authorId 457604408587321387
  * @authorLink https://github.com/Josh65-2201
@@ -192,9 +192,9 @@
     .searchBar__1ac1c.search__1ac1c{ /* Discovery */
       position: fixed;
       top: 8px;
-      left: 50%;
+      left: 50vw;
       max-width: none !important;
-      width: 31.25%;
+      width: 31.25vw;
       height: 32px;
       transform: translateX(-50%);
       -webkit-app-region: no-drag;
@@ -208,18 +208,18 @@
         width: 100%;
       }
       .clickTrapContainer__59d0d .layer__59d0d .container__16eb0{
-        left: 50% !important;
-        width: 31.25% !important;
+        left: 50vw !important;
+        width: 31.25vw !important;
         transform: translateX(-50%);
       }
 
 
   /* Update ready to install */
-  .trailing_c38106 > div:nth-of-type(3){
+  /*.trailing_c38106 > div:nth-of-type(3){
     top: 8px;
-    left: 256px; /* calc(100% - 648px) */
+    left: calc(100% - 648px);
     height: 32px;
-  }
+  }*/
 
 
   /* User account */
@@ -515,7 +515,7 @@
     /* Search */
     .searchBar__5ec2f{
       position: fixed;
-      top: -88px;
+      top: -89px;
       left: calc(var(--custom-guild-sidebar-width) * -1 - 10px);
       width: 100vw;
       margin: 0px;
@@ -1476,6 +1476,9 @@
     .nav__409aa{
       width: calc(var(--custom-guild-sidebar-width) - 73px);
     }
+    .modalContentInner_e44912{
+      background-color: transparent;
+    }
 
     /* User */
     .section__409aa:has(.profileCustomizationTab__3cfcf){
@@ -1489,8 +1492,8 @@
     .fixedContent__409aa{
       position: fixed;
       top: -40px;
-      left: 50%;
-      width: 31.25%;
+      left: 50vw;
+      width: 31.25vw;
       transform: translateX(-50%);
       overflow: visible;
       padding-inline: 0px;
