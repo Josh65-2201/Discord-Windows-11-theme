@@ -50,6 +50,10 @@
 - background-image
 - background-repeat
 - color
+- fill
+- fill-*
+- stroke
+- stroke-*
 - opacity
 - transform
 - transition
