@@ -32,11 +32,11 @@
   @import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft-3D/flags.css");
 
 
-  /* Theme settings */
+  /* Theme settings, defaults at https://github.com/Josh65-2201/Discord-Windows-11-theme#available-settings */
   :root{
-    --custom-member-list-width: 300px; /* 300px */
-    --unread: #00C81D;               /* #00C81D */
-    --transparency: 0;                 /* Only set to 1 when Vencord transparency is enabled */
+    --custom-member-list-width: 300px;
+    --unread: #00C81D;
+    --transparency: 0;
   }
 
 
