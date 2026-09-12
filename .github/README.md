@@ -12,6 +12,16 @@
 5. Save
 6. Check if theme is enabled in client settings if no change is seen
 
+## Available settings
+
+Settings can be changed in the file, defaults listed below
+
+```css
+--custom-member-list-width: 300px; /* 300px */
+--unread: #00C81D;               /* #00C81D */
+--transparency: 0;                 /* Only set to 1 when Vencord transparency is enabled */
+```
+
 ## Functionality changes
 
 - Mute and deafen settings are now shown only on the voice connected panel
