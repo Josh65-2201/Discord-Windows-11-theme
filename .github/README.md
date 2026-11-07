@@ -17,9 +17,9 @@
 Settings can be changed in the file, defaults listed below
 
 ```css
---custom-member-list-width: 300px; /* 300px */
---unread: #00C81D;               /* #00C81D */
---transparency: 0;                 /* Only set to 1 when Vencord transparency is enabled */
+--custom-member-list-width: 300px;
+--unread: #00C81D;
+--transparency: 0; /* Requires Vencord/Better discord background transparency enabled */
 ```
 
 ## Functionality changes
